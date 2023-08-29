@@ -1,0 +1,14 @@
+:root{
+    --font-family-body: "Open Sans", sans-serif;
+
+    --primary-color: #B8AFD5;
+    --secundary-color: #B4AAD4;
+    --tertiary-color: #8987C1;
+    --quaternary-color: #8888C1;
+
+    --primary-logo-color: #D7BCDC;
+    --secundary-logo-color: #9A6D89;
+
+    --nav-gradient: linear-gradient(90deg, rgba(184,175,213,0) 0%, rgba(180,170,212,1) 55%);
+
+}
