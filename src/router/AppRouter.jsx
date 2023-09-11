@@ -8,15 +8,13 @@ import Contact from '../pages/Contact/Contact';
 
 const AppRouter = () => (
   <Router>
-    <div>
       <Routes>
-        <Route path="/" exact element={<Home/>} />
+        <Route path="/" element={<Home/>} />
         <Route path="/sobre-nosotros" element={<AboutUs/>} />
         <Route path="/servicios" element={<Services/>} />
         <Route path="/portfolio" element={<Portfolio/>} />
         <Route path="/contacto" element={<Contact/>} />
       </Routes>
-    </div>
   </Router>
 );
 
