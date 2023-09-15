@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import './header.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
   useEffect(() => {
@@ -23,11 +24,11 @@ function Header() {
           <h5>Pochitama.dev</h5>
         </div>
         <ul className="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><Link to= "/" >Home</Link></li>
+          <li><Link to="/sobre-nosotros">About</Link></li>
+          <li><Link to="/portfolio">Portfolio</Link></li>
+          <li><Link to="/servicios">Services</Link></li>
+          <li><Link to="/contacto">Contact</Link></li>
         </ul>
         <div className="bar">
           <div className="bar-1"></div>
