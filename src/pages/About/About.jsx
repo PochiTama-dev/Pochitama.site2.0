@@ -1,9 +1,14 @@
 import React from 'react';
+import "./about.css"
+import "../../Themes/Base/_variables.css"
 
 const About = () => {
   return (
-    
-    <div>About</div>
+    <section className='aboutSection'>
+      <div className='aboutLine1'></div>
+      <h1 className='aboutTitle'>Quiénes Somos</h1>
+      <div className='aboutLine2'></div>
+    </section>
   )
 }
 
