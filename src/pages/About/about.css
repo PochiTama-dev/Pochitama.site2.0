@@ -15,7 +15,7 @@
 
 .aboutLine1{
       top: 50%;
-      transform: translateY(-50%) scaleX(0.8); /* Largo al 50% y centrada verticalmente */
+      transform: translateY(-50%) scaleX(0.8);
       width: 15%;
       height: 3px;
       margin-bottom: 11px;
@@ -24,9 +24,71 @@
 
 .aboutLine2{
     top: 50%;
-    transform: translateY(-50%) scaleX(0.8); /* Largo al 50% y centrada verticalmente */
+    transform: translateY(-50%) scaleX(0.8);
     width: 15%;
     height: 3px;
     margin-bottom: 11px;
     background-color: var(--primary-color); 
+}
+
+.equipoPochitama{
+    width: 100%;
+    height: 1000px;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 32px;
+    position: relative;
+}
+
+.colaboradores{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.colaborador{
+    width: 279px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.colaborador img {
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -11px;
+}
+
+.colaborador .encabezado {
+    display: inline-block;
+    position: relative;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 63%;
+    height: 50%;
+}
+
+.colaborador .info {
+    border-radius: 0px 0px 10px 10px;
+    padding-bottom: 40px;
+    min-height: 100px;
+}
+
+.colaborador .info h4 {
+    color: var(--quaternary-color);
+    font-size: 24px;
+    line-height: 0px;
+    font-weight: 800;
+    margin-bottom: 17px;
+}
+
+.colaborador .info h5 {
+    font-size: 24px;
+    line-height: 22px;
+    color: #5F5F5F;
+    padding: 0 24px;
+    font-weight: 100;
+    margin: 0;
 }
