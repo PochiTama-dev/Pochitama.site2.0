@@ -8,7 +8,7 @@ const About = () => {
     <section>
       <section className='aboutSection'>
         <div className='aboutLine1'></div>
-        <h1 className='aboutTitle'>Quiénes Somos</h1>
+        <h1 className='aboutTitle'>QUIÉNES SOMOS</h1>
         <div className='aboutLine2'></div>
       </section>
       <section className='equipoPochitama'>
