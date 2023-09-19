@@ -57,7 +57,7 @@
     width: 225px;
     border-radius: 50%;
     position: relative;
-    bottom: -11px;
+    bottom: -2px;
 }
 
 .colaborador .encabezado {
@@ -66,8 +66,18 @@
     border: 5px solid var(--quaternary-color);
     border-radius: 50%;
     overflow: hidden;
-    width: 63%;
-    height: 59%;
+    width: 57%;
+    height: 54%;
+}
+
+.encabezado:hover{
+    width: 67%;
+    height: 62%;
+}
+
+.colaborador img:hover{
+    transform: scale(1.1);
+    bottom: -18px;
 }
 
 .colaborador .info {
