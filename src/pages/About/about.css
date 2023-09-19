@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin: 45px 0px 25px 0px;
 }
 
 .aboutTitle{
@@ -18,7 +18,7 @@
       transform: translateY(-50%) scaleX(0.8);
       width: 15%;
       height: 3px;
-      margin-bottom: 11px;
+      margin-bottom: 16px;
       background-color: var(--primary-color); 
   }
 
@@ -27,7 +27,7 @@
     transform: translateY(-50%) scaleX(0.8);
     width: 15%;
     height: 3px;
-    margin-bottom: 11px;
+    margin-bottom: 16px;
     background-color: var(--primary-color); 
 }
 
@@ -48,16 +48,16 @@
 }
 
 .colaborador{
-    width: 279px;
+    width: 400px;
     margin-bottom: 24px;
     position: relative;
 }
 
 .colaborador img {
-    width: 150px;
+    width: 225px;
     border-radius: 50%;
     position: relative;
-    bottom: -11px;
+    bottom: -2px;
 }
 
 .colaborador .encabezado {
@@ -66,8 +66,18 @@
     border: 5px solid var(--quaternary-color);
     border-radius: 50%;
     overflow: hidden;
-    width: 63%;
-    height: 50%;
+    width: 57%;
+    height: 54%;
+}
+
+.encabezado:hover{
+    width: 67%;
+    height: 62%;
+}
+
+.colaborador img:hover{
+    transform: scale(1.1);
+    bottom: -18px;
 }
 
 .colaborador .info {
@@ -79,14 +89,14 @@
 .colaborador .info h4 {
     color: var(--quaternary-color);
     font-size: 24px;
-    line-height: 0px;
+    line-height: 1px;
     font-weight: 800;
     margin-bottom: 17px;
 }
 
 .colaborador .info h5 {
     font-size: 24px;
-    line-height: 22px;
+    line-height: 27px;
     color: #5F5F5F;
     padding: 0 24px;
     font-weight: 100;
