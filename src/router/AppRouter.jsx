@@ -6,7 +6,7 @@ import Services from '../pages/Services/Services';
 import Portfolio from '../pages/Portfolio/Portfolio';
 import Contact from '../pages/Contact/Contact';
 import Header from '../components/header/Header';
-import Footer from "../components/footer/index";
+import Footer from "../components/footer/footer";
 
 const AppRouter = () => (
   <Router>

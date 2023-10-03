@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import './footer.css'
 import miLogo from '../../assets/LogoPochi.png';
 import { BsInstagram, BsTwitter, BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 
