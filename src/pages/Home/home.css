@@ -5,7 +5,7 @@
 }
 
 
-.aboutSection{
+.beneSection{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,14 +13,14 @@
     margin: 45px 0px 25px 0px;
 }
 
-.aboutTitle{
+.beneTitle{
     color: #FFFFFF;
     font-size: 40px;
     font-weight: bold;
     padding-bottom: 24px;
 }
 
-.aboutLine1{
+.beneLine1{
       top: 50%;
       transform: translateY(-50%) scaleX(0.8);
       width: 15%;
@@ -29,7 +29,7 @@
       background-color: #FFFFFF; 
   }
 
-.aboutLine2{
+.beneLine2{
     top: 50%;
     transform: translateY(-50%) scaleX(0.8);
     width: 15%;
