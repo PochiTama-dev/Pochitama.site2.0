@@ -1,0 +1,39 @@
+.beneFont{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: auto;
+}
+
+
+.aboutSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 45px 0px 25px 0px;
+}
+
+.aboutTitle{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+
+.aboutLine1{
+      top: 50%;
+      transform: translateY(-50%) scaleX(0.8);
+      width: 15%;
+      height: 3px;
+      margin-bottom: 16px;
+      background-color: #FFFFFF; 
+  }
+
+.aboutLine2{
+    top: 50%;
+    transform: translateY(-50%) scaleX(0.8);
+    width: 15%;
+    height: 3px;
+    margin-bottom: 16px;
+    background-color: #FFFFFF; 
+}
