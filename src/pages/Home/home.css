@@ -2,6 +2,8 @@
     background-color: var(--primary-color);
     width: 100%;
     height: auto;
+    padding-bottom: 80px;
+    margin-bottom: 300px;
 }
 
 
@@ -10,7 +12,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 45px 0px 25px 0px;
+    margin: 0px 0px 60px 0px;
+    padding-top: 85px;
 }
 
 .beneTitle{
@@ -36,4 +39,31 @@
     height: 3px;
     margin-bottom: 16px;
     background-color: #FFFFFF; 
+}
+
+.beneSection2{
+    width: 100%;
+}
+
+.beneDescription{
+    width: 100%;
+}
+
+.beneDescriptionText {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.beneDescriptionText2{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
 }
