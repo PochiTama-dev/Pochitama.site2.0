@@ -1,0 +1,268 @@
+.beneFont{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+    margin-bottom: 300px;
+}
+
+
+.beneSection{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px 60px 0px;
+    padding-top: 85px;
+}
+
+.beneTitle{
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+
+.beneLine1{
+      top: 50%;
+      transform: translateY(-50%) scaleX(0.8);
+      width: 15%;
+      height: 3px;
+      margin-bottom: 16px;
+      background-color: #FFFFFF; 
+  }
+
+.beneLine2{
+    top: 50%;
+    transform: translateY(-50%) scaleX(0.8);
+    width: 15%;
+    height: 3px;
+    margin-bottom: 16px;
+    background-color: #FFFFFF; 
+}
+
+.beneSection2{
+    width: 100%;
+}
+
+.beneDescription{
+    width: 100%;
+}
+
+.beneDescriptionText {
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    line-height: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.beneDescriptionText2{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 8px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/* ESTILADO SECCION BENEFICIOS */
+
+.beneSection3{
+    width: 100%;
+    margin: 200px 0px 0px 0px ;
+}
+
+/* BENEFICIO 1 PASION POR TU VISION */
+
+.bar1{
+    background-color: var(--tertiary-color);
+    margin-left: 35%;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.benefitTitle1{
+    padding: 2.4% 0% 2.4% 7% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.benefitImage{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    left: 80%;
+    top: 90%;
+    
+}
+
+.beneDescription2{
+    margin: 0% 19% 0% 35%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.benefitText{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* BENEFICIO 2 DISEÑO CENTRADO EN EL USUARIO */
+
+.bar2{
+    background-color: var(--tertiary-color);
+    margin-right: 35%;
+    border-radius: 0px 15px 15px 0px;
+    margin-top: 7%;
+}
+
+.benefitTitle2{
+    padding: 2.8% 0% 2.8% 34% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+    
+}
+
+.beneDescription3{
+    margin: 0% 35% 0% 19%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.benefitText2{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.benefitImage2{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    right: 80%;
+    top: 146%;  
+}
+
+/* BENEFICIO 3 CÓDIGO QUE IMPULSA RESULTADOS */
+
+.bar3{
+    background-color: var(--tertiary-color);
+    margin-left: 35%;
+    border-radius: 15px 0px 0px 15px;
+    margin-top: 7%;
+}
+
+.benefitImage3{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    left: 80%;
+    top: 206%;
+}
+
+.benefitTitle3{
+    padding: 2.4% 0% 2.4% 4% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* BENEFICIO 4 COLABORACION TRANSPARENTE */
+
+.benefitTitle4{
+    padding: 2.8% 0% 2.8% 37% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+    
+}
+
+.benefitImage4{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    right: 80%;
+    top: 266%;  
+}
+
+/* BENEFICIO 5  ENTREGA A TIEMPO, SIEMPRE */
+
+.benefitImage5{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    left: 80%;
+    top: 330%;
+}
+
+.benefitTitle5{
+    padding: 2.4% 0% 2.4% 7% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* BENEFICIO 6 SOPORTE CONTINUO */
+
+.benefitTitle6{
+    padding: 2.8% 0% 2.8% 45% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+    
+}
+
+.benefitImage6{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    right: 80%;
+    top: 386%;  
+}
+
+/* BENEFICIO 7 HISTORIAS DE ÉXITO COMPARTIDAS */
+
+.benefitImage7{
+    width: 225px;
+    border: 5px solid var(--quaternary-color);
+    border-radius: 100%;
+    position: absolute;
+    left: 80%;
+    top: 446%;
+}
+
+.benefitTitle7{
+    padding: 2.4% 0% 2.4% 3% ;
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* RETOQUE DESCRIPCIONES IZQ Y DER DE BENEFICIOS A PARTIR DEL 3 */
+
+.beneDescription4{
+    margin: 0% 20% 0% 35%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.beneDescription5{
+    margin: 0% 35% 0% 19.5%;
+    font-size: 20px;
+    font-weight: bold;
+}
