@@ -2,9 +2,7 @@ import React from "react";
 import Beneficios from "../../components/Home/Beneficios/Beneficios";
 
 const Home = () => {
-  return (
-    <Beneficios />
-  );
+  return <Beneficios />;
 };
 
 export default Home;

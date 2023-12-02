@@ -1,7 +1,6 @@
-/* The following block can be included in a custom.scss */
-
-/* make the customizations */
-$primary: #ff00ff;
+/* Customizaciones */
+$primary: #B8AFD5;
+$secondary: #B4AAD4;
 $utilities: (
   "height": (
     property: height,
@@ -17,5 +16,5 @@ $utilities: (
   )
 );
 
-/* import bootstrap to set changes */
+/* importaciones de clases de bootstrap */
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
