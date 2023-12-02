@@ -1,0 +1,20 @@
+/* Customizaciones */
+$primary: #B8AFD5;
+$secondary: #B4AAD4;
+$utilities: (
+  "height": (
+    property: height,
+    class: h,
+    values: (
+      3px: 3px,
+      25: 25%,
+      50: 50%,
+      75: 75%,
+      100: 100%,
+      auto: auto
+    )
+  )
+);
+
+/* importaciones de clases de bootstrap */
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
