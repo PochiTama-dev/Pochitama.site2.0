@@ -4,17 +4,35 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   useEffect(() => {
-    const handleMenuClick = () => {
-      const menu = document.querySelector('.bar');
-      const nav = document.querySelector('.menu');
 
-      menu.addEventListener('click', () => {
-        menu.classList.toggle('bar-active');
-        nav.classList.toggle('nav-active');
+    const menu = document.querySelector('.bar');
+    const nav = document.querySelector('.menu');
+    const links = document.querySelectorAll('.menu li a');
+
+    const handleMenuClick = () => {
+      menu.classList.toggle('bar-active');
+      nav.classList.toggle('nav-active');
+    };
+
+    const closeMenu = () => {
+      menu.classList.remove('bar-active');
+      nav.classList.remove('nav-active');
+    };
+
+    menu.addEventListener('click', handleMenuClick);
+
+    links.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Limpieza del event listener al desmontar el componente
+    return () => {
+      menu.removeEventListener('click', handleMenuClick);
+      links.forEach(link => {
+        link.removeEventListener('click', closeMenu);
       });
     };
 
-    handleMenuClick();
   }, []);
 
   return (
