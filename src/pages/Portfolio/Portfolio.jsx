@@ -1,6 +1,8 @@
 import React from 'react'
 import './portfolio.css'
+import ProyectCard from '../../components/Portfolio/ProyectCard';
 import {texto} from "./variables.js";
+import { Modal } from 'react-bootstrap';
 
 const Portfolio = () => {
 
@@ -9,10 +11,10 @@ const Portfolio = () => {
       <div className="row pt-10">{/* ROW TEXTOS */}
         <div className='col-2'/>
         <div className="col-8">
-          <div className="d-flex flex-row justify-content-center align-items-center">{/* BOX TITULO */}
-            <hr className='portfolio-hr'/>
+          <div className="d-flex flex-row justify-content-center align-items-center mb-4">{/* BOX TITULO */}
+            <div className='portfolio-hr'/>
             <h2 className='portfolio-title'> Proyectos Destacados</h2>
-            <hr className='portfolio-hr'/>
+            <div className='portfolio-hr'/>
           </div>
           <div className='portfolio-text-box'>{/* TEXT-BOX */}
             <p className='portfolio-p'>{texto}</p>{/*texto */}
@@ -21,30 +23,14 @@ const Portfolio = () => {
         <div className='col-2'/>
       </div>
         <div className="row pt-8">{/* ROW IMGS */}
-            <div className='col-2'/>
-            <div className='col-8 d-flex flex-row justify-content-center'>
-                <div className="porfolio-proyect-box impar">{/*FONDO CON IMAGEN*/}
-                    <div className='portfolio-pildora'>{/*PILDORA PROYECTO*/}
-                        <label className='portfolio-label'>Proyecto</label>
-                    </div>
-                </div>
-                <div className="porfolio-proyect-box par">{/*FONDO CON IMAGEN*/}
-                    <div className='portfolio-pildora'>{/*PILDORA PROYECTO*/}
-                        <label className='portfolio-label'>Proyecto</label>
-                    </div>
-                </div>
-                <div className="porfolio-proyect-box impar">{/*FONDO CON IMAGEN*/}
-                    <div  className='portfolio-pildora'>{/*PILDORA PROYECTO*/}
-                        <label className='portfolio-label'>Proyecto</label>
-                    </div>
-                </div>
-                <div className="porfolio-proyect-box par">{/*FONDO CON IMAGEN*/}
-                    <div  className='portfolio-pildora'>{/*PILDORA PROYECTO*/}
-                        <label className='portfolio-label'>Proyecto</label>
-                    </div>
-                </div>
+            <div className='col-1'/>
+            <div className='col-10 d-flex flex-row justify-content-center'>
+              <ProyectCard proyectName="Proyecto" position="impar"/>
+              <ProyectCard proyectName="Proyecto" position="impar"/>
+              <ProyectCard proyectName="Proyecto" position="impar"/>
+              <ProyectCard proyectName="Proyecto" position="impar"/>
             </div>
-            <div className='col-2'/>
+            <div className='col-1'/>
 
         </div>
     </div>
