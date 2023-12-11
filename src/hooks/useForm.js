@@ -3,25 +3,25 @@ import emailjs from "@emailjs/browser";
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
+  const [buttonSelections, setButtonSelections] = useState({});
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
   const formRef = useRef(null);
 
-  const resetForm = () => {
-    setForm(initialForm);
-    setErrors({});
-    setLoading(false);
-    setResponse(false);
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+  const handleChange = (e, buttonValue) => {
+    if (e.target.tagName === 'BUTTON') {
+      setButtonSelections({
+        ...buttonSelections,
+        [buttonValue]: !buttonSelections[buttonValue],
+      });
+    } else {
+      const { name, value } = e.target;
+      setForm({
+        ...form,
+        [name]: value,
+      });
+    }
   };
 
   const handleBlur = (e) => {
@@ -32,13 +32,13 @@ export const useForm = (initialForm, validateForm) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrors(validateForm(form));
-
-    if (Object.keys(errors).length === 0) {
+  
+    if (Object.keys(errors).length === 0 && Object.keys(validateForm(form)).length === 0) {
       setLoading(true);
-
-      //Asigno la referencia al formulario
+  
+      // Asigna la referencia al formulario
       formRef.current = e.target;
-
+  
       emailjs
         .sendForm(
           "service_zv0t669",
@@ -50,6 +50,8 @@ export const useForm = (initialForm, validateForm) => {
           (result) => {
             setLoading(false);
             setResponse(true);
+            setForm(initialForm);
+            setButtonSelections({});
             console.log(result.status);
           },
           (error) => {
@@ -63,12 +65,12 @@ export const useForm = (initialForm, validateForm) => {
 
   return {
     form,
+    buttonSelections,
     errors,
     loading,
     response,
     handleChange,
     handleBlur,
     handleSubmit,
-    resetForm,
   };
 };

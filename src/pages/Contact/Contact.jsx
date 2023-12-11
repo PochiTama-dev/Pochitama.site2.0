@@ -38,13 +38,13 @@ const validationsForm = (form) => {
 const Contact = () => {
   const {
     form,
+    buttonSelections,
     errors,
     loading,
     response,
     handleChange,
     handleBlur,
     handleSubmit,
-    resetForm,
   } = useForm(initialForm, validationsForm);
 
   const formRef = useRef();
@@ -57,10 +57,9 @@ const Contact = () => {
       
       setTimeout(() => {
         setShowSuccessMessage(false);
-        resetForm();
       }, 3000);
     }
-  }, [response, resetForm]);
+  }, [response]);
 
   return (
     <Container fluid className="bg-primary p-5">
@@ -83,38 +82,73 @@ const Contact = () => {
             <span>Estas buscando:</span>
           </Col>
           <Col xs={12} md={8} lg={5} className="mb-4">
+            <input
+              type="hidden"
+              name="seo"
+              value={buttonSelections['seo'] ? 'SEO' : ''}
+            />
             <Button
-              variant="tertiary"
-              className="text-white px-md-4 me-md-1 my-1"
+              variant={buttonSelections['seo'] ? 'quaternary' : 'tertiary'}
+              className={`text-white px-md-4 me-md-1 my-1 ${buttonSelections['seo'] ? 'selected btn-transition' : 'btn-transition'}`}
               size="lg"
+              value="seo"
+              onClick={(e) => handleChange(e, 'seo')}
             >
               SEO
             </Button>{" "}
+            <input
+              type="hidden"
+              name="web_design"
+              value={buttonSelections['web_design'] ? 'Web design & dev' : ''}
+            />
             <Button
-              variant="tertiary"
-              className="text-white px-md-4 mx-md-1 my-1"
+              variant={buttonSelections['web_design'] ? 'quaternary' : 'tertiary'}
+              className={`text-white px-md-4 mx-md-1 my-1 ${buttonSelections['web_design'] ? 'selected btn-transition' : 'btn-transition'}`}
               size="lg"
+              value="web_design"
+              onClick={(e) => handleChange(e, 'web_design')}
             >
               Web design & dev
             </Button>{" "}
+            <input
+              type="hidden"
+              name="app_design"
+              value={buttonSelections['app_design'] ? 'App design & dev' : ''}
+            />
             <Button
-              variant="tertiary"
-              className="text-white px-md-4 mx-md-1 my-1"
+              variant={buttonSelections['app_design'] ? 'quaternary' : 'tertiary'}
+              className={`text-white px-md-4 mx-md-1 my-1 ${buttonSelections['app_design'] ? 'selected btn-transition' : 'btn-transition'}`}
               size="lg"
+              value="app_design"
+              onClick={(e) => handleChange(e, 'app_design')}
             >
               App design & dev
             </Button>{" "}
+            <input
+              type="hidden"
+              name="branding"
+              value={buttonSelections['branding'] ? 'Branding' : ''}
+            />
             <Button
-              variant="tertiary"
-              className="text-white px-md-4 me-md-1 my-1"
+              variant={buttonSelections['branding'] ? 'quaternary' : 'tertiary'}
+              className={`text-white px-md-4 me-md-1 my-1 ${buttonSelections['branding'] ? 'selected btn-transition' : 'btn-transition'}`}
               size="lg"
+              value="branding"
+              onClick={(e) => handleChange(e, 'branding')}
             >
               Branding
             </Button>{" "}
+            <input
+              type="hidden"
+              name="design_context"
+              value={buttonSelections['design_context'] ? 'Design Context' : ''}
+            />
             <Button
-              variant="tertiary"
-              className="text-white px-md-4 mx-md-1 my-1"
+              variant={buttonSelections['design_context'] ? 'quaternary' : 'tertiary'}
+              className={`text-white px-md-4 mx-md-1 my-1 ${buttonSelections['design_context'] ? 'selected btn-transition' : 'btn-transition'}`}
               size="lg"
+              value="design_context"
+              onClick={(e) => handleChange(e, 'design_context')}
             >
               Design Context
             </Button>{" "}

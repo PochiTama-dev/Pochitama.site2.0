@@ -1,8 +1,8 @@
 /* Customizaciones */
 $primary: #B8AFD5;
-$secondary: #B4AAD4;
+$secondary: #a89bd3;
 $tertiary: #8987C1;
-$quaternary: #8888C1;
+$quaternary: #e2e2f5;
 
 $primary-logo-color: #D7BCDC;
 $secundary-logo-color: #9A6D89;
@@ -210,6 +210,16 @@ $utilities: (
       secondary: $secondary,
       tertiary: $tertiary,
       quaternary: $quaternary,
+    )
+  ),
+  "button-text": (
+    property: color,
+    class: btn,
+    values: (
+      primary: $secondary,
+      secondary: $primary,
+      tertiary: $quaternary,
+      quaternary: $tertiary,
     )
   ),
 );
