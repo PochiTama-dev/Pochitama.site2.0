@@ -202,6 +202,16 @@ $utilities: (
       y: translateY(-50%),
     )
   ),
+  "button": (
+    property: background-color,
+    class: btn,
+    values: (
+      primary: $primary,
+      secondary: $secondary,
+      tertiary: $tertiary,
+      quaternary: $quaternary,
+    )
+  ),
 );
 
 

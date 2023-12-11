@@ -74,16 +74,20 @@ nav {
 		overflow-x: hidden;
 	}
 
+	body .nav-active {
+		overflow: hidden;
+	}
+
 	.menu {
-		position: absolute;
-		right: -100%;
+		display: none;
+	  }
+	
+	.menu {
+		position: fixed;
+		right: 0;
 		height: 90vh;
 		top: 10vh;
 		background-color: #eeecec;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -95,10 +99,15 @@ nav {
 	.bar {
 		display: block;
 	}
-}
 
-.nav-active {
-	transform: translateX(-100%);
+	.menu.nav-active {
+		transform: translateX(0);
+	}
+	
+	.nav-active {
+		transform: translateX(-100%);
+	}
+
 }
 
 .bar-active .bar-1 {
