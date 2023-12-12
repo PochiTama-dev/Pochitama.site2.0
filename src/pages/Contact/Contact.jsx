@@ -11,25 +11,27 @@ const initialForm = {
   message: "",
 };
 
-const validationsForm = (form) => {
-  let errors = {};
-  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
-  let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+const validationsForm = (form, fieldName = '', value = '') => {
+  const errors = {};
+  const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  const regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
 
-  if (!form.user_name.trim()) {
-    errors.user_name = "Tu Nombre es requerido";
-  } else if (!regexName.test(form.user_name.trim())) {
-    errors.user_name = "Tu Nombre solo puede contener letras y espacios";
-  }
+  const validateField = (name, val) => {
+    if (!val || !val.trim()) {
+      errors[name] = `El campo ${name} es requerido`;
+    } else if (name === "user_name" && !regexName.test(val)) {
+      errors[name] = `El campo ${name} solo puede contener letras y espacios`;
+    } else if (name === "user_email" && !regexEmail.test(val)) {
+      errors[name] = `Debes ingresar un E-mail válido`;
+    }
+  };
 
-  if (!form.user_email.trim()) {
-    errors.user_email = "Tu E-mail es requerido";
-  } else if (!regexEmail.test(form.user_email.trim())) {
-    errors.user_email = "Tenés que ingresar un E-mail valido";
-  }
-
-  if (!form.message.trim()) {
-    errors.message = "Es importante que nos cuentes sobre tu proyecto";
+  if (!form || fieldName === '') {
+    validateField("user_name", form.user_name);
+    validateField("user_email", form.user_email);
+    validateField("message", form.message);
+  } else {
+    validateField(fieldName, value);
   }
 
   return errors;

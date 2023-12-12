@@ -25,18 +25,30 @@ export const useForm = (initialForm, validateForm) => {
   };
 
   const handleBlur = (e) => {
-    handleChange(e);
-    setErrors(validateForm(form));
+    const { name, value } = e.target;
+    const fieldErrors = validateForm(false, name, value);
+    setErrors({
+      ...errors,
+      [name]: fieldErrors[name],
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Actualizo el estado de los errores
     setErrors(validateForm(form));
+
+    // Espero a que el estado se actualice antes de continuar
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
+    // Vuelvo a obtener los errores después de la actualización del estado
+    const formErrors = validateForm(form);
   
-    if (Object.keys(errors).length === 0 && Object.keys(validateForm(form)).length === 0) {
+    if (Object.keys(formErrors).length === 0) {
       setLoading(true);
   
-      // Asigna la referencia al formulario
+      // Asigno la referencia al formulario
       formRef.current = e.target;
   
       emailjs
