@@ -8,10 +8,14 @@ function ModalPortfolio({show, data}) {
             <Modal.Header closeButton>
                 <Modal.Title> {data ? data.name : "TITULO DEL PROYECTO"} </Modal.Title>
             </Modal.Header>
-            <Modal.Body className='d-flex flex-row' style={{border:"2px solid blue"}}>
-                <div className='' style={{background:`url(${data ? data.img : "/src/assets/images/exampleProyect.png"})`, width:'50%'}}/>
-                <div style={{width:'50%', padding:'5px  '}}>
-                    <label>
+            <Modal.Body className='d-flex' style={{flexDirection:'column', padding:'0'}}>
+                <div className='' style={{background:`url(${data ? data.img : "/src/assets/images/exampleProyect.png"})`, width:'100%', height:'45vh'}}/>
+                <div className="modal_rectangule">
+                    <label className='modal_rectangule_title'>Proyecto</label>
+                     <div className="modal_logo"/>
+                </div>
+                <div style={{width:'100%', padding:'5px ', maxHeight:'20vh'}}>
+                    <label> 
                         {data ? data.description : loreIpsum}
                     </label>
                 </div>
