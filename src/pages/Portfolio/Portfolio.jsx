@@ -2,7 +2,6 @@ import React from 'react'
 import './portfolio.css'
 import ProyectCard from '../../components/Portfolio/ProyectCard';
 import {texto} from "./variables.js";
-import { Modal } from 'react-bootstrap';
 
 const Portfolio = () => {
 
@@ -26,9 +25,9 @@ const Portfolio = () => {
             <div className='col-1'/>
             <div className='col-10 d-flex flex-row justify-content-center'>
               <ProyectCard proyectName="Proyecto" position="impar"/>
+              <ProyectCard proyectName="Proyecto" position="par"/>
               <ProyectCard proyectName="Proyecto" position="impar"/>
-              <ProyectCard proyectName="Proyecto" position="impar"/>
-              <ProyectCard proyectName="Proyecto" position="impar"/>
+              <ProyectCard proyectName="Proyecto" position="par"/>
             </div>
             <div className='col-1'/>
 
