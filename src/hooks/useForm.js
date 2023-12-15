@@ -59,26 +59,25 @@ export const useForm = (initialForm, validateForm) => {
     // Vuelvo a obtener los errores después de la actualización del estado
     const formErrors = validateForm(form);
 
-    if (Object.keys(formErrors).length === 0) {
+    if (Object.keys(formErrors).length === 0 && captchaValue) {
       setLoading(true);
 
-        axios
-          .post(
-            "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
-            form,
-            { headers: { "Content-Type": "application/json" } }
-          )
-          .then(function (result) {
-            setLoading(false);
-            setResponse(true);
-            setForm(initialForm);
-            setButtonSelections({});
-            console.log(result);
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-          
+      axios
+        .post(
+          "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
+          form,
+          { headers: { "Content-Type": "application/json" } }
+        )
+        .then(function (result) {
+          setLoading(false);
+          setResponse(true);
+          setForm(initialForm);
+          setButtonSelections({});
+          console.log(result);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     } else {
       return;
     }
