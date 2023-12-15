@@ -89,24 +89,23 @@
 }
 .modal_rectangule{
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 60%;
+    min-width: 40%;
     width: auto;
     height: 10%; /* Puedes ajustar la altura del rectángulo según tus necesidades */
     background-color: #8987C1; /* Color del rectángulo superpuesto */
     z-index: 1;
     border-radius: 20px 0px 0px 20px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    padding: 10px;
     align-items: center;
 }
 .modal_logo{
     background: url('/src/assets/images/LogoPochi.png');
     margin-left: 20px;
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translateY(-50%);
+    position: relative;
     width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
     height: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
     background-size: cover;
@@ -123,5 +122,30 @@
     font-weight: 800;
     line-height: normal;
     text-transform: uppercase;
-    margin-right: 10px;
+}
+.modal_label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.modal_button{
+    cursor: pointer;
+     border-radius: 20px;
+     border-color: #8987C1;
+     background:#8987C1;
+     margin-bottom: 30px; 
+     width:30%;
+     padding: 5px;
+}
+.modal_button_label{
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    word-wrap: break-word;
 }
