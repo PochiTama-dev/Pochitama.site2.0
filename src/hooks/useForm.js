@@ -62,9 +62,6 @@ export const useForm = (initialForm, validateForm) => {
     if (Object.keys(formErrors).length === 0) {
       setLoading(true);
 
-      /* if (!captchaValue) {
-        alert("Verificar el reCAPTCHA!");
-      } else { */
         axios
           .post(
             "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
@@ -81,7 +78,7 @@ export const useForm = (initialForm, validateForm) => {
           .catch(function (error) {
             console.log(error);
           });
-      /* } */
+          
     } else {
       return;
     }
