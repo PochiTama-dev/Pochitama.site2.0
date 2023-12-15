@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import axios from "axios";
 
 export const useForm = (initialForm, validateForm) => {
@@ -7,6 +7,11 @@ export const useForm = (initialForm, validateForm) => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
+  const [recaptcha, setRecaptcha] = useState(null);
+
+  const recaptchaCallback = useCallback((recaptchaInstance) => {
+    setRecaptcha(recaptchaInstance);
+  }, []);
 
   const handleChange = (e, buttonValue) => {
     if (e.target.tagName === "BUTTON") {
@@ -43,6 +48,8 @@ export const useForm = (initialForm, validateForm) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const captchaValue = recaptcha?.();
+
     // Actualizo el estado de los errores
     setErrors(validateForm(form));
 
@@ -55,22 +62,26 @@ export const useForm = (initialForm, validateForm) => {
     if (Object.keys(formErrors).length === 0) {
       setLoading(true);
 
-      axios
-        .post(
-          "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
-          form,
-          { headers: { "Content-Type": "application/json" } }
-        )
-        .then(function (result) {
-          setLoading(false);
-          setResponse(true);
-          setForm(initialForm);
-          setButtonSelections({});
-          console.log(result);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      /* if (!captchaValue) {
+        alert("Verificar el reCAPTCHA!");
+      } else { */
+        axios
+          .post(
+            "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
+            form,
+            { headers: { "Content-Type": "application/json" } }
+          )
+          .then(function (result) {
+            setLoading(false);
+            setResponse(true);
+            setForm(initialForm);
+            setButtonSelections({});
+            console.log(result);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+      /* } */
     } else {
       return;
     }
@@ -82,6 +93,7 @@ export const useForm = (initialForm, validateForm) => {
     errors,
     loading,
     response,
+    recaptcha: recaptchaCallback,
     handleChange,
     handleBlur,
     handleSubmit,

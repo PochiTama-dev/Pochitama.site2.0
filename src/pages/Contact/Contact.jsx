@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "./../../hooks/useForm";
 import { Alert, Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import { RiMailSendLine } from "react-icons/ri";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./contact.css";
 import "../../Themes/Base/_variables.css";
 
@@ -44,6 +45,7 @@ const Contact = () => {
     errors,
     loading,
     response,
+    recaptcha,
     handleChange,
     handleBlur,
     handleSubmit,
@@ -60,6 +62,15 @@ const Contact = () => {
       }, 3000);
     }
   }, [response]);
+
+  const handleRecaptchaLoad = (recaptchaInstance) => {
+    recaptcha(recaptchaInstance);
+  };
+
+  useEffect(() => {
+    const recaptchaRef = recaptcha?.();
+    console.log('Valor de recaptchaRef:', recaptchaRef);
+  }, [recaptcha]);
 
   return (
     <Container fluid className="bg-primary p-5">
@@ -205,6 +216,11 @@ const Contact = () => {
                 {errors.message}
               </Form.Control.Feedback>
             </Form.Group>
+            <ReCAPTCHA 
+              sitekey="6LcPFjIpAAAAAGsjEgeUnIcGe1H3aq5iseReUvBB"
+              onLoad={handleRecaptchaLoad}
+              size="invisible"
+            />
             <div className="text-end mt-4">
               <Button
                 variant="tertiary"
