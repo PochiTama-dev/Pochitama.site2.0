@@ -1,5 +1,5 @@
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
+import axios from "axios";
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
@@ -7,13 +7,20 @@ export const useForm = (initialForm, validateForm) => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [response, setResponse] = useState(null);
-  const formRef = useRef(null);
 
   const handleChange = (e, buttonValue) => {
-    if (e.target.tagName === 'BUTTON') {
+    if (e.target.tagName === "BUTTON") {
       setButtonSelections({
         ...buttonSelections,
         [buttonValue]: !buttonSelections[buttonValue],
+      });
+
+      setForm({
+        ...form,
+        buttons: {
+          ...form.buttons,
+          [buttonValue]: !buttonSelections[buttonValue] ? buttonValue : "",
+        },
       });
     } else {
       const { name, value } = e.target;
@@ -35,7 +42,7 @@ export const useForm = (initialForm, validateForm) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Actualizo el estado de los errores
     setErrors(validateForm(form));
 
@@ -44,32 +51,26 @@ export const useForm = (initialForm, validateForm) => {
 
     // Vuelvo a obtener los errores después de la actualización del estado
     const formErrors = validateForm(form);
-  
+
     if (Object.keys(formErrors).length === 0) {
       setLoading(true);
-  
-      // Asigno la referencia al formulario
-      formRef.current = e.target;
-  
-      emailjs
-        .sendForm(
-          "service_zv0t669",
-          "template_tj5zvrk",
-          formRef.current,
-          "xQIakum3hdLQhvFWS"
+
+      axios
+        .post(
+          "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
+          form,
+          { headers: { "Content-Type": "application/json" } }
         )
-        .then(
-          (result) => {
-            setLoading(false);
-            setResponse(true);
-            setForm(initialForm);
-            setButtonSelections({});
-            console.log(result.status);
-          },
-          (error) => {
-            console.log(error.text);
-          }
-        );
+        .then(function (result) {
+          setLoading(false);
+          setResponse(true);
+          setForm(initialForm);
+          setButtonSelections({});
+          console.log(result);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     } else {
       return;
     }

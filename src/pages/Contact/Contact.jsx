@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "./../../hooks/useForm";
 import { Alert, Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import { RiMailSendLine } from "react-icons/ri";
@@ -11,25 +11,25 @@ const initialForm = {
   message: "",
 };
 
-const validationsForm = (form, fieldName = '', value = '') => {
+const validationsForm = (emptyForm, fieldName = '', value = '') => {
   const errors = {};
   const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
   const regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
 
-  const validateField = (name, val) => {
-    if (!val || !val.trim()) {
+  const validateField = (name, value) => {
+    if (!value || !value.trim()) {
       errors[name] = `El campo ${name} es requerido`;
-    } else if (name === "user_name" && !regexName.test(val)) {
+    } else if (name === "user_name" && !regexName.test(value)) {
       errors[name] = `El campo ${name} solo puede contener letras y espacios`;
-    } else if (name === "user_email" && !regexEmail.test(val)) {
+    } else if (name === "user_email" && !regexEmail.test(value)) {
       errors[name] = `Debes ingresar un E-mail válido`;
     }
   };
 
-  if (!form || fieldName === '') {
-    validateField("user_name", form.user_name);
-    validateField("user_email", form.user_email);
-    validateField("message", form.message);
+  if (emptyForm) {
+    validateField("user_name", emptyForm.user_name);
+    validateField("user_email", emptyForm.user_email);
+    validateField("message", emptyForm.message);
   } else {
     validateField(fieldName, value);
   }
@@ -48,8 +48,6 @@ const Contact = () => {
     handleBlur,
     handleSubmit,
   } = useForm(initialForm, validationsForm);
-
-  const formRef = useRef();
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
@@ -78,7 +76,7 @@ const Contact = () => {
           </h3>
         </Col>
       </Row>
-      <Form ref={formRef} onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <Row className="ps-md-4 ps-md-4 ps-lg-5 ms-lg-5">
           <Col xs={12} className="text-white mb-3">
             <span>Estas buscando:</span>
@@ -229,7 +227,7 @@ const Contact = () => {
       {/* Mensaje de éxito */}
       {showSuccessMessage && (
         <Alert variant="success" className="mt-3">
-          ¡El formulario se envió con éxito!
+          ¡El formulario fue enviado con éxito!
         </Alert>
       )}
     </Container>
