@@ -12,7 +12,6 @@ import react from "../../assets/images/react.png";
 import ruby from "../../assets/images/ruby.png";
 import vue from "../../assets/images/Vue.png";
 import wordpress from "../../assets/images/Wordpress.png";
-import anime from "animejs";
 
 function Cta({
   title = "¿Tenes un proyecto?",
@@ -21,17 +20,13 @@ function Cta({
   const [gifVisible, setGifVisible] = useState(true);
 
   useEffect(() => {
-    // Establece un temporizador para ocultar el GIF después de 5 segundos (por ejemplo)
     const timeoutId = setTimeout(() => {
       setGifVisible(false);
-    }, 5000); // 5000 milisegundos = 5 segundos
+    }, 5000);
 
-    // Limpia el temporizador al desmontar el componente
     return () => clearTimeout(timeoutId);
-  }, []); // El segundo argumento [] asegura que este efecto solo se ejecute una vez al montar el componente
+  }, []);
   const handleGifLoad = () => {
-    // Se llama cuando el GIF ha terminado de cargar
-    // Puedes realizar acciones adicionales aquí si es necesario
     console.log("GIF cargado");
   };
   return (
@@ -68,7 +63,7 @@ function Cta({
           <div className="wordpress">
             <img src={wordpress} alt="wordpress" className="" />
           </div>
-          <div className="gif">
+          <div className="gif-gato-logo">
             {gifVisible ? (
               <img
                 src={gif}
@@ -80,96 +75,28 @@ function Cta({
               <img
                 src={logo}
                 alt="logo"
-                className="static"
+                className="static-image-logo"
                 style={{ height: "100%" }}
               />
             )}
             {!gifVisible && (
-              <div className="gif2">
+              <div className="gif-gato-logo-2">
                 <img src={gif} alt="gato codeando" style={{ height: "100%" }} />
               </div>
             )}
           </div>
         </div>
         <div className="col-sm col-right">
-          <div className="title">{title} </div>
-          <div className="subtitle">{subtitle}</div>
-
-          <button className="button">Contactanos</button>
+          <div className="div-text">
+            <div className="title">{title}</div>
+            <div className="subtitle">{subtitle}</div>
+          </div>
+          <div className="div-contact-box">
+            <button className="button-contact">Contactanos</button>
+          </div>
         </div>
       </div>
       <div className="svg-background">
-        {/* <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 100% 100%"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
-            fill="#B8AFD5"
-          >
-            {" "}
-            <animate
-              attributeName="d"
-              dur="5s"
-              repeatCount="indefinite"
-              keyTimes="0;0.5;1"
-              values="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 526.673 392.789 526.673C567.071 526.673 704.614 429.538 900.816 525.212C1097.02 620.886 1537 525.212 1537 525.212V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
-            />
-          </path>
-        </svg> */}
-        {/* <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 100% 100%"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
-            fill="#B8AFD5"
-          >
-            {" "}
-            <animate
-              attributeName="d"
-              dur="5s"
-              repeatCount="indefinite"
-              keyTimes="0;0.5;1"
-              values="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 525.212 392.789 525.212C567.071 525.212 704.614 495.538 900.816 525.212C1097.02 554.886 1537 525.212 1537 525.212V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
-            />
-          </path>
-        </svg> */}
-        {/* <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 100% 100%"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
-            fill="#B8AFD5"
-          >
-            {" "}
-            <animate
-              attributeName="d"
-              dur="5s"
-              repeatCount="indefinite"
-              keyTimes="0;0.25;0.5;0.75;1"
-              values="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 525.212 392.789 525.212C567.071 525.212 704.614 495.538 900.816 525.212C1097.02 554.886 1537 525.212 1537 525.212V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 525.212 392.789 525.212C567.071 525.212 704.614 426.673 900.816 426.673C1097.02 426.673 1537 525.212 1537 525.212V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z;
-              M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
-            />
-          </path>
-        </svg> */}
         <svg
           width="100%"
           height="100%"
