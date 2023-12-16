@@ -1,0 +1,376 @@
+.cta {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  /* position: relative; */
+  /* background-color: var(--primary-color); */
+}
+
+.div-container {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  /* position: absolute; */
+  /* flex-direction: row; */
+  display: flex;
+}
+
+.col-left {
+  /* align-items: center; */
+  /* justify-content: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 50%;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* .col-left-div {
+  display: flex;
+  height: 100vh;
+} */
+
+.static {
+  position: absolute;
+  height: 30%;
+  right: 0%;
+}
+
+.static:hover {
+  opacity: 0;
+}
+
+.gif {
+  /* display: flex; */
+  /* margin-top: 50%; */
+  /* z-index: 0; */
+  /* display: inline-block; */
+  height: 30%;
+  top: 40%;
+  position: absolute;
+  /* width: 30%; */
+  /* margin-right: 40%; */
+  /* align-items: center; */
+}
+
+.gif2 {
+  /* display: flex; */
+  /* margin-top: 50%; */
+  /* z-index: 0; */
+  /* display: inline-block; */
+  height: 100%;
+  /* top: 20%; */
+  /* position: absolute; */
+  /* width: 30%; */
+  /* margin-right: 40%; */
+  /* align-items: center; */
+}
+
+@keyframes angular {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 250px);
+  }
+}
+
+.angular {
+  display: flex;
+  width: 93px;
+  height: 93px;
+  /* top: 75%; */
+  left: 45%;
+  flex-shrink: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  position: absolute;
+  animation: angular 2s forwards ease-in-out;
+}
+
+@keyframes django {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-140px, 0);
+  }
+}
+
+.django {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  top: 42%;
+  /* right: 65%; */
+  background-color: var(--secundary-logo-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: django 2s forwards ease-in-out;
+}
+
+@keyframes js {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(130px, 280px);
+  }
+}
+.js {
+  display: flex;
+  background-color: var(--primary-logo-color);
+  /* top: 82%;
+  left: 60%; */
+  height: 103px;
+  width: 103px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  animation: js 2s 2s forwards ease-in-out;
+}
+
+@keyframes node {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-150px, 250px);
+  }
+}
+.node {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  /* top: 71%;
+  right: 60%; */
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--primary-logo-color);
+  animation: node 2s 2s forwards ease-in-out;
+}
+
+@keyframes php {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(220px, 150px);
+  }
+}
+.php {
+  display: flex;
+  width: 176px;
+  height: 176px;
+  top: 40%;
+  /* top: 60%;
+  left: 68%; */
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-logo-color);
+  position: absolute;
+  animation: php 2s 2s forwards ease-in-out;
+}
+
+@keyframes python {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, -150px);
+  }
+}
+
+.python {
+  display: flex;
+  width: 93px;
+  height: 93px;
+  /* top: 25%; */
+  left: 50%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  position: absolute;
+  animation: python 2s forwards ease-in-out;
+}
+
+@keyframes react {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(220px, 0);
+  }
+}
+.react {
+  display: flex;
+  width: 108px;
+  height: 108px;
+  top: 43%;
+  /* left: 72%; */
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  position: absolute;
+  animation: react 2s forwards ease-in-out;
+}
+
+@keyframes ruby {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(200px, -125px);
+  }
+}
+.ruby {
+  display: flex;
+  width: 114px;
+  height: 114px;
+  /* top: 27%;
+  left: 70%; */
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-logo-color);
+  position: absolute;
+  animation: ruby 2s 2s forwards ease-in-out;
+}
+@keyframes vue {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-120px, -190px);
+  }
+}
+.vue {
+  display: flex;
+  width: 194px;
+  height: 194px;
+  top: 40%;
+  /* top: 16%;
+  right: 55%; */
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-logo-color);
+  position: absolute;
+  animation: vue 2s 2s forwards ease-in-out;
+}
+
+@keyframes wordpress {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-230px, 0);
+  }
+}
+.wordpress {
+  display: flex;
+  position: absolute;
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  top: 45%;
+  /* left: 5%; */
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  animation: wordpress 2s forwards ease-in-out;
+}
+.col-right {
+  height: 100vh;
+  width: 50%;
+  left: 50%;
+}
+
+.title {
+  padding-top: 25%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+}
+
+.subtitle {
+  padding-top: 5%;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: #5f5f5f;
+  text-align: center;
+  height: 99px;
+  width: 80%;
+  margin-left: 10%;
+  top: 290px;
+  left: 846px;
+  line-height: normal;
+}
+
+.button {
+  margin-top: 40%;
+  background-color: var(--primary-color);
+  color: white;
+  width: 220px;
+  height: 73px;
+  top: 641px;
+  left: 968px;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  border: none;
+}
+
+.svg-background {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+/* Para que el SVG esté detrás del contenido */
+/* 
+.svg-background svg {
+  width: 100%; 
+   height: auto;
+} */
