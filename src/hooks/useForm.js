@@ -48,8 +48,6 @@ export const useForm = (initialForm, validateForm) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const captchaValue = recaptcha?.();
-
     // Actualizo el estado de los errores
     setErrors(validateForm(form));
 
@@ -59,7 +57,7 @@ export const useForm = (initialForm, validateForm) => {
     // Vuelvo a obtener los errores después de la actualización del estado
     const formErrors = validateForm(form);
 
-    if (Object.keys(formErrors).length === 0 && captchaValue) {
+    if (Object.keys(formErrors).length === 0 && recaptcha == 'success') {
       setLoading(true);
 
       axios

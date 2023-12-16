@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "./../../hooks/useForm";
 import { Alert, Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
 import { RiMailSendLine } from "react-icons/ri";
@@ -52,6 +52,7 @@ const Contact = () => {
   } = useForm(initialForm, validationsForm);
 
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const recaptchaRef = useRef(null);
 
   useEffect(() => {
     if (response) {
@@ -64,13 +65,15 @@ const Contact = () => {
   }, [response]);
 
   const handleRecaptchaLoad = (recaptchaInstance) => {
-    recaptcha(recaptchaInstance);
+    if (recaptchaInstance) {
+      recaptchaInstance.state = 'success'
+      recaptcha(recaptchaInstance.state);
+    }
   };
 
   useEffect(() => {
-    const recaptchaRef = recaptcha?.();
-    console.log('Valor de recaptchaRef:', recaptchaRef);
-  }, [recaptcha]);
+    handleRecaptchaLoad(recaptchaRef.current);
+  }, []);
 
   return (
     <Container fluid className="bg-primary p-5">
@@ -218,7 +221,7 @@ const Contact = () => {
             </Form.Group>
             <ReCAPTCHA 
               sitekey="6LcPFjIpAAAAAGsjEgeUnIcGe1H3aq5iseReUvBB"
-              onLoad={handleRecaptchaLoad}
+              ref={recaptchaRef}
               size="invisible"
             />
             <div className="text-end mt-4">
