@@ -26,9 +26,7 @@ function Cta({
 
     return () => clearTimeout(timeoutId);
   }, []);
-  const handleGifLoad = () => {
-    console.log("GIF cargado");
-  };
+  const handleGifLoad = () => {};
   return (
     <div className="cta ">
       <div className=" div-container">
@@ -88,8 +86,8 @@ function Cta({
         </div>
         <div className="col-sm col-right">
           <div className="div-text">
-            <div className="title">{title}</div>
-            <div className="subtitle">{subtitle}</div>
+            <p className="title">{title}</p>
+            <p className="subtitle">{subtitle}</p>
           </div>
           <div className="div-contact-box">
             <button className="button-contact">Contactanos</button>
