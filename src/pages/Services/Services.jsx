@@ -1,20 +1,20 @@
-import React from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { RiWindowFill } from "react-icons/ri";
-import { FiShoppingCart } from "react-icons/fi";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiMobile4 } from "react-icons/ci";
 import { CgFigma } from "react-icons/cg";
 import { PiDesktopBold } from "react-icons/pi";
+import "./services.css";
 
 const Services = () => {
   return (
     <Container fluid className="bg-white py-5">
-      <Row className="justify-content-center text-center">
+      <Row className="justify-content-center text-center mb-5">
         <Col xs={3} md={2} className="d-flex flex-column justify-content-center" >
           <div className="bg-primary h-3px"></div>
         </Col>
         <Col xs={6} md={7} lg={6} xl={4} className="d-flex flex-column justify-content-center" >
-          <h2 className="text-primary text-uppercase fw-bold">
+          <h2 className="text-primary text-uppercase fw-bolder">
             Servicios que ofrecemos
           </h2>
         </Col>
@@ -23,80 +23,100 @@ const Services = () => {
         </Col>
       </Row>
 
-      <Row className="justify-content-center">
-        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-3">
-          <Card style={{ width: '18rem' }}>
+      <Row className="justify-content-center pt-md-5 pb-md-5">
+        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
+          <Card className="bg-primary" style={{ width: '18rem' }}>
             <div className="card-image text-center">
-              <RiWindowFill size={50} />
+              <RiWindowFill className="icon-cards" size={65} />
             </div>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+            <Card.Body className="d-flex flex-column justify-content-between bg-primary">
+              <Card.Title className="text-uppercase text-center text-white">Desarrollo de Aplicaciones Web a Medida</Card.Title>
+              <Card.Text className="text-white text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ut et massa mi. Aliquam in hendrerit urna.
+                Maecenas vitae mattis tellus.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <div className="text-center">
+                <Button variant="tertiary" className="rounded-pill fw-bolder text-white text-uppercase text-center bg-primary px-5 border-radius btn rounded">Ver Mas</Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-3">
-          <Card style={{ width: '18rem' }}>
+        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
+          <Card className="bg-primary" style={{ width: '18rem' }}>
             <div className="card-image text-center">
-              <FiShoppingCart size={50} />
+              <AiOutlineShoppingCart className="icon-cards" size={65} />
             </div>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+            <Card.Body className="d-flex flex-column justify-content-between bg-primary">
+              <Card.Title className="text-uppercase text-center text-white">Optimización de Rendimiento</Card.Title>
+              <Card.Text className="text-white text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ut et massa mi. Aliquam in hendrerit urna.
+                Maecenas vitae mattis tellus.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <div className="text-center">
+                <Button variant="tertiary" className="rounded-pill fw-bolder text-white text-uppercase text-center bg-primary px-5 border-radius btn rounded">Ver Mas</Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-3">
-          <Card style={{ width: '18rem' }}>
+        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
+          <Card className="bg-primary" style={{ width: '18rem' }}>
             <div className="card-image text-center">
-              <CiMobile4 size={50} />
+              <CiMobile4 className="icon-cards" size={65} />
             </div>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+            <Card.Body className="d-flex flex-column justify-content-between bg-primary">
+              <Card.Title className="text-uppercase text-center text-white">Desarrollo de aplicaciones</Card.Title>
+              <Card.Text className="text-white text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ut et massa mi. Aliquam in hendrerit urna.
+                Maecenas vitae mattis tellus.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <div className="text-center">
+                <Button variant="tertiary" className="rounded-pill fw-bolder text-white text-uppercase text-center bg-primary px-5 border-radius btn rounded">Ver Mas</Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
       </Row>
       
-      <Row className="justify-content-center">
-        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-3">
-          <Card style={{ width: '18rem' }}>
+      <Row className="justify-content-center mt-md-5">
+        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
+          <Card className="bg-primary" style={{ width: '18rem' }}>
             <div className="card-image text-center">
-              <CgFigma size={50} />
+              <CgFigma className="icon-cards" size={65} />
             </div>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+            <Card.Body className="d-flex flex-column justify-content-between bg-primary">
+              <Card.Title className="text-uppercase text-center text-white">Diseños UX/UI</Card.Title>
+              <Card.Text className="text-white text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ut et massa mi. Aliquam in hendrerit urna.
+                Maecenas vitae mattis tellus.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <div className="text-center">
+                <Button variant="tertiary" className="rounded-pill fw-bolder text-white text-uppercase text-center bg-primary px-5 border-radius btn rounded">Ver Mas</Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
 
-        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-3">
-          <Card style={{ width: '18rem' }}>
+        <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
+          <Card className="bg-primary" style={{ width: '18rem' }}>
             <div className="card-image text-center">
-              <PiDesktopBold size={50} />
+              <PiDesktopBold className="icon-cards" size={65} />
             </div>
-            <Card.Body>
-              <Card.Title>Card Title</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of the card's content.
+            <Card.Body className="d-flex flex-column justify-content-between bg-primary">
+              <Card.Title className="text-uppercase text-center text-white">Mantenimiento y Soporte</Card.Title>
+              <Card.Text className="text-white text-center">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Ut et massa mi. Aliquam in hendrerit urna.
+                Maecenas vitae mattis tellus.
               </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <div className="text-center">
+                <Button variant="tertiary" className="rounded-pill fw-bolder text-white text-uppercase text-center bg-primary px-5 border-radius btn rounded">Ver Mas</Button>
+              </div>
             </Card.Body>
           </Card>
         </Col>
