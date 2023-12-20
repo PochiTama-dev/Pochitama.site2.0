@@ -10,6 +10,10 @@ nav {
 	background: linear-gradient(90deg, rgba(184,175,213,0) 0%, rgba(180,170,212,1) 55%);
 }
 
+.nav-active{
+	z-index: 100;
+}
+
 .logo {
 	color: #fff;
 	text-transform: capitalize;

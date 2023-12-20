@@ -5,10 +5,16 @@ import { CiMobile4 } from "react-icons/ci";
 import { CgFigma } from "react-icons/cg";
 import { PiDesktopBold } from "react-icons/pi";
 import "./services.css";
+import Cta from "../../components/cta/Cta";
 
 const Services = () => {
+  const titleCta = "Descubre más sobre nuestros servicios";
+  const subtitleCta =
+    "Crear aplicaciones que marquen la diferencia. Diseño elegante, funcionalidad poderosa y compromiso absoluto con la excelencia.";
   return (
-    <Container fluid className="bg-white py-5">
+    <div>
+      <Cta title={titleCta} subtitle={subtitleCta} />
+      <Container fluid className="bg-white py-5">
       <Row className="justify-content-center text-center mb-5">
         <Col xs={3} md={2} className="d-flex flex-column justify-content-center" >
           <div className="bg-primary h-3px"></div>
@@ -25,7 +31,7 @@ const Services = () => {
 
       <Row className="justify-content-center pt-md-5 pb-md-5">
         <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
-          <Card className="bg-primary" style={{ width: '18rem' }}>
+          <Card className="bg-primary card_hover" style={{ width: '18rem' }}>
             <div className="card-image text-center">
               <RiWindowFill className="icon-cards" size={65} />
             </div>
@@ -44,7 +50,7 @@ const Services = () => {
         </Col>
 
         <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
-          <Card className="bg-primary" style={{ width: '18rem' }}>
+          <Card className="bg-primary card_hover" style={{ width: '18rem' }}>
             <div className="card-image text-center">
               <AiOutlineShoppingCart className="icon-cards" size={65} />
             </div>
@@ -63,7 +69,7 @@ const Services = () => {
         </Col>
 
         <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
-          <Card className="bg-primary" style={{ width: '18rem' }}>
+          <Card className="bg-primary card_hover" style={{ width: '18rem' }}>
             <div className="card-image text-center">
               <CiMobile4 className="icon-cards" size={65} />
             </div>
@@ -84,7 +90,7 @@ const Services = () => {
       
       <Row className="justify-content-center mt-md-5">
         <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
-          <Card className="bg-primary" style={{ width: '18rem' }}>
+          <Card className="bg-primary card_hover" style={{ width: '18rem' }}>
             <div className="card-image text-center">
               <CgFigma className="icon-cards" size={65} />
             </div>
@@ -103,7 +109,7 @@ const Services = () => {
         </Col>
 
         <Col xs={10} md={4} lg={3} className="d-flex justify-content-center my-5 my-md-3">
-          <Card className="bg-primary" style={{ width: '18rem' }}>
+          <Card className="bg-primary card_hover" style={{ width: '18rem' }}>
             <div className="card-image text-center">
               <PiDesktopBold className="icon-cards" size={65} />
             </div>
@@ -122,6 +128,7 @@ const Services = () => {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 };
 
