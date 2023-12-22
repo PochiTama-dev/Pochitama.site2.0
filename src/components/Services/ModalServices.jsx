@@ -24,7 +24,7 @@ function ModalServices({ show, data, onHide }) {
           }}
         />
         <div className="modal_rectangule_services">
-          <div>
+          <div className="modal_div_title">
             <label className="modal_rectangule_services_title">{data.title}</label>
           </div>
           <div className="modal_logo_services" />
