@@ -1,10 +1,10 @@
-import { useState, useEffect, useRef } from "react";
-import { useForm } from "./../../hooks/useForm";
+import { useEffect, useRef, useState } from "react";
 import { Alert, Button, Col, Container, Form, Row, Spinner } from "react-bootstrap";
-import { RiMailSendLine } from "react-icons/ri";
 import ReCAPTCHA from "react-google-recaptcha";
-import "./contact.css";
+import { RiMailSendLine } from "react-icons/ri";
 import "../../Themes/Base/_variables.css";
+import { useForm } from "./../../hooks/useForm";
+import "./contact.css";
 
 const initialForm = {
   user_name: "",
