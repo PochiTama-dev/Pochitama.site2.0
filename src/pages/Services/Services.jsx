@@ -19,8 +19,14 @@ const Services = () => {
   });
 
   const handleShowModal = () => {
+    console.log('evento');
     setShowModal(!showModal);
   };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
   const handleCLickCard = (data) => {
     const { title, img, description } = data;
 
@@ -232,7 +238,7 @@ const Services = () => {
           </Col>
         </Row>
       </Container>
-      {showModal && <ModalServices show={showModal} data={selectedCardData} />}
+      {showModal && <ModalServices show={showModal} data={selectedCardData} onHide={handleCloseModal} />}
     </div>
   );
 };
