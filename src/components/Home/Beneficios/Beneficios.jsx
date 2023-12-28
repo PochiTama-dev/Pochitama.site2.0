@@ -4,7 +4,7 @@ import ScrollReveal from "scrollreveal";
 import CardBeneficio from "./CardBeneficio";
 
 import gatito from "../../../assets/images/gatito.png";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const listaBeneficios = [
   {
@@ -56,13 +56,16 @@ const listaBeneficios = [
 ];
 
 const Beneficios = () => {
+
+  const imageCatRef = useRef(null);
+
   useEffect(() => {
     listaBeneficios.forEach((beneficio, index) => {
       ScrollReveal().reveal(`#beneficio${index}`, {
         delay: 500,
-        duration: 1000,
+        duration: 2000,
         origin: `${beneficio.alignEnd ? "right" : "left"}`,
-        distance: "1000px",
+        distance: "50%",
         opacity: 0,
       });
     });
@@ -74,11 +77,43 @@ const Beneficios = () => {
       distance: "200px",
       opacity: 1,
     });
+
+    const imageCat = document.getElementById('imageCat');
+    const containerHomeBeneficios = document.getElementById('containerHomeBeneficios');
+
+    // Ajusta la posición inicial de la imagen sobre el contenedor
+    imageCat.style.position = 'absolute';
+    imageCat.style.top = '50%';
+    imageCat.style.left = '50%';
+    imageCat.style.transform = 'translate(-50%, -50%)';
+
+    // Calcula la posición original de la imagen en relación con el contenedor
+    const originalPosition = containerHomeBeneficios.offsetTop + containerHomeBeneficios.offsetHeight / 2;
+
+    // Maneja el evento de scroll
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+
+      // Calcula la nueva posición de la imagen
+      const newPosition = originalPosition - scrollTop;
+
+      // Ajusta la posición de la imagen sobre el contenedor
+      imageCat.style.top = `${newPosition}px`;
+    };
+
+    // Agrega el listener de scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpia el listener cuando el componente se desmonta
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+
   }, []);
 
   return (
     <>
-      <Container fluid className="bg-primary px-0 pt-7">
+      <Container fluid id="containerHomeBeneficios" className="bg-primary px-0 pt-7" style={{ overflow: 'hidden' }}>
         <Row className="align-items-center mx-0">
           <Col></Col>
           <Col className="bg-white h-3px"></Col>
@@ -115,8 +150,12 @@ const Beneficios = () => {
         ))}
         <Container
           id="imageCat"
+          ref={imageCatRef}
           fluid
           className="px-0 bg-primary bottom--20 px-5 d-flex justify-content-center"
+          style={{
+            position: 'relative', // Cambia la posición a relativa
+          }}
         >
           <Image fluid src={gatito} alt="gatito" />
         </Container>
