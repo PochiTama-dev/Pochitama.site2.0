@@ -1,0 +1,47 @@
+.carousel {
+  cursor: grab;
+  margin-left: 5%;
+  /* margin-right: 5%; */
+}
+.inner-carousel {
+  display: flex;
+  gap: 3%;
+  /* left: -200px; */
+  top: 5vh;
+  width: 90vw;
+  position: absolute;
+}
+.item {
+  color: white;
+  background-color: var(--secundary-color);
+  min-width: 25vw;
+  min-height: 50vh;
+}
+
+.item-text {
+  margin: 5%;
+  pointer-events: none;
+  font-family: "Open Sans-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
+
+.slider {
+  height: 70vh;
+  width: 100%;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.slider-title {
+  color: var(--secundary-color);
+  font-family: "Open Sans-ExtraBold", Helvetica;
+  font-size: 40px;
+  font-weight: 800;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  text-align: center;
+}
