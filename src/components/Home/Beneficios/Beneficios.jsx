@@ -1,10 +1,10 @@
-import { Badge, Col, Container, Image, Row, Stack } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import ScrollReveal from "scrollreveal";
 
 import CardBeneficio from "./CardBeneficio";
 
 import gatito from "../../../assets/images/gatito.png";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const listaBeneficios = [
   {
@@ -56,8 +56,12 @@ const listaBeneficios = [
 ];
 
 const Beneficios = () => {
-
+  const [scrollY, setScrollY] = useState(0);
   const imageCatRef = useRef(null);
+
+  const handleScroll = () => {
+    setScrollY(window.scrollY);
+  };
 
   useEffect(() => {
     listaBeneficios.forEach((beneficio, index) => {
@@ -70,41 +74,15 @@ const Beneficios = () => {
       });
     });
 
-    ScrollReveal().reveal("#imageCat", {
+    /* ScrollReveal().reveal("#imageCat", {
       delay: 200,
       duration: 5000,
       origin: "bottom",
       distance: "200px",
       opacity: 1,
-    });
+    }); */
 
-    const imageCat = document.getElementById('imageCat');
-    const containerHomeBeneficios = document.getElementById('containerHomeBeneficios');
-
-    // Ajusta la posición inicial de la imagen sobre el contenedor
-    imageCat.style.position = 'absolute';
-    imageCat.style.top = '50%';
-    imageCat.style.left = '50%';
-    imageCat.style.transform = 'translate(-50%, -50%)';
-
-    // Calcula la posición original de la imagen en relación con el contenedor
-    const originalPosition = containerHomeBeneficios.offsetTop + containerHomeBeneficios.offsetHeight / 2;
-
-    // Maneja el evento de scroll
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-
-      // Calcula la nueva posición de la imagen
-      const newPosition = originalPosition - scrollTop;
-
-      // Ajusta la posición de la imagen sobre el contenedor
-      imageCat.style.top = `${newPosition}px`;
-    };
-
-    // Agrega el listener de scroll
     window.addEventListener('scroll', handleScroll);
-
-    // Limpia el listener cuando el componente se desmonta
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -113,7 +91,7 @@ const Beneficios = () => {
 
   return (
     <>
-      <Container fluid id="containerHomeBeneficios" className="bg-primary px-0 pt-7" style={{ overflow: 'hidden' }}>
+      <Container fluid id="containerHomeBeneficios" className="bg-primary px-0 pt-7" style={{ overflow: 'hidden', position: 'relative' }}>
         <Row className="align-items-center mx-0">
           <Col></Col>
           <Col className="bg-white h-3px"></Col>
@@ -153,11 +131,8 @@ const Beneficios = () => {
           ref={imageCatRef}
           fluid
           className="px-0 bg-primary bottom--20 px-5 d-flex justify-content-center"
-          style={{
-            position: 'relative', // Cambia la posición a relativa
-          }}
         >
-          <Image fluid src={gatito} alt="gatito" />
+          <Image fluid src={gatito} alt="gatito" style= {{ width: '60%', position: 'absolute', top: `${scrollY - 300}px`, zIndex: '1' }} />
         </Container>
       </Container>
     </>
