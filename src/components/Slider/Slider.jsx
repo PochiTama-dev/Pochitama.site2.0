@@ -2,18 +2,29 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { titleClients, loremIpsum } from "./variables.js";
 import "./slider.css";
+import line from "../../assets/images/Line.png";
 
 function Slider({ title = "¿Que dicen nuestros Clientes?" }) {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
+  const [val, setVal] = useState(0);
 
   useEffect(() => {
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
 
+  const handleNext = () => {
+    let index = val < loremIpsum.length - 1 ? val + 1 : val;
+    setVal(index);
+  };
+
   return (
     <div className="slider">
-      <h1 className="slider-title">{title}</h1>
+      <div className="slider-title-box">
+        <img src={line} alt="line" className="title-line" />
+        <h1 className="slider-title">{title}</h1>
+        <img src={line} alt="line" className="title-line" />
+      </div>
       <motion.div
         ref={carousel}
         className="carousel"
@@ -27,7 +38,9 @@ function Slider({ title = "¿Que dicen nuestros Clientes?" }) {
           {loremIpsum.map((e) => {
             return (
               <motion.div className="item">
+                {/* “ */}
                 <p className="item-text">{e.name}</p>
+                {/* ” */}
               </motion.div>
             );
           })}
