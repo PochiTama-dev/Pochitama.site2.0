@@ -21,9 +21,9 @@ function Slider({ title = "¿Que dicen nuestros Clientes?" }) {
   return (
     <div className="slider">
       <div className="slider-title-box">
-        <img src={line} alt="line" className="title-line" />
+        <img src={line} alt="line" />
         <h1 className="slider-title">{title}</h1>
-        <img src={line} alt="line" className="title-line" />
+        <img src={line} alt="line" />
       </div>
       <motion.div
         ref={carousel}
@@ -35,9 +35,9 @@ function Slider({ title = "¿Que dicen nuestros Clientes?" }) {
           dragConstraints={{ right: 0, left: -width }}
           className="inner-carousel"
         >
-          {loremIpsum.map((e) => {
+          {loremIpsum.map((e, i) => {
             return (
-              <motion.div className="item">
+              <motion.div className="item" key={i}>
                 {/* “ */}
                 <p className="item-text">{e.name}</p>
                 {/* ” */}
