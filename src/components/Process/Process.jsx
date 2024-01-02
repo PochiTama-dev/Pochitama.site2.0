@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./process.css";
-import { motion } from "framer-motion";
 import line from "../../assets/images/Line.png";
 import lupa from "../../assets/images/Lupa.png";
 import estrategia from "../../assets/images/estrategia.png";
