@@ -11,7 +11,6 @@
   margin: 0;
   width: 100%;
   text-align: center;
-
   display: flex;
 }
 
@@ -36,12 +35,15 @@
   opacity: 0;
 }
 
-.gif-gato-logo {
+.gif-gato-logo-box {
   height: 30%;
   top: 40%;
   position: absolute;
 }
 
+.start-gif-logo {
+  height: 100%;
+}
 .gif-gato-logo-2 {
   height: 100%;
 }
@@ -76,7 +78,7 @@
   }
 
   to {
-    transform: translate(-140px, 0);
+    transform: translate(-150px, 0);
   }
 }
 
@@ -84,7 +86,7 @@
   display: flex;
   width: 60px;
   height: 60px;
-  top: 42%;
+  top: 41%;
   background-color: var(--secundary-logo-color);
   border-radius: 50%;
   flex-shrink: 0;
@@ -258,7 +260,7 @@
   }
 
   to {
-    transform: translate(-230px, 0);
+    transform: translate(-240px, 0);
   }
 }
 .wordpress {
@@ -317,9 +319,8 @@
 .button-contact {
   background-color: var(--primary-color);
   color: white;
-  width: 220px;
-  height: 73px;
-  left: 968px;
+  width: 25%;
+  height: 20%;
   border-radius: 24px;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
@@ -334,4 +335,48 @@
   height: 100%;
   z-index: -1;
   position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  /* Estilos para pantallas pequeñas */
+  .angular,
+  .django,
+  .js,
+  .node,
+  .php,
+  .python,
+  .react,
+  .ruby,
+  .vue,
+  .wordpress,
+  .static-image-logo:hover,
+  .gif-gato-logo-2 {
+    display: none;
+  }
+
+  .col-left {
+    height: 30%;
+  }
+  .gif-gato-logo-box {
+    width: 90%;
+    height: 70%;
+    top: 15%;
+    left: 5%;
+  }
+  .start-gif-logo {
+    width: 100%;
+  }
+  .static-image-logo {
+    width: 100%;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .button-contact {
+    font-size: 18px;
+    width: 80%;
+  }
 }
