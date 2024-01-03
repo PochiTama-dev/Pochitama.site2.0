@@ -3,7 +3,8 @@ import "./about.css";
 import "../../Themes/Base/_variables.css";
 import colaboradores from "../../colaboradores.json";
 import Cta from "../../components/cta/Cta";
-
+import AboutUsSlider
+ from "../../components/quienes/AboutUsSlider.JSX";
 const About = () => {
   const titleCta = "¿Queres que tu proyecto se expanda?";
   const subtitleCta =
@@ -13,12 +14,18 @@ const About = () => {
       <Cta title={titleCta} subtitle={subtitleCta} />
       <section>
         <section className="aboutSection">
-          <div className="aboutLine1"></div>
+          <div className="aboutLine1"/>
           <h1 className="aboutTitle">QUIÉNES SOMOS</h1>
-          <div className="aboutLine2"></div>
+          <div className="aboutLine2"/>
         </section>
         <section className="equipoPochitama">
-          <div className="colaboradores">
+          {colaboradores.equipo && (
+             <AboutUsSlider
+            equipo = {colaboradores.equipo}
+            />
+          )}
+         
+          {/* <div className="colaboradores">
             {colaboradores.equipo.map((colaborador, index) => (
               <div key={index} className="colaborador">
                 <div className="encabezado">
@@ -30,7 +37,7 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </section>
       </section>
     </div>
