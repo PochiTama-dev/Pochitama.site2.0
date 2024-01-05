@@ -1,10 +1,10 @@
-import { Badge, Col, Container, Image, Row, Stack } from "react-bootstrap";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import ScrollReveal from "scrollreveal";
 
 import CardBeneficio from "./CardBeneficio";
 
 import gatito from "../../../assets/images/gatito.png";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const listaBeneficios = [
   {
@@ -56,29 +56,82 @@ const listaBeneficios = [
 ];
 
 const Beneficios = () => {
+  const [outComponent, setOutComponent] = useState(true);
+  const [inComponent, setInComponent] = useState(false);
+  const [bottom, setBottom] = useState(false);
+
   useEffect(() => {
     listaBeneficios.forEach((beneficio, index) => {
       ScrollReveal().reveal(`#beneficio${index}`, {
         delay: 500,
-        duration: 1000,
+        duration: 2000,
         origin: `${beneficio.alignEnd ? "right" : "left"}`,
-        distance: "1000px",
+        distance: "50%",
         opacity: 0,
       });
     });
 
-    ScrollReveal().reveal("#imageCat", {
-      delay: 200,
-      duration: 5000,
-      origin: "bottom",
-      distance: "200px",
-      opacity: 1,
-    });
+    var containerHomeBeneficios = document.getElementById(
+      "containerHomeBeneficios"
+    );
+    var imageCat = document.getElementById("imageCat");
+
+    function adjustImageCatPosition() {
+      var containerHomeBeneficiosRect =
+        containerHomeBeneficios.getBoundingClientRect();
+
+      if (!bottom && containerHomeBeneficiosRect.bottom <= window.innerHeight) {
+        imageCat.style.position = "relative";
+        imageCat.style.bottom = 0;
+        setInComponent(false);
+        setOutComponent(true);
+        setBottom(true);
+      } else if (
+        !inComponent &&
+        containerHomeBeneficiosRect.top + 150 <= window.innerHeight
+      ) {
+        imageCat.style.position = "fixed";
+        imageCat.style.bottom = "-200px";
+
+        // Forzar el reflow antes de aplicar la animación
+        imageCat.offsetHeight;
+
+        imageCat.style.transition = "bottom .5s, opacity 1s";
+        imageCat.style.bottom = 0;
+        imageCat.style.opacity = 1;
+
+        setInComponent(true);
+        setOutComponent(false);
+      } else if (outComponent) {
+        imageCat.style.position = "fixed";
+        imageCat.style.bottom = "-200px";
+        imageCat.style.transition = "bottom .5s, opacity 1s";
+        imageCat.style.opacity = "";
+        setInComponent(false);
+        setBottom(false);
+      }
+    }
+
+    window.addEventListener("scroll", adjustImageCatPosition);
+    window.addEventListener("resize", adjustImageCatPosition);
+
+    adjustImageCatPosition();
+
+    // Limpieza de eventos al desmontar el componente
+    return () => {
+      window.removeEventListener("scroll", adjustImageCatPosition);
+      window.removeEventListener("resize", adjustImageCatPosition);
+    };
   }, []);
 
   return (
     <>
-      <Container fluid className="bg-primary px-0 pt-7">
+      <Container
+        fluid
+        id="containerHomeBeneficios"
+        className="bg-primary px-0 pt-7"
+        style={{ overflow: "hidden", position: "relative" }}
+      >
         <Row className="align-items-center mx-0">
           <Col></Col>
           <Col className="bg-white h-3px"></Col>
@@ -114,11 +167,18 @@ const Beneficios = () => {
           />
         ))}
         <Container
-          id="imageCat"
           fluid
+          id="containerImageCat"
           className="px-0 bg-primary bottom--20 px-5 d-flex justify-content-center"
+          style={{ height: "210px" }}
         >
-          <Image fluid src={gatito} alt="gatito" />
+          <Image
+            fluid
+            id="imageCat"
+            src={gatito}
+            alt="gatito"
+            style={{ width: "50%" }}
+          />
         </Container>
       </Container>
     </>
