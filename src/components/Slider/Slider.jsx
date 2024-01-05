@@ -1,21 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
+import Slider from "react-slick";
 import { motion } from "framer-motion";
-import { titleClients, loremIpsum } from "./variables.js";
+import { loremIpsum } from "./variables.js";
 import "./slider.css";
 import line from "../../assets/images/Line.png";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-function Slider({ title = "¿Que dicen nuestros Clientes?" }) {
-  const [width, setWidth] = useState(0);
-  const carousel = useRef();
-  const [val, setVal] = useState(0);
+function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
+  const sliderRef = useRef(null);
 
   useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+    if (sliderRef.current) {
+      sliderRef.current.slickGoTo(0);
+    }
   }, []);
 
-  const handleNext = () => {
-    let index = val < loremIpsum.length - 1 ? val + 1 : val;
-    setVal(index);
+  const goToNextSlide = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
   };
 
   return (
@@ -25,64 +29,25 @@ function Slider({ title = "¿Que dicen nuestros Clientes?" }) {
         <h1 className="slider-title">{title}</h1>
         <img src={line} alt="line" />
       </div>
-      <motion.div
-        ref={carousel}
+
+      <Slider
+        ref={sliderRef}
         className="carousel"
-        whileTap={{ cursor: "grabbing" }}
+        infinite={true}
+        speed={500}
+        slidesToShow={3}
+        slidesToScroll={1}
       >
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="inner-carousel"
-        >
-          {loremIpsum.map((e, i) => {
-            return (
-              <motion.div className="item" key={i}>
-                {/* “ */}
-                <p className="item-text">{e.name}</p>
-                {/* ” */}
-              </motion.div>
-            );
-          })}
-          {/* <motion.div className="item">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris.
-            </p>
-          </motion.div>
-          <motion.div className="item">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris.
-            </p>
-          </motion.div>
-          <motion.div className="item">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris.
-            </p>
-          </motion.div>
-          <motion.div className="item">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris.
-            </p>
-          </motion.div>
-          <motion.div className="item">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-              fringilla, mattis ligula consectetur, ultrices mauris.
-            </p>
-          </motion.div> */}
-        </motion.div>
-      </motion.div>
+        {loremIpsum.map((e, i) => (
+          <div key={i} className="card-container">
+            <div className="item" onClick={goToNextSlide}>
+              <p className="item-text">{e.name}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
 
-export default Slider;
+export default CustomSlider;
