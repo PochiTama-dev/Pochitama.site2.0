@@ -1,0 +1,382 @@
+.cta {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.div-container {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+
+.col-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 50%;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.static-image-logo {
+  position: absolute;
+  height: 30%;
+  right: 0%;
+}
+
+.static-image-logo:hover {
+  opacity: 0;
+}
+
+.gif-gato-logo-box {
+  height: 30%;
+  top: 40%;
+  position: absolute;
+}
+
+.start-gif-logo {
+  height: 100%;
+}
+.gif-gato-logo-2 {
+  height: 100%;
+}
+
+@keyframes angular {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, 250px);
+  }
+}
+
+.angular {
+  display: flex;
+  width: 93px;
+  height: 93px;
+  left: 45%;
+  flex-shrink: 0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  position: absolute;
+  animation: angular 1s forwards ease-in-out;
+}
+
+@keyframes django {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-150px, 0);
+  }
+}
+
+.django {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  top: 41%;
+  background-color: var(--secundary-logo-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: django 1s forwards ease-in-out;
+}
+
+@keyframes js {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(130px, 280px);
+  }
+}
+.js {
+  display: flex;
+  background-color: var(--primary-logo-color);
+  height: 103px;
+  width: 103px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  animation: js 1s 1s forwards ease-in-out;
+}
+
+@keyframes node {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-150px, 250px);
+  }
+}
+.node {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--primary-logo-color);
+  animation: node 1s 1s forwards ease-in-out;
+}
+
+@keyframes php {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(220px, 150px);
+  }
+}
+.php {
+  display: flex;
+  width: 176px;
+  height: 176px;
+  top: 40%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-logo-color);
+  position: absolute;
+  animation: php 1s 1s forwards ease-in-out;
+}
+
+@keyframes python {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(0, -150px);
+  }
+}
+
+.python {
+  display: flex;
+  width: 93px;
+  height: 93px;
+  left: 50%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  position: absolute;
+  animation: python 1s forwards ease-in-out;
+}
+
+@keyframes react {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(220px, 0);
+  }
+}
+.react {
+  display: flex;
+  width: 108px;
+  height: 108px;
+  top: 43%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  position: absolute;
+  animation: react 1s forwards ease-in-out;
+}
+
+@keyframes ruby {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(200px, -125px);
+  }
+}
+.ruby {
+  display: flex;
+  width: 114px;
+  height: 114px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-logo-color);
+  position: absolute;
+  animation: ruby 1s 1s forwards ease-in-out;
+}
+@keyframes vue {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-120px, -190px);
+  }
+}
+.vue {
+  display: flex;
+  width: 194px;
+  height: 194px;
+  top: 40%;
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-logo-color);
+  position: absolute;
+  animation: vue 1s 1s forwards ease-in-out;
+}
+
+@keyframes wordpress {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-240px, 0);
+  }
+}
+.wordpress {
+  display: flex;
+  position: absolute;
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  top: 45%;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secundary-logo-color);
+  animation: wordpress 1s forwards ease-in-out;
+}
+.col-right {
+  height: 100vh;
+  width: 50%;
+  left: 50%;
+}
+.div-text {
+  height: 60%;
+}
+
+.title {
+  padding-top: 20%;
+  color: white;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+}
+
+.subtitle {
+  padding-top: 5%;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  color: #5f5f5f;
+  text-align: center;
+  height: auto;
+  width: 80%;
+  margin-left: 10%;
+  top: 290px;
+  left: 846px;
+  line-height: normal;
+}
+
+.div-contact-box {
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-contact {
+  background-color: var(--primary-color);
+  color: white;
+  width: 25%;
+  height: 20%;
+  border-radius: 24px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  border: none;
+}
+
+.svg-background {
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
+@media screen and (max-width: 767px) {
+  /* Estilos para pantallas pequeñas */
+  .angular,
+  .django,
+  .js,
+  .node,
+  .php,
+  .python,
+  .react,
+  .ruby,
+  .vue,
+  .wordpress,
+  .static-image-logo:hover,
+  .gif-gato-logo-2 {
+    display: none;
+  }
+
+  .col-left {
+    height: 30%;
+  }
+  .gif-gato-logo-box {
+    width: 90%;
+    height: 70%;
+    top: 15%;
+    left: 5%;
+  }
+  .start-gif-logo {
+    width: 100%;
+  }
+  .static-image-logo {
+    width: 100%;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .button-contact {
+    font-size: 18px;
+    width: 80%;
+  }
+}

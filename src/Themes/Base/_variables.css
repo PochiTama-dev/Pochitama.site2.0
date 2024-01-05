@@ -1,6 +1,7 @@
-:root{
+:root,
+[data-bs-theme=light] {
     --font-family-body: "Open Sans", sans-serif;
-
+    --bs-primary: #5dFFfd;
     --primary-color: #B8AFD5;
     --secundary-color: #B4AAD4;
     --tertiary-color: #8987C1;
@@ -12,3 +13,4 @@
     --nav-gradient: linear-gradient(90deg, rgba(184,175,213,0) 0%, rgba(180,170,212,1) 55%);
 
 }
+
