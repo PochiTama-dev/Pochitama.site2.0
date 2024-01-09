@@ -3,13 +3,13 @@ import "./about.css";
 import "../../Themes/Base/_variables.css";
 import colaboradores from "../../colaboradores.json";
 import Cta from "../../components/cta/Cta";
-import AboutUsSlider from "../../components/quienes/AboutUsSlider.jsx";
+import AboutUsSlider from "../../components/quienes/AboutUsSlider"
 const About = () => {
   const titleCta = "¿Queres que tu proyecto se expanda?";
   const subtitleCta =
     "¡Es posible! \n Nuestros expertos en E-commerce te pueden ayudar.";
 
-    const [equipo, setEquipo] = useState()
+    const [equipo, setEquipo] = useState(colaboradores.equipo)
     useEffect(()=>{
       setEquipo(colaboradores.equipo)
     },[])

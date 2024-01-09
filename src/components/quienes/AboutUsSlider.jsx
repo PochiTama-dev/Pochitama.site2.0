@@ -1,46 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-bootstrap';
+import React from 'react';
+import { Carousel, Container, Row, Col, Image } from 'react-bootstrap';
 
 const AboutUsSlider = ({ equipo }) => {
-  const [index, setIndex] = useState(0);
-  const [sheet, setSheet] = useState([equipo[0],equipo[1],equipo[2]])
+  if (!equipo || equipo.length === 0) {
+    return <p>No hay información de equipo disponible.</p>;
+  }
 
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     setIndex((prevIndex) => (prevIndex + 1 < Math.ceil(equipo.length / 3) ? prevIndex + 1 : 0));
-  //   }, 3000);
+  const itemsPerSlide = 3;
+  const carouselItems = [];
 
-  //   return () => clearInterval(intervalId);
-  // }, [equipo]);
+  for (let index = 0; index < Math.ceil(equipo.length / itemsPerSlide); index++) {
+    const startIndex = index * itemsPerSlide;
+    const endIndex = startIndex + itemsPerSlide;
 
-  useEffect(()=>{
-    setSheet([equipo[index+3], equipo[index+4], equipo[index+5]])
-  },[index])
+    const currentSlice = equipo.slice(startIndex, endIndex);
+    const missingItems = itemsPerSlide - currentSlice.length;
 
-  useEffect(()=>{
-    console.log(sheet[0])
-  },[sheet])
+    // Agregar elementos ficticios si faltan
+    for (let i = 0; i < missingItems; i++) {
+      currentSlice.push({ nombre: 'Proximamente', imagen: 'https://avatars.githubusercontent.com/u/111319458?v=4' });
+    }
+
+    carouselItems.push(
+      <Carousel.Item key={index}>
+        <Row>
+          {currentSlice.map((miembro, idx) => (
+            <Col key={idx} md={4}>
+              <Image src={miembro.imagen} alt={miembro.nombre} roundedCircle fluid />
+              <p>{miembro.nombre}</p>
+            </Col>
+          ))}
+        </Row>
+      </Carousel.Item>
+    );
+  }
 
   return (
-    <Carousel activeIndex={index} onSelect={() => {}}>
-      {equipo &&
-        sheet.map((item, i) => {
-          const groupIndex = Math.floor(i / 3);
-          return groupIndex === index && (
-            <Carousel.Item key={i}>
-              <img src={item[0]?.imagen} alt={item[0]?.nombre} />
-              <img src={item[1]?.imagen} alt={item[1]?.nombre} />
-              <img src={item[2]?.imagen} alt={item[2]?.nombre} />
-              {/* Puedes incluir el siguiente código para mostrar el nombre y área */}
-              {/* <Carousel.Caption>
-                <h3>{miembro.nombre}</h3>
-                <p>{miembro.area}</p>
-              </Carousel.Caption> */}
-            </Carousel.Item>
-          );
-        })}
-    </Carousel>
+    <Container>
+      <Row>
+        <Col>
+          <Carousel indicators={false} interval={null} wrap={false}>
+            {carouselItems}
+          </Carousel>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
 export default AboutUsSlider;
+
+
+
+
+
+
