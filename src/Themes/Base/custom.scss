@@ -222,6 +222,16 @@ $utilities: (
       quaternary: $tertiary,
     )
   ),
+  "text": (
+    property: color,
+    class: text,
+    values: (
+      primary: $secondary,
+      secondary: $primary,
+      tertiary: $tertiary,
+      quaternary: $quaternary,
+    )
+  )
 );
 
 
