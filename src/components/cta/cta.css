@@ -342,7 +342,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  /* Estilos para pantallas pequeñas */
   .angular,
   .django,
   .js,
@@ -365,11 +364,7 @@
     flex-direction: column;
     align-items: center;
   }
-  /* .col-left,
-  .col-right {
-    width: 100%;
-    text-align: center;
-  } */
+
   .col-left,
   .col-right {
     width: 100%;
@@ -382,10 +377,6 @@
     order: 1;
   }
   .gif-gato-logo-box {
-    /* width: 90%;
-    height: 70%;
-    top: 15%;
-    left: 5%; */
     display: none;
   }
   .gif-gato-logo-box-responsive {
@@ -421,8 +412,8 @@
     width: 50%;
   }
   path {
-    transform: translateX(-130px) translateY(-150px); /* Ajusta el valor según sea necesario */
-    animation: wave-animation 5s infinite; /* Ajusta la duración según sea necesario */
+    transform: translateX(-130px) translateY(-150px);
+    animation: wave-animation 5s infinite;
   }
 }
 @keyframes wave-animation {
@@ -438,10 +429,4 @@
       "M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 501.078 1013.93 531.685C1234.77 562.291 1730 531.685 1730 531.685V0H0V531.685Z"
     );
   }
-
-  /* 100% {
-    d: path(
-      "M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 431.931 1013.93 431.931C1234.77 431.931 1730 531.685 1730 531.685V0H0V531.685Z"
-    );
-  } */
 }
