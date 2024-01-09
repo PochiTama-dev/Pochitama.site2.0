@@ -1,38 +1,23 @@
-import React from 'react';
-import './footer.css'
-import miLogo from '../../assets/LogoPochi.png';
-import { BsInstagram, BsTwitter, BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
+import React from "react";
+import "./footer.css";
+import miLogo from "../../assets/images/LogoPochi.png";
+import LinksBox from "./LinksBox";
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-          
-            <div className='section_img'>
-              <a href="/" >
-              <img className='img' src={miLogo} alt='' />
-              </a>
-            </div>
-            <div className='footer-links'>
-              <a href="https://instagram.com/pochitama.dev/" target="_blank" rel="noopener noreferrer" className='sin-enlace'>
-            <BsInstagram/>
-              </a>
-              <a href="https://facebook.com/profile.php?id=100090586969134" target="_blank" rel="noopener noreferrer" className='sin-enlace'>
-            <BsFacebook/>
-              </a>
-              <a href="" target="_blank" rel="noopener noreferrer" className='sin-enlace'>
-            <BsTwitter/>
-              </a>
-              <a href="" target="_blank" rel="noopener noreferrer" className='sin-enlace'>
-            <BsLinkedin/>
-              </a>
-              <a href="https://github.com/PochiTama-dev" target="_blank" rel="noopener noreferrer" className='sin-enlace'>
-            <BsGithub/>
-              </a>
-            </div>
-            <div className='copyright'>
-              <h4>COPYRIGHT © 2020 - 2023 POCHITAMADEVS | TODOS LOS DERECHOS RESERVADOS</h4>
-            </div>
+    <footer className="footer">
+      <div> {/* CONTENEDOR IMAGEN */}
+        <a href="/">
+          <img className="img_footer" src={miLogo} alt="" />
+        </a>
+      </div>
+      <LinksBox/> {/* Caja de links */}
+      <div className="copyright"> {/* CONTENEDOR IMAGEN */}
+        <>
+          COPYRIGHT © 2020 - 2023 POCHITAMADEVS | TODOS LOS DERECHOS RESERVADOS
+        </>
+      </div>
     </footer>
-  )
-}
+  );
+};
 export default Footer;

@@ -10,6 +10,10 @@ nav {
 	background: linear-gradient(90deg, rgba(184,175,213,0) 0%, rgba(180,170,212,1) 55%);
 }
 
+.nav-active{
+	z-index: 100;
+}
+
 .logo {
 	color: #fff;
 	text-transform: capitalize;
@@ -38,7 +42,7 @@ nav {
 }
 
 .menu a {
-	color: #fff;
+	color: #8987C1;
 	text-decoration: none;
 	font-size: 15px;
 	padding: 30px;
@@ -74,16 +78,20 @@ nav {
 		overflow-x: hidden;
 	}
 
+	body .nav-active {
+		overflow: hidden;
+	}
+
 	.menu {
-		position: absolute;
-		right: -100%;
+		display: none;
+	  }
+	
+	.menu {
+		position: fixed;
+		right: 0;
 		height: 90vh;
 		top: 10vh;
-		background-color: #000;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
+		background-color: #eeecec;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -95,10 +103,15 @@ nav {
 	.bar {
 		display: block;
 	}
-}
 
-.nav-active {
-	transform: translateX(-100%);
+	.menu.nav-active {
+		transform: translateX(0);
+	}
+	
+	.nav-active {
+		transform: translateX(-100%);
+	}
+
 }
 
 .bar-active .bar-1 {

@@ -1,0 +1,150 @@
+.portfolio-container {
+  min-height: 50vh;
+  background: linear-gradient(180deg, #b8afd5 42.05%, #fff 75.42%);
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.portfolio-title {
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+.portfolio-hr {
+  width: 20%;
+  border: 1px solid white;
+  margin: 5px;
+}
+
+.portfolio-p {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 600;
+  max-width: 75%;
+}
+.box-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 10%;
+  padding: 5px;
+}
+
+.portfolio-label {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.portfolio-pildora {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-self: end;
+  padding: 5px;
+  background-color: rgba(137, 135, 193, 0.6);
+  border-radius: 15px;
+  width: 60%;
+}
+.porfolio-proyect-box {
+  display: flex;
+  border-radius: 25px;
+  background: url(/src/assets/images/exampleProyect.png) 50% center / cover
+    no-repeat lightgray;
+  box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px 0px;
+  height: 50vh;
+  width: 20%;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease; /* Agregamos transición para suavizar el efecto */
+}
+
+.porfolio-proyect-box:hover {
+  transform: scale(1.1); /* Agranda el elemento al 110% del tamaño original */
+  box-shadow: rgba(0, 0, 0, 0.4) 30px 30px 30px 0px; /* Aumenta la sombra al hacer hover */
+  filter: brightness(1.2); /* Ilumina el elemento al hacer hover */
+  cursor: pointer;
+}
+.par {
+  margin-top: 20px;
+}
+.impar {
+  margin-bottom: 20px;
+}
+.portfolio-text-box {
+  display: flex;
+  justify-content: center;
+}
+.modal_rectangule {
+  position: absolute;
+  top: 65%;
+  left: 60%;
+  min-width: 40%;
+  width: auto;
+  height: 10%; /* Puedes ajustar la altura del rectángulo según tus necesidades */
+  background-color: #8987c1; /* Color del rectángulo superpuesto */
+  z-index: 1;
+  border-radius: 20px 0px 0px 20px;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  align-items: center;
+}
+.modal_logo {
+  background: url("/src/assets/images/LogoPochi.png");
+  margin-left: 20px;
+  position: relative;
+  width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  background-size: cover;
+  border-radius: 50%; /* Hace la imagen redonda */
+  z-index: 2; /* Asegura que la imagen esté por encima del rectángulo */
+}
+
+.modal_rectangule_title {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.modal_label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.modal_button {
+  cursor: pointer;
+  border-radius: 20px;
+  border-color: #8987c1;
+  background: #8987c1;
+  margin-bottom: 30px;
+  width: 30%;
+  padding: 5px;
+}
+.modal_button_label {
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
