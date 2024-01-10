@@ -16,7 +16,7 @@
 .process-title {
   color: var(--secundary-color);
   font-family: "Open Sans-ExtraBold", Helvetica;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
   left: 0;
   letter-spacing: 0;
@@ -34,7 +34,7 @@
   justify-content: space-around;
   width: 70%;
   height: 50%;
-  margin-top: 2%;
+  margin-top: 3%;
 }
 
 .process-card {
@@ -50,18 +50,20 @@
 .process-card-text {
   text-transform: uppercase;
   font-family: "Open Sans-Bold", Helvetica;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 500;
   margin-top: 15%;
 }
 .process-card-ul {
   text-transform: uppercase;
   font-family: "Open Sans-Bold", Helvetica;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 500;
   margin-top: 10%;
   text-align: left;
   margin-right: 2%;
+  letter-spacing: 0;
+  line-height: 1.5;
 }
 .process-card .front,
 .process-card .back {
