@@ -4,6 +4,7 @@ import Slider from "../../components/Slider/Slider";
 import Projects from '../../components/Projects/Projects';
 import Process from "../../components/Process/Process";
 import Approach from "../../components/Approach/Approach";
+import CustomSlider from "../../components/Slider/Slider";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Beneficios />;
       <Slider />
       <Projects />
+      <CustomSlider />
       <Process />
       <Approach />
     </>
