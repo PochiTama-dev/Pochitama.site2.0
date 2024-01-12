@@ -4,13 +4,14 @@ import Cta from "../../components/cta/Cta";
 import Slider from "../../components/Slider/Slider";
 import Process from "../../components/Process/Process";
 import Approach from "../../components/Approach/Approach";
+import CustomSlider from "../../components/Slider/Slider";
 
 const Home = () => {
   return (
     <>
       <Cta />
       <Beneficios />;
-      <Slider />
+      <CustomSlider />
       <Process />
       <Approach />
     </>

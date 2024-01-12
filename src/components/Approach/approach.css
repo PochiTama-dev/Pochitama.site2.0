@@ -16,7 +16,7 @@
 .approach-title {
   color: var(--secundary-color);
   font-family: "Open Sans-ExtraBold", Helvetica;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 800;
   left: 0;
   letter-spacing: 0;
@@ -28,12 +28,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .approach-cards-box {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  width: 90%;
+  width: 80%;
   height: 50%;
   margin-top: 5%;
 }
@@ -41,23 +43,29 @@
 .approach-card {
   background-color: var(--secundary-color);
   color: white;
-  width: 20vw;
-  height: 35vh;
+  width: 18vw;
+  height: 30vh;
   line-height: normal;
   text-align: center;
   perspective: 1000px;
+  position: relative;
 }
 
 .approach-card-subtitle {
-  margin-top: 40vh;
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 700;
   color: var(--secundary-color);
 }
 
 .approach-card-text {
   text-transform: uppercase;
   font-family: "Open Sans-Bold", Helvetica;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 3%;
 }
 .approach-card .front,
 .approach-card .back {
@@ -80,4 +88,43 @@
 
 .approach-card .back {
   transform: rotateY(180deg);
+}
+
+.approach-image-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .line-left,
+  .line-right {
+    display: none;
+  }
+  .approach {
+    height: auto;
+  }
+  .approach-cards-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .approach-card {
+    background-color: white;
+    width: 60%;
+    height: 30vh;
+    margin: 3%;
+  }
+
+  .approach-image-desktop {
+    display: none;
+  }
+  .approach-image-mobile {
+    display: block;
+  }
+  .approach-card-subtitle {
+    bottom: -15px;
+  }
+  .approach-card-text {
+    color: var(--secundary-color);
+    font-size: 10px;
+  }
 }

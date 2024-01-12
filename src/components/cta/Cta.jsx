@@ -85,10 +85,28 @@ function Cta({
             )}
           </div>
         </div>
-        <div className="col-sm col-right">
+        <div className=" col-right">
           <div className="div-text">
             <p className="title">{title}</p>
             <p className="subtitle">{subtitle}</p>
+          </div>
+          <div className="gif-gato-logo-box-responsive">
+            {gifVisible ? (
+              <img
+                src={gif}
+                alt="gato codeando"
+                className="start-gif-logo-responsive"
+                style={{ height: "100%" }}
+                onLoad={handleGifLoad}
+              />
+            ) : (
+              <img
+                src={logo}
+                alt="logo"
+                className="static-image-logo-responsive"
+                style={{ height: "100%" }}
+              />
+            )}
           </div>
           <div className="div-contact-box">
             <button className="button-contact">Contactanos</button>
