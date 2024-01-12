@@ -45,6 +45,7 @@
   line-height: normal;
   text-align: center;
   perspective: 1000px;
+  position: relative;
 }
 
 .process-card-text {
@@ -59,7 +60,6 @@
   font-family: "Open Sans-Bold", Helvetica;
   font-size: 18px;
   font-weight: 500;
-  margin-top: 10%;
   text-align: left;
   margin-right: 2%;
   letter-spacing: 0;
@@ -73,6 +73,11 @@
   backface-visibility: hidden;
   transition: transform 0.5s;
 }
+.process-card .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .process-card.flipped .front {
   transform: rotateY(180deg);
 }
@@ -83,4 +88,77 @@
 
 .process-card .back {
   transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+  .line-left,
+  .line-right,
+  .process-cards-box {
+    display: none;
+  }
+  .process {
+    height: auto;
+    margin-bottom: 30%;
+  }
+  .process-carousel {
+    margin-top: 10%;
+    width: 70%;
+    margin-left: 0;
+  }
+  .process-card {
+    width: 100%;
+  }
+
+  .process-card img {
+    display: inline;
+  }
+
+  .process .slick-next,
+  .process .slick-next:hover {
+    background-color: var(--secundary-color);
+    right: -15%;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+  }
+  .process .slick-prev,
+  .process .slick-prev:hover {
+    background-color: var(--secundary-color);
+    left: -15%;
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+  }
+
+  .process .slick-next:before,
+  .process .slick-prev:before {
+    border-radius: 100%;
+    margin-top: 10%;
+    color: white;
+    opacity: 1;
+  }
+
+  .process-cards-box-mobile {
+    width: 80%;
+  }
+
+  .process-card-text {
+    font-size: 18px;
+    margin-top: 10%;
+  }
+
+  .process-card-ul {
+    font-size: 14px;
+    margin-right: 5%;
+  }
+}
+@media (min-width: 769px) {
+  .process-carousel {
+    display: none;
+  }
 }

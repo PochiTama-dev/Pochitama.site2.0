@@ -319,7 +319,6 @@
 .button-contact {
   background-color: var(--primary-color);
   color: white;
-  width: 25%;
   height: 20%;
   border-radius: 24px;
   text-transform: uppercase;
