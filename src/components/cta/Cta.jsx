@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./cta.css";
 import logo from "../../assets/images/LogoPochi.png";
 import gif from "../../assets/gif/pochitama-gif.gif";
