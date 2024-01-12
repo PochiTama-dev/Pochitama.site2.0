@@ -78,6 +78,10 @@
   .line-right {
     display: none;
   }
+  .slider {
+    height: auto;
+    margin-bottom: 20%;
+  }
   .slider-title {
     font-size: 24px;
   }
