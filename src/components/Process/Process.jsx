@@ -19,13 +19,30 @@ function Process() {
   const [isFlipped5, setIsFlipped5] = useState(false);
   const [isFlipped6, setIsFlipped6] = useState(false);
 
-  const CustomNextArrow = (props) => (
-    <div {...props} style={{ ...props.style, display: "flex" }} />
-  );
-
-  const CustomPrevArrow = (props) => (
-    <div {...props} style={{ ...props.style, display: "flex" }} />
-  );
+  function CustomNextArrow(props) {
+    const { style, onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{ ...style, display: "flex" }}
+        className="slick-next"
+      >
+        ➡️
+      </div>
+    );
+  }
+  function CustomPrevArrow(props) {
+    const { style, onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{ ...style, display: "flex" }}
+        className="slick-prev"
+      >
+        ⬅️
+      </div>
+    );
+  }
 
   const settings = {
     infinite: true,
