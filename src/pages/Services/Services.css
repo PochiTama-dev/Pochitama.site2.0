@@ -1,3 +1,11 @@
+.container-services {
+  background-color: white;
+}
+
+.text-primary-services {
+  color: var(--primary-color);
+}
+
 .card-image{
     height: 25px;
 }
@@ -106,5 +114,23 @@
   }
   .modal_div_title {
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .container-services {
+    background-color: var(--primary-color);
+  }
+  
+  .text-primary-services {
+    color: white;
+  }
+
+  .container-services .card_hover {
+    border: none;
+  }
+
+  .card-body .card-text {
+    margin-bottom: 2rem;
   }
 }
