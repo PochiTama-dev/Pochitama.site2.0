@@ -29,12 +29,12 @@ const About = () => {
       { screenWidth > 1024 &&
           <section className="why_section">
             <section className="d-flex justify-content-center align-items-center w-100">
-              <div className="aboutLine1"style={{backgroundColor:'white'}}/>
+              <div className="aboutLine1"style={{backgroundColor:'white', margin:"0px"}}/>
               <h1 className="">¿POR QUÉ ELEGIRNOS?</h1>
-              <div className="aboutLine2"/>
+              <div className="aboutLine2" style={{backgroundColor:'white', margin:"0px"}}/>
             </section>
-            <section>
-              <text>
+            <section style={{width:"80%"}}>
+              <text className="why_description">
               Descripción de la cons ultoría destacando los beneficios y la propuesta de valor única de la consultoría en el campo de desarrollo de aplicaciones
               </text>
             </section>

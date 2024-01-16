@@ -106,7 +106,16 @@
     color: white;
     background-color: #B8AFD5;
     width: 100%;
+    min-height: 40vh;
+}
 
+.why_description{
+    color: 'white';
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: '600';
+    text-transform: 'uppercase';
+    word-wrap: 'break-word'
 }
 
 @media only screen and (max-width: 768px){
