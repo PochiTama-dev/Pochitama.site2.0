@@ -11,7 +11,6 @@
   margin: 0;
   width: 100%;
   text-align: center;
-
   display: flex;
 }
 
@@ -36,12 +35,15 @@
   opacity: 0;
 }
 
-.gif-gato-logo {
+.gif-gato-logo-box {
   height: 30%;
   top: 40%;
   position: absolute;
 }
 
+.start-gif-logo {
+  height: 100%;
+}
 .gif-gato-logo-2 {
   height: 100%;
 }
@@ -76,7 +78,7 @@
   }
 
   to {
-    transform: translate(-140px, 0);
+    transform: translate(-150px, 0);
   }
 }
 
@@ -84,7 +86,7 @@
   display: flex;
   width: 60px;
   height: 60px;
-  top: 42%;
+  top: 41%;
   background-color: var(--secundary-logo-color);
   border-radius: 50%;
   flex-shrink: 0;
@@ -258,7 +260,7 @@
   }
 
   to {
-    transform: translate(-230px, 0);
+    transform: translate(-240px, 0);
   }
 }
 .wordpress {
@@ -317,9 +319,7 @@
 .button-contact {
   background-color: var(--primary-color);
   color: white;
-  width: 220px;
-  height: 73px;
-  left: 968px;
+  height: 20%;
   border-radius: 24px;
   text-transform: uppercase;
   font-family: "Open Sans", sans-serif;
@@ -334,4 +334,98 @@
   height: 100%;
   z-index: -1;
   position: absolute;
+}
+
+.gif-gato-logo-box-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .angular,
+  .django,
+  .js,
+  .node,
+  .php,
+  .python,
+  .react,
+  .ruby,
+  .vue,
+  .wordpress,
+  .static-image-logo:hover,
+  .gif-gato-logo-2 {
+    display: none;
+  }
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .div-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-left,
+  .col-right {
+    width: 100%;
+    text-align: center;
+  }
+  .col-left {
+    order: 2;
+  }
+  .col-right {
+    order: 1;
+  }
+  .gif-gato-logo-box {
+    display: none;
+  }
+  .gif-gato-logo-box-responsive {
+    display: block;
+    margin-top: 10%;
+  }
+  .start-gif-logo-responsive {
+    height: 250px;
+    width: 250px;
+  }
+  .start-gif-logo {
+    display: none;
+  }
+  .static-image-logo {
+    display: none;
+  }
+  .div-text {
+    height: auto;
+  }
+  .title {
+    /* padding-top: 10%; */
+    margin-top: 75%;
+    font-size: 24px;
+  }
+  .subtitle {
+    font-size: 18px;
+    width: 80%;
+    margin-left: 10%;
+  }
+  .button-contact {
+    margin-bottom: 25%;
+    font-size: 18px;
+    width: 50%;
+  }
+  path {
+    transform: translateX(-130px) translateY(-150px);
+    animation: wave-animation 5s infinite;
+  }
+}
+@keyframes wave-animation {
+  0%,
+  100% {
+    d: path(
+      "M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 1730 559.956 1730 559.956V0H0V531.685Z"
+    );
+  }
+
+  50% {
+    d: path(
+      "M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 501.078 1013.93 531.685C1234.77 562.291 1730 531.685 1730 531.685V0H0V531.685Z"
+    );
+  }
 }

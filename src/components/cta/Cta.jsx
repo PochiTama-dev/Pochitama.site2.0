@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./cta.css";
 import logo from "../../assets/images/LogoPochi.png";
 import gif from "../../assets/gif/pochitama-gif.gif";
@@ -61,11 +61,12 @@ function Cta({
           <div className="wordpress">
             <img src={wordpress} alt="wordpress" className="" />
           </div>
-          <div className="gif-gato-logo">
+          <div className="gif-gato-logo-box">
             {gifVisible ? (
               <img
                 src={gif}
                 alt="gato codeando"
+                className="start-gif-logo"
                 style={{ height: "100%" }}
                 onLoad={handleGifLoad}
               />
@@ -84,10 +85,28 @@ function Cta({
             )}
           </div>
         </div>
-        <div className="col-sm col-right">
+        <div className=" col-right">
           <div className="div-text">
             <p className="title">{title}</p>
             <p className="subtitle">{subtitle}</p>
+          </div>
+          <div className="gif-gato-logo-box-responsive">
+            {gifVisible ? (
+              <img
+                src={gif}
+                alt="gato codeando"
+                className="start-gif-logo-responsive"
+                style={{ height: "100%" }}
+                onLoad={handleGifLoad}
+              />
+            ) : (
+              <img
+                src={logo}
+                alt="logo"
+                className="static-image-logo-responsive"
+                style={{ height: "100%" }}
+              />
+            )}
           </div>
           <div className="div-contact-box">
             <button className="button-contact">Contactanos</button>
@@ -103,19 +122,18 @@ function Cta({
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
+            d="M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 1730 559.956 1730 559.956V0H0V531.685Z"
             fill="#B8AFD5"
           >
-            {" "}
             <animate
               attributeName="d"
               dur="5s"
               repeatCount="indefinite"
               keyTimes="0;0.33;0.66;1"
-              values="M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z;
-      M0 525.212C0 525.212 218.506 525.212 392.789 525.212C567.071 525.212 704.614 495.538 900.816 525.212C1097.02 554.886 1537 525.212 1537 525.212V0H0V525.212Z;
-      M0 525.212C0 525.212 218.506 525.212 392.789 525.212C567.071 525.212 704.614 426.673 900.816 426.673C1097.02 426.673 1537 525.212 1537 525.212V0H0V525.212Z;
-      M0 525.212C0 525.212 218.506 426.673 392.789 426.673C567.071 426.673 704.614 449.538 900.816 525.212C1097.02 600.886 1537 553.139 1537 553.139V0H0V525.212Z"
+              values="M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 1730 559.956 1730 559.956V0H0V531.685Z;
+              M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 501.078 1013.93 531.685C1234.77 562.291 1730 531.685 1730 531.685V0H0V531.685Z;
+              M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 431.931 1013.93 431.931C1234.77 431.931 1730 531.685 1730 531.685V0H0V531.685Z;
+              M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 1730 559.956 1730 559.956V0H0V531.685Z"
             />
           </path>
         </svg>

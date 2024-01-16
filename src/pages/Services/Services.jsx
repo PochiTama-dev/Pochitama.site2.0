@@ -46,28 +46,28 @@ const Services = () => {
   return (
     <div>
       <Cta title={titleCta} subtitle={subtitleCta} />
-      <Container fluid className="bg-white py-5">
+      <Container fluid className="container-services py-5">
         <Row className="justify-content-center text-center mb-5">
           <Col
-            xs={3}
+            xs={0}
             md={2}
             className="d-flex flex-column justify-content-center"
           >
             <div className="bg-primary h-3px"></div>
           </Col>
           <Col
-            xs={6}
+            xs={11}
             md={7}
             lg={6}
             xl={4}
             className="d-flex flex-column justify-content-center"
           >
-            <h2 className="text-primary text-uppercase fw-bolder">
+            <h2 className="text-primary-services text-uppercase fw-bolder">
               Servicios que ofrecemos
             </h2>
           </Col>
           <Col
-            xs={3}
+            xs={0}
             md={2}
             className="d-flex flex-column justify-content-center"
           >
