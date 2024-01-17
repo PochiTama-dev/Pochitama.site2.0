@@ -7,6 +7,7 @@ import desarrollo from "../../assets/images/desarrollo-a-medida.png";
 import mantenimiento from "../../assets/images/mantenimiento.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 function OurServices() {
   const servicesSliderRef = useRef(null);
@@ -95,9 +96,11 @@ function OurServices() {
         ))}
       </Slider>
       <div className="services-button-box">
-        <button className="services-button">
-          Descubri mas sobre nuestros servicios
-        </button>
+        <Link to="/servicios">
+          <button className="rounded-pill fw-bolder text-white text-uppercase text-center bg-primary px-5 border-radius btn rounded">
+            Descubri mas sobre nuestros servicios
+          </button>
+        </Link>
       </div>
     </div>
   );
