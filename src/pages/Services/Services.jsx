@@ -5,7 +5,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiMobile4 } from "react-icons/ci";
 import { CgFigma } from "react-icons/cg";
 import { PiDesktopBold } from "react-icons/pi";
-import "./services.css";
+//import "./Services.css";
 import Cta from "../../components/cta/Cta";
 import ModalServices from "../../components/Services/ModalServices";
 import { loreIpsum, dataCardWeb, dataCardSoftware, dataCardApps, dataCardUXUI, dataCardECommerce } from "./variables";
