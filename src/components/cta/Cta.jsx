@@ -12,6 +12,7 @@ import react from "../../assets/images/react.png";
 import ruby from "../../assets/images/ruby.png";
 import vue from "../../assets/images/Vue.png";
 import wordpress from "../../assets/images/Wordpress.png";
+import { Link } from "react-router-dom";
 
 function Cta({
   title = "¿Tenes un proyecto?",
@@ -108,9 +109,11 @@ function Cta({
               />
             )}
           </div>
-          <div className="div-contact-box">
+          {/* <div > */}
+          <Link className="div-contact-box" to="/contacto">
             <button className="button-contact">Contactanos</button>
-          </div>
+          </Link>
+          {/* </div> */}
         </div>
       </div>
       <div className="svg-background">
