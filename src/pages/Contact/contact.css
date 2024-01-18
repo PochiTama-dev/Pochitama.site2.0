@@ -16,11 +16,11 @@
 }
   
 .container-watermark .watermark-image {
-    opacity: 0.1;
+    opacity: 0.5;
     height: auto;
     margin-right: 5rem;
     max-width: none;
-    transform: scale(1.4);
+    transform: scale(1.8);
 }
 
 @media screen and (max-width: 768px) {
