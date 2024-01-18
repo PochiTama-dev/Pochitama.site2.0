@@ -120,6 +120,9 @@ const Beneficios = () => {
           setInComponent(false);
           setBottom(false);
         }
+      } else {
+        imageCat.style.position = "relative";
+        imageCat.style.bottom = 0;
       }
     }
     window.addEventListener("scroll", adjustImageCatPosition);
