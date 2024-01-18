@@ -1,9 +1,14 @@
 import { Col, Container, Image, Row } from "react-bootstrap";
 import ScrollReveal from "scrollreveal";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import CardBeneficio from "./CardBeneficio";
+import SliderBeneficio from "./SliderBeneficio";
 
 import gatito from "../../../assets/images/gatito.png";
+import "./beneficios.css";
 import { useEffect, useState } from "react";
 
 const listaBeneficios = [
@@ -63,8 +68,8 @@ const Beneficios = () => {
   useEffect(() => {
     listaBeneficios.forEach((beneficio, index) => {
       ScrollReveal().reveal(`#beneficio${index}`, {
-        delay: 500,
-        duration: 2000,
+        delay: 250,
+        duration: 1500,
         origin: `${beneficio.alignEnd ? "right" : "left"}`,
         distance: "50%",
         opacity: 0,
@@ -77,41 +82,46 @@ const Beneficios = () => {
     var imageCat = document.getElementById("imageCat");
 
     function adjustImageCatPosition() {
-      var containerHomeBeneficiosRect =
-        containerHomeBeneficios.getBoundingClientRect();
+      /* Se ejecuta solo en tamaños lg */
+      if (window.innerWidth >= 992) {
+        var containerHomeBeneficiosRect =
+          containerHomeBeneficios.getBoundingClientRect();
 
-      if (!bottom && containerHomeBeneficiosRect.bottom <= window.innerHeight) {
-        imageCat.style.position = "relative";
-        imageCat.style.bottom = 0;
-        setInComponent(false);
-        setOutComponent(true);
-        setBottom(true);
-      } else if (
-        !inComponent &&
-        containerHomeBeneficiosRect.top + 150 <= window.innerHeight
-      ) {
-        imageCat.style.position = "fixed";
-        imageCat.style.bottom = "-200px";
+        if (
+          !bottom &&
+          containerHomeBeneficiosRect.bottom <= window.innerHeight
+        ) {
+          imageCat.style.position = "relative";
+          imageCat.style.bottom = 0;
+          setInComponent(false);
+          setOutComponent(true);
+          setBottom(true);
+        } else if (
+          !inComponent &&
+          containerHomeBeneficiosRect.top + 150 <= window.innerHeight
+        ) {
+          imageCat.style.position = "fixed";
+          imageCat.style.bottom = "-200px";
 
-        // Forzar el reflow antes de aplicar la animación
-        imageCat.offsetHeight;
+          // Forzar el reflow antes de aplicar la animación
+          imageCat.offsetHeight;
 
-        imageCat.style.transition = "bottom .5s, opacity 1s";
-        imageCat.style.bottom = 0;
-        imageCat.style.opacity = 1;
+          imageCat.style.transition = "bottom .5s, opacity 1s";
+          imageCat.style.bottom = 0;
+          imageCat.style.opacity = 1;
 
-        setInComponent(true);
-        setOutComponent(false);
-      } else if (outComponent) {
-        imageCat.style.position = "fixed";
-        imageCat.style.bottom = "-200px";
-        imageCat.style.transition = "bottom .5s, opacity 1s";
-        imageCat.style.opacity = "";
-        setInComponent(false);
-        setBottom(false);
+          setInComponent(true);
+          setOutComponent(false);
+        } else if (outComponent) {
+          imageCat.style.position = "fixed";
+          imageCat.style.bottom = "-200px";
+          imageCat.style.transition = "bottom .5s, opacity 1s";
+          imageCat.style.opacity = "";
+          setInComponent(false);
+          setBottom(false);
+        }
       }
     }
-
     window.addEventListener("scroll", adjustImageCatPosition);
     window.addEventListener("resize", adjustImageCatPosition);
 
@@ -124,6 +134,40 @@ const Beneficios = () => {
     };
   }, []);
 
+  function CustomNextArrow(props) {
+    const { style, onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{ ...style, display: "flex" }}
+        className="slick-next"
+      >
+        ➡️
+      </div>
+    );
+  }
+  function CustomPrevArrow(props) {
+    const { style, onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{ ...style, display: "flex" }}
+        className="slick-prev"
+      >
+        ⬅️
+      </div>
+    );
+  }
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+  };
+
   return (
     <>
       <Container
@@ -134,20 +178,21 @@ const Beneficios = () => {
       >
         <Row className="align-items-center mx-0">
           <Col></Col>
-          <Col className="bg-white h-3px"></Col>
+          <Col className="d-none d-lg-block bg-white h-3px"></Col>
           <Col
-            xxl={6}
-            xs={5}
+            xxl={10}
+            lg={5}
             className="text-center text-wrap text-uppercase fs-1 fw-bold text-white mx-0"
           >
             ¿por qué elegirnos?
           </Col>
-          <Col className="bg-white h-3px"></Col>
+          <Col className="d-none d-lg-block bg-white h-3px"></Col>
           <Col></Col>
         </Row>
-        <Row className="d-flex justify-content-center align-items-center mt-5 mx-0 mb-10">
+        <Row className="d-none d-lg-flex justify-content-center align-items-center mt-5 mx-0 mb-10">
           <Col
-            xs={5}
+            xs={0}
+            lg={5}
             xxl={9}
             className="fs-5 text-white text-center text-wrap text-uppercase"
           >
@@ -156,28 +201,42 @@ const Beneficios = () => {
             de aplicaciones
           </Col>
         </Row>
-        {listaBeneficios.map((beneficio, index) => (
-          <CardBeneficio
-            key={index}
-            id={`beneficio${index}`}
-            title={beneficio.title}
-            description={beneficio.description}
-            image={beneficio.image}
-            alignEnd={beneficio.alignEnd}
-          />
-        ))}
+        {/* Slider */}
+        <div className="beneficios-slider-container d-flex d-lg-none">
+          <Slider {...settings} className="beneficios-carousel">
+            {listaBeneficios.map((beneficio, index) => (
+              <SliderBeneficio
+                key={index}
+                id={`beneficio${index}`}
+                title={beneficio.title}
+                description={beneficio.description}
+                image={beneficio.image}
+              />
+            ))}
+          </Slider>
+        </div>
+        <div className="d-none d-lg-block">
+          {listaBeneficios.map((beneficio, index) => (
+            <CardBeneficio
+              key={index}
+              id={`beneficio${index}`}
+              title={beneficio.title}
+              description={beneficio.description}
+              image={beneficio.image}
+              alignEnd={beneficio.alignEnd}
+            />
+          ))}
+        </div>
         <Container
           fluid
           id="containerImageCat"
-          className="px-0 bg-primary bottom--20 px-5 d-flex justify-content-center"
-          style={{ height: "210px" }}
+          className="px-0 bg-primary bottom--20 px-5 d-flex justify-content-center containerImageCat"
         >
           <Image
             fluid
             id="imageCat"
             src={gatito}
             alt="gatito"
-            style={{ width: "50%" }}
           />
         </Container>
       </Container>
