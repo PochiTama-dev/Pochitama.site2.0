@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   useEffect(() => {
 
+    const body = document.querySelector('body');
     const menu = document.querySelector('.bar');
     const nav = document.querySelector('.menu');
     const links = document.querySelectorAll('.menu li a');
@@ -12,11 +13,17 @@ function Header() {
     const handleMenuClick = () => {
       menu.classList.toggle('bar-active');
       nav.classList.toggle('nav-active');
+      if (nav.classList.contains('nav-active')) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = '';
+      }
     };
 
     const closeMenu = () => {
       menu.classList.remove('bar-active');
       nav.classList.remove('nav-active');
+      body.style.overflow = '';
     };
 
     menu.addEventListener('click', handleMenuClick);
@@ -39,7 +46,7 @@ function Header() {
     <header>
       <nav>
         <div className="logo">
-          <h5>Pochitama.dev</h5>
+        <Link to= "/" ><h5>Pochitama.dev</h5></Link>
         </div>
         <ul className="menu">
           <li><Link to= "/" >Home</Link></li>

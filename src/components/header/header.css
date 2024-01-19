@@ -23,6 +23,10 @@ nav {
 	letter-spacing: 1px;
 }
 
+.logo a {
+	text-decoration: none;
+}
+
 .logo h5 {
 	color: #8987C1;
 }
@@ -42,7 +46,7 @@ nav {
 }
 
 .menu a {
-	color: #8987C1;
+	color: white;
 	text-decoration: none;
 	font-size: 15px;
 	padding: 30px;
@@ -91,7 +95,7 @@ nav {
 		right: 0;
 		height: 90vh;
 		top: 10vh;
-		background-color: #eeecec;
+		background-color: var(--primary-color);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
