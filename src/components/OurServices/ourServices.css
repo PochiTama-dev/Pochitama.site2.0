@@ -94,6 +94,34 @@
   text-align: center;
 }
 
+.services .slick-next,
+.services .slick-next:hover {
+  background-color: var(--secundary-color);
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+.services .slick-prev,
+.services .slick-prev:hover {
+  background-color: var(--secundary-color);
+  height: 25px;
+  width: 25px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.services .slick-next:before,
+.services .slick-prev:before {
+  border-radius: 100%;
+  margin-top: 15%;
+  color: white;
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .line-left,
   .line-right {
@@ -105,6 +133,10 @@
   }
   .services-title {
     font-size: 24px;
+  }
+  .services-carousel {
+    width: 80%;
+    margin-left: 10%;
   }
   .services-card-container {
     margin-top: 5%;
