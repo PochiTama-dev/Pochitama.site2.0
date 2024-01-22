@@ -24,11 +24,38 @@ function OurServices() {
     }
   };
 
+  function CustomNextArrow(props) {
+    const { style, onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{ ...style, display: "flex" }}
+        className="slick-next"
+      >
+        ➡️
+      </div>
+    );
+  }
+  function CustomPrevArrow(props) {
+    const { style, onClick } = props;
+    return (
+      <div
+        onClick={onClick}
+        style={{ ...style, display: "flex" }}
+        className="slick-prev"
+      >
+        ⬅️
+      </div>
+    );
+  }
+
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
     responsive: [
       {
         breakpoint: 768,
