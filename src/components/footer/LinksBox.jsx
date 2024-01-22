@@ -5,6 +5,8 @@ import {
     BsGithub,
     BsFacebook,
   } from "react-icons/bs";
+  import {FaGithub,
+  }  from "react-icons/fa";
 
 const LinksBox = () =>{
     return(

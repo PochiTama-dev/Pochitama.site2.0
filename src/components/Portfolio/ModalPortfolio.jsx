@@ -9,7 +9,7 @@ function ModalPortfolio({show, data}) {
     return (
         <Modal show={show} centered size='xl'  onClick={handlerEvent}>
             <Modal.Body className='d-flex flex-column p-0'>
-                <div className='' style={{background:`url(${data ? data.img : "/src/assets/images/exampleProyect.png"})`, width:'100%', minHeight:'45vh'}}/>
+                <div className='' style={{background:`url(${data ? data.img : "/src/assets/images/exampleProyect.png"})`, width:'100%', minHeight:'45vh', borderTopLeftRadius:"5px", borderTopRightRadius:"5px"}}/>
                     <div className="modal_rectangule">
                         <div style={{width:'60%'}}>
                             <label className='modal_rectangule_title'>Desarrollo de Pagina Web</label> 
