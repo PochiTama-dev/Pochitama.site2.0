@@ -420,7 +420,7 @@
     font-size: 18px;
     height: 50%;
   }
-  path {
+  .cta path {
     transform: translateX(-130px) translateY(-150px);
     animation: wave-animation 5s infinite;
   }
