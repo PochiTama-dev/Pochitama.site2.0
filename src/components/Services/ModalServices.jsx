@@ -23,11 +23,11 @@ function ModalServices({ show, data, onHide }) {
             minHeight: "45vh",
           }}
         />
-        <div className="modal_rectangule_services">
+        <div className="modal_rectangule">
           <div className="modal_div_title">
-            <label className="modal_rectangule_services_title">{data.title}</label>
+            <label className="modal_rectangule_title">{data.title}</label>
           </div>
-          <div className="modal_logo_services" />
+          <div className="modal_logo" />
         </div>
         <div style={{ width: "100%", padding: "5px ", marginTop: "50px" }}>
           <div>
