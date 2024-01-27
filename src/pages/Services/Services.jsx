@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import { RiWindowFill } from "react-icons/ri";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -8,7 +8,15 @@ import { PiDesktopBold } from "react-icons/pi";
 import "./Services.css";
 import Cta from "../../components/cta/Cta";
 import ModalServices from "../../components/Services/ModalServices";
-import { loreIpsum, dataCardWeb, dataCardSoftware, dataCardApps, dataCardUXUI, dataCardECommerce } from "./variables";
+import {
+  loreIpsum,
+  dataCardWeb,
+  dataCardSoftware,
+  dataCardApps,
+  dataCardUXUI,
+  dataCardECommerce,
+} from "./variables";
+import { useLocation } from "react-router-dom";
 
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
@@ -18,8 +26,21 @@ const Services = () => {
     description: loreIpsum,
   });
 
+  const servicesRef = useRef(null);
+  // ... (resto del código)
+  const { state } = useLocation();
+  const fromOurServices = state?.fromOurServices;
+
+  useEffect(() => {
+    // Verifica si la redirección fue iniciada desde OurServices
+    if (servicesRef.current && fromOurServices) {
+      // Realiza el scroll a la posición de la referencia
+      servicesRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [fromOurServices]);
+
   const handleShowModal = () => {
-    console.log('evento');
+    console.log("evento");
     setShowModal(!showModal);
   };
 
@@ -46,7 +67,7 @@ const Services = () => {
   return (
     <div>
       <Cta title={titleCta} subtitle={subtitleCta} />
-      <Container fluid className="container-services py-5">
+      <Container fluid className="container-services py-5" ref={servicesRef}>
         <Row className="justify-content-center text-center mb-5">
           <Col
             xs={0}
@@ -117,7 +138,11 @@ const Services = () => {
             lg={3}
             className="d-flex justify-content-center my-5 my-md-3"
           >
-            <Card className="bg-primary card_hover" style={{ width: "18rem" }} onClick={() => handleCLickCard(dataCardSoftware)} >
+            <Card
+              className="bg-primary card_hover"
+              style={{ width: "18rem" }}
+              onClick={() => handleCLickCard(dataCardSoftware)}
+            >
               <div className="card-image text-center">
                 <AiOutlineShoppingCart className="icon-cards" size={65} />
               </div>
@@ -148,7 +173,11 @@ const Services = () => {
             lg={3}
             className="d-flex justify-content-center my-5 my-md-3"
           >
-            <Card className="bg-primary card_hover" style={{ width: "18rem" }} onClick={() => handleCLickCard(dataCardApps)}>
+            <Card
+              className="bg-primary card_hover"
+              style={{ width: "18rem" }}
+              onClick={() => handleCLickCard(dataCardApps)}
+            >
               <div className="card-image text-center">
                 <CiMobile4 className="icon-cards" size={65} />
               </div>
@@ -181,7 +210,11 @@ const Services = () => {
             lg={3}
             className="d-flex justify-content-center my-5 my-md-3"
           >
-            <Card className="bg-primary card_hover" style={{ width: "18rem" }} onClick={() => handleCLickCard(dataCardUXUI)}>
+            <Card
+              className="bg-primary card_hover"
+              style={{ width: "18rem" }}
+              onClick={() => handleCLickCard(dataCardUXUI)}
+            >
               <div className="card-image text-center">
                 <CgFigma className="icon-cards" size={65} />
               </div>
@@ -212,7 +245,11 @@ const Services = () => {
             lg={3}
             className="d-flex justify-content-center my-5 my-md-3"
           >
-            <Card className="bg-primary card_hover" style={{ width: "18rem" }} onClick={() => handleCLickCard(dataCardECommerce)}>
+            <Card
+              className="bg-primary card_hover"
+              style={{ width: "18rem" }}
+              onClick={() => handleCLickCard(dataCardECommerce)}
+            >
               <div className="card-image text-center">
                 <PiDesktopBold className="icon-cards" size={65} />
               </div>
@@ -238,7 +275,13 @@ const Services = () => {
           </Col>
         </Row>
       </Container>
-      {showModal && <ModalServices show={showModal} data={selectedCardData} onHide={handleCloseModal} />}
+      {showModal && (
+        <ModalServices
+          show={showModal}
+          data={selectedCardData}
+          onHide={handleCloseModal}
+        />
+      )}
     </div>
   );
 };

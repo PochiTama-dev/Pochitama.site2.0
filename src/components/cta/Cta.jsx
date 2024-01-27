@@ -2,16 +2,16 @@ import { useEffect, useState } from "react";
 import "./cta.css";
 import logo from "../../assets/images/LogoPochi.png";
 import gif from "../../assets/gif/pochitama-gif.gif";
-import angular from "../../assets/images/angular.png";
-import django from "../../assets/images/django.png";
-import js from "../../assets/images/js.png";
-import node from "../../assets/images/node.png";
-import php from "../../assets/images/php.png";
-import python from "../../assets/images/python.png";
-import react from "../../assets/images/react.png";
-import ruby from "../../assets/images/ruby.png";
-import vue from "../../assets/images/Vue.png";
-import wordpress from "../../assets/images/Wordpress.png";
+import angular from "../../assets/images/angular.webp";
+import django from "../../assets/images/django.webp";
+import js from "../../assets/images/js.webp";
+import node from "../../assets/images/node.webp";
+import php from "../../assets/images/php.webp";
+import python from "../../assets/images/python.webp";
+import react from "../../assets/images/react.webp";
+import ruby from "../../assets/images/ruby.webp";
+import vue from "../../assets/images/Vue.webp";
+import wordpress from "../../assets/images/Wordpress.webp";
 import { Link } from "react-router-dom";
 
 function Cta({
@@ -109,11 +109,11 @@ function Cta({
               />
             )}
           </div>
-          {/* <div > */}
-          <Link className="div-contact-box" to="/contacto">
-            <button className="button-contact">Contactanos</button>
-          </Link>
-          {/* </div> */}
+          <div className="div-contact-box">
+            <Link className="button-contact-link" to="/contacto">
+              <button className="button-contact">Contactanos</button>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="svg-background">
