@@ -12,7 +12,7 @@ import {
 import ReCAPTCHA from "react-google-recaptcha";
 import { RiMailSendLine } from "react-icons/ri";
 import { useForm } from "./../../hooks/useForm";
-import logo from "../../assets/images/LogoPochi.png";
+import logo from "../../assets/images/LogoPochi.webp";
 import "./contact.css";
 
 const initialForm = {

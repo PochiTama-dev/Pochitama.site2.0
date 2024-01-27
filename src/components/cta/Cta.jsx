@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
 import "./cta.css";
-import logo from "../../assets/images/LogoPochi.png";
+import logo from "../../assets/images/LogoPochi.webp";
 import gif from "../../assets/gif/pochitama-gif.gif";
-import angular from "../../assets/images/angular.png";
-import django from "../../assets/images/django.png";
-import js from "../../assets/images/js.png";
-import node from "../../assets/images/node.png";
-import php from "../../assets/images/php.png";
-import python from "../../assets/images/python.png";
-import react from "../../assets/images/react.png";
-import ruby from "../../assets/images/ruby.png";
-import vue from "../../assets/images/Vue.png";
-import wordpress from "../../assets/images/Wordpress.png";
+import angular from "../../assets/images/angular.webp";
+import django from "../../assets/images/django.webp";
+import js from "../../assets/images/js.webp";
+import node from "../../assets/images/node.webp";
+import php from "../../assets/images/php.webp";
+import python from "../../assets/images/python.webp";
+import react from "../../assets/images/react.webp";
+import ruby from "../../assets/images/ruby.webp";
+import vue from "../../assets/images/Vue.webp";
+import wordpress from "../../assets/images/Wordpress.webp";
+import gatoAnimado from "../../assets/gif/pochitama-gif.webm";
 import { Link } from "react-router-dom";
 
 function Cta({
@@ -28,6 +29,10 @@ function Cta({
     return () => clearTimeout(timeoutId);
   }, []);
   const handleGifLoad = () => {};
+  const handleVideoLoad = () => {
+    setGifVisible(false);
+  };
+
   return (
     <div className="cta ">
       <div className=" div-container">
@@ -64,13 +69,29 @@ function Cta({
           </div>
           <div className="gif-gato-logo-box">
             {gifVisible ? (
-              <img
-                src={gif}
-                alt="gato codeando"
-                className="start-gif-logo"
-                style={{ height: "100%" }}
-                onLoad={handleGifLoad}
-              />
+              // <img
+              //   src={gif}
+              //   alt="gato codeando"
+              //   className="start-gif-logo"
+              //   style={{ height: "100%" }}
+              //   onLoad={handleGifLoad}
+              // />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                // className="start-gif-logo"
+                className={`start-gif-logo ${gifVisible ? "hidden" : ""}`}
+                onLoadedData={handleVideoLoad}
+              >
+                <source
+                  src={gatoAnimado}
+                  className="start-gif-logo"
+                  type="video/webm"
+                />
+              </video>
             ) : (
               <img
                 src={logo}
@@ -80,9 +101,18 @@ function Cta({
               />
             )}
             {!gifVisible && (
-              <div className="gif-gato-logo-2">
-                <img src={gif} alt="gato codeando" style={{ height: "100%" }} />
-              </div>
+              // <div className="gif-gato-logo-2">
+              //   <img src={gif} alt="gato codeando" style={{ height: "100%" }} />
+              // </div>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="gif-gato-logo-2"
+              >
+                <source src={gatoAnimado} type="video/webm" />
+              </video>
             )}
           </div>
         </div>
@@ -109,11 +139,11 @@ function Cta({
               />
             )}
           </div>
-          {/* <div > */}
-          <Link className="div-contact-box" to="/contacto">
-            <button className="button-contact">Contactanos</button>
-          </Link>
-          {/* </div> */}
+          <div className="div-contact-box">
+            <Link className="button-contact-link" to="/contacto">
+              <button className="button-contact">Contactanos</button>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="svg-background">

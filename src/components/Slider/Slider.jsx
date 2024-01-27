@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import { motion } from "framer-motion";
 import { loremIpsum } from "./variables.js";
 import "./slider.css";
-import line from "../../assets/images/Line.png";
+import line from "../../assets/images/Line.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "../../assets/images/LogoPochi.png";
+import logo from "../../assets/images/LogoPochi.webp";
 
 function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
   const sliderRef = useRef(null);

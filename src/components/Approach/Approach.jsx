@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import "./approach.css";
-import line from "../../assets/images/Line.png";
-import heart from "../../assets/images/heart.png";
-import brain from "../../assets/images/brain.png";
-import partnership from "../../assets/images/partnership.png";
-import hands from "../../assets/images/hands.png";
-import heartMobile from "../../assets/images/heart-mobile.png";
-import brainMobile from "../../assets/images/brain-mobile.png";
-import partnershipMobile from "../../assets/images/partnership-mobile.png";
-import handsMobile from "../../assets/images/hands-mobile.png";
+import line from "../../assets/images/Line.webp";
+import heart from "../../assets/images/heart.webp";
+import brain from "../../assets/images/brain.webp";
+import partnership from "../../assets/images/partnership.webp";
+import hands from "../../assets/images/hands.webp";
+import heartMobile from "../../assets/images/heart-mobile.webp";
+import brainMobile from "../../assets/images/brain-mobile.webp";
+import partnershipMobile from "../../assets/images/partnership-mobile.webp";
+import handsMobile from "../../assets/images/hands-mobile.webp";
 
 function Approach() {
   const [isFlipped, setIsFlipped] = useState(false);

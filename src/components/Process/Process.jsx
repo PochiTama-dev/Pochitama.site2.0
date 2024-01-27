@@ -3,13 +3,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./process.css";
-import line from "../../assets/images/Line.png";
-import lupa from "../../assets/images/Lupa.png";
-import estrategia from "../../assets/images/estrategia.png";
-import desarrollo from "../../assets/images/desarrollo.png";
-import pruebas from "../../assets/images/pruebas.png";
-import lanzamiento from "../../assets/images/lanzamiento.png";
-import seguimiento from "../../assets/images/seguimiento.png";
+import line from "../../assets/images/Line.webp";
+import lupa from "../../assets/images/Lupa.webp";
+import estrategia from "../../assets/images/estrategia.webp";
+import desarrollo from "../../assets/images/desarrollo.webp";
+import pruebas from "../../assets/images/pruebas.webp";
+import lanzamiento from "../../assets/images/lanzamiento.webp";
+import seguimiento from "../../assets/images/seguimiento.webp";
 
 function Process() {
   const [isFlipped, setIsFlipped] = useState(false);
