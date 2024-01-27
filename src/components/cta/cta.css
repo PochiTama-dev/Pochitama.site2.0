@@ -6,6 +6,10 @@
   margin: 0;
   padding: 0;
 }
+video {
+  background-color: transparent;
+  border: none;
+}
 
 .div-container {
   margin: 0;
@@ -40,7 +44,13 @@
   top: 40%;
   position: absolute;
 }
+.gif-gato-logo-box:hover .static-image-logo {
+  opacity: 0;
+}
 
+.gif-gato-logo-box:hover .start-gif-logo {
+  display: none;
+}
 .start-gif-logo {
   height: 100%;
 }

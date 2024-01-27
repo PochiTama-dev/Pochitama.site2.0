@@ -1,8 +1,8 @@
 import { Button, Card, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { IoIosPaw } from "react-icons/io";
-import projectImage from "../../assets/proyect-example.png";
-import waveImage from "../../assets/images/wave-project.png";
+import projectImage from "../../assets/images/exampleProyect.webp";
+import waveImage from "../../assets/images/wave-project.webp";
 import "./projects.css";
 
 function Projects() {
@@ -47,7 +47,11 @@ function Projects() {
             <Card className="project_card card_hover">
               <Card.Body>
                 <Row className="d-flex flex-column flex-md-row">
-                  <Col xs={{ order: 2, className: "d-flex" }} md={4} className="order-md-1">
+                  <Col
+                    xs={{ order: 2, className: "d-flex" }}
+                    md={4}
+                    className="order-md-1"
+                  >
                     <p className="text-primary text-uppercase">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
@@ -55,7 +59,11 @@ function Projects() {
                       ultrices mauris.
                     </p>
                   </Col>
-                  <Col xs={{ order: 1, className: "d-flex" }} md={8} className="order-md-2">
+                  <Col
+                    xs={{ order: 1, className: "d-flex" }}
+                    md={8}
+                    className="order-md-2"
+                  >
                     <img
                       src={projectImage}
                       alt="Proyecto 1"

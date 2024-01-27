@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import CardBeneficio from "./CardBeneficio";
 import SliderBeneficio from "./SliderBeneficio";
 
-import gatito from "../../../assets/images/gatito.png";
+import gatito from "../../../assets/images/gatito.webp";
 import "./beneficios.css";
 import { useEffect, useState } from "react";
 
@@ -235,12 +235,7 @@ const Beneficios = () => {
           id="containerImageCat"
           className="px-0 bg-primary bottom--20 px-5 d-flex justify-content-center containerImageCat"
         >
-          <Image
-            fluid
-            id="imageCat"
-            src={gatito}
-            alt="gatito"
-          />
+          <Image fluid id="imageCat" src={gatito} alt="gatito" />
         </Container>
       </Container>
     </>

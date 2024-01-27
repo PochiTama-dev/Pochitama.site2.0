@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./cta.css";
-import logo from "../../assets/images/LogoPochi.png";
+import logo from "../../assets/images/LogoPochi.webp";
 import gif from "../../assets/gif/pochitama-gif.gif";
 import angular from "../../assets/images/angular.webp";
 import django from "../../assets/images/django.webp";
@@ -12,6 +12,7 @@ import react from "../../assets/images/react.webp";
 import ruby from "../../assets/images/ruby.webp";
 import vue from "../../assets/images/Vue.webp";
 import wordpress from "../../assets/images/Wordpress.webp";
+import gatoAnimado from "../../assets/gif/pochitama-gif.webm";
 import { Link } from "react-router-dom";
 
 function Cta({
@@ -28,6 +29,10 @@ function Cta({
     return () => clearTimeout(timeoutId);
   }, []);
   const handleGifLoad = () => {};
+  const handleVideoLoad = () => {
+    setGifVisible(false);
+  };
+
   return (
     <div className="cta ">
       <div className=" div-container">
@@ -64,13 +69,29 @@ function Cta({
           </div>
           <div className="gif-gato-logo-box">
             {gifVisible ? (
-              <img
-                src={gif}
-                alt="gato codeando"
-                className="start-gif-logo"
-                style={{ height: "100%" }}
-                onLoad={handleGifLoad}
-              />
+              // <img
+              //   src={gif}
+              //   alt="gato codeando"
+              //   className="start-gif-logo"
+              //   style={{ height: "100%" }}
+              //   onLoad={handleGifLoad}
+              // />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                // className="start-gif-logo"
+                className={`start-gif-logo ${gifVisible ? "hidden" : ""}`}
+                onLoadedData={handleVideoLoad}
+              >
+                <source
+                  src={gatoAnimado}
+                  className="start-gif-logo"
+                  type="video/webm"
+                />
+              </video>
             ) : (
               <img
                 src={logo}
@@ -80,9 +101,18 @@ function Cta({
               />
             )}
             {!gifVisible && (
-              <div className="gif-gato-logo-2">
-                <img src={gif} alt="gato codeando" style={{ height: "100%" }} />
-              </div>
+              // <div className="gif-gato-logo-2">
+              //   <img src={gif} alt="gato codeando" style={{ height: "100%" }} />
+              // </div>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="gif-gato-logo-2"
+              >
+                <source src={gatoAnimado} type="video/webm" />
+              </video>
             )}
           </div>
         </div>

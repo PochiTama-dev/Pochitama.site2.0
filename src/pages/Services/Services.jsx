@@ -22,7 +22,7 @@ const Services = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedCardData, setSelectedCardData] = useState({
     title: "",
-    img: "exampleProyect.png",
+    img: "exampleProyect.webp",
     description: loreIpsum,
   });
 
