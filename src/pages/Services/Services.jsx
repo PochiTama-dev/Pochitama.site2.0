@@ -27,14 +27,11 @@ const Services = () => {
   });
 
   const servicesRef = useRef(null);
-  // ... (resto del código)
   const { state } = useLocation();
   const fromOurServices = state?.fromOurServices;
 
   useEffect(() => {
-    // Verifica si la redirección fue iniciada desde OurServices
     if (servicesRef.current && fromOurServices) {
-      // Realiza el scroll a la posición de la referencia
       servicesRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [fromOurServices]);

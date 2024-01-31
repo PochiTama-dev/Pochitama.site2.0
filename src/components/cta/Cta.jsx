@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./cta.css";
 import logo from "../../assets/images/LogoPochi.webp";
-import gif from "../../assets/gif/pochitama-gif.gif";
 import angular from "../../assets/images/angular.webp";
 import django from "../../assets/images/django.webp";
 import js from "../../assets/images/js.webp";
@@ -28,10 +27,6 @@ function Cta({
 
     return () => clearTimeout(timeoutId);
   }, []);
-  const handleGifLoad = () => {};
-  const handleVideoLoad = () => {
-    setGifVisible(false);
-  };
 
   return (
     <div className="cta ">
@@ -69,22 +64,13 @@ function Cta({
           </div>
           <div className="gif-gato-logo-box">
             {gifVisible ? (
-              // <img
-              //   src={gif}
-              //   alt="gato codeando"
-              //   className="start-gif-logo"
-              //   style={{ height: "100%" }}
-              //   onLoad={handleGifLoad}
-              // />
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 preload="auto"
-                // className="start-gif-logo"
                 className={`start-gif-logo ${gifVisible ? "hidden" : ""}`}
-                onLoadedData={handleVideoLoad}
               >
                 <source
                   src={gatoAnimado}
@@ -101,9 +87,6 @@ function Cta({
               />
             )}
             {!gifVisible && (
-              // <div className="gif-gato-logo-2">
-              //   <img src={gif} alt="gato codeando" style={{ height: "100%" }} />
-              // </div>
               <video
                 autoPlay
                 loop
@@ -118,18 +101,20 @@ function Cta({
         </div>
         <div className=" col-right">
           <div className="div-text">
-            <p className="title">{title}</p>
-            <p className="subtitle">{subtitle}</p>
+            <h2 className="title">{title}</h2>
+            <h3 className="subtitle">{subtitle}</h3>
           </div>
           <div className="gif-gato-logo-box-responsive">
             {gifVisible ? (
-              <img
-                src={gif}
-                alt="gato codeando"
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
                 className="start-gif-logo-responsive"
-                style={{ height: "100%" }}
-                onLoad={handleGifLoad}
-              />
+              >
+                <source src={gatoAnimado} type="video/webm" />
+              </video>
             ) : (
               <img
                 src={logo}
