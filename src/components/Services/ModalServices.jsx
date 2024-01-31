@@ -14,7 +14,7 @@ function ModalServices({ show, data, onHide }) {
           className=""
           style={{
             background: `url(${
-              data ? data.img : "/src/assets/images/exampleProyect.png"
+              data ? data.img : "/src/assets/images/exampleProyect.webp"
             })`,
             backgroundSize: "cover", // Ajusta el tamaño de la imagen para cubrir completamente el contenedor
             backgroundPosition: "center", // Ajusta la posición de la imagen al centro

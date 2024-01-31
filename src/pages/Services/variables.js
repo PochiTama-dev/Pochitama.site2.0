@@ -4,30 +4,30 @@ export const loreIpsum =
 /* Datos de los modal */
 export const dataCardWeb = {
   title: "Desarrollo de Paginas Web",
-  img: "/src/assets/images/desarrolloPaginasWeb.png",
+  img: "/src/assets/images/desarrolloPaginasWeb.webp",
   description: "Descripción específica para esta tarjeta",
 };
 
 export const dataCardSoftware = {
   title: "Desarrollo de software",
-  img: "/src/assets/images/desarrolloSoftware.png",
+  img: "/src/assets/images/desarrolloSoftware.webp",
   description: "Descripción específica para esta tarjeta",
 };
 
 export const dataCardECommerce = {
   title: "E-Commerce",
-  img: "/src/assets/images/e-commerce.png",
+  img: "/src/assets/images/e-commerce.webp",
   description: "Descripción específica para esta tarjeta",
 };
 
 export const dataCardApps = {
   title: "Desarrollo de aplicaciones",
-  img: "/src/assets/images/desarrolloApps.png",
+  img: "/src/assets/images/desarrolloApps.webp",
   description: "Descripción específica para esta tarjeta",
 };
 
 export const dataCardUXUI = {
   title: "Diseños UX/UI",
-  img: "/src/assets/images/diseñoUXUI.png",
+  img: "/src/assets/images/diseñoUXUI.webp",
   description: "Descripción específica para esta tarjeta",
 };

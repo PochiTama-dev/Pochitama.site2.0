@@ -1,28 +1,28 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import "./ourServices.css";
-import line from "../../assets/images/Line.png";
-import optimizacion from "../../assets/images/optimizacion.png";
-import desarrollo from "../../assets/images/desarrollo-a-medida.png";
-import mantenimiento from "../../assets/images/mantenimiento.png";
+import line from "../../assets/images/line.webp";
+import optimizacion from "../../assets/images/optimizacion.webp";
+import desarrollo from "../../assets/images/desarrollo-a-medida.webp";
+import mantenimiento from "../../assets/images/mantenimiento.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function OurServices() {
   const servicesSliderRef = useRef(null);
+
+  const navigate = useNavigate();
+
+  const handleCLickCard = () => {
+    navigate("/servicios", { state: { fromOurServices: true } });
+  };
 
   useEffect(() => {
     if (servicesSliderRef.current) {
       servicesSliderRef.current.slickGoTo(0);
     }
   }, []);
-
-  const goToNextSlide = () => {
-    if (servicesSliderRef.current) {
-      servicesSliderRef.current.slickNext();
-    }
-  };
 
   function CustomNextArrow(props) {
     const { style, onClick } = props;
@@ -76,10 +76,7 @@ function OurServices() {
       title: "Desarrollo de aplicaciones web a medida",
       image: desarrollo,
     },
-    {
-      title: "Mantenimiento y soporte",
-      image: mantenimiento,
-    },
+    { title: "Mantenimiento y soporte", image: mantenimiento },
     {
       title: "Optimización de rendimiento",
       image: optimizacion,
@@ -109,7 +106,7 @@ function OurServices() {
       >
         {cards.map((e, i) => (
           <div key={i} className="services-card-container">
-            <div className="services-item" onClick={goToNextSlide}>
+            <div className="services-item" onClick={handleCLickCard}>
               <div className="services-item-image-box">
                 <img
                   src={e.image}
