@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { motion } from "framer-motion";
 import { loremIpsum } from "./variables.js";
 import "./slider.css";
 import line from "../../assets/images/Line.webp";

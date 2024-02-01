@@ -313,6 +313,7 @@ video {
   text-align: center;
   height: auto;
   width: 80%;
+  max-width: 80%;
   margin-left: 10%;
   top: 290px;
   left: 846px;
