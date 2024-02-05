@@ -1,6 +1,6 @@
 import { Button, Card, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { IoIosPaw } from "react-icons/io";
+import paw from '../../assets/images/ion--paw.svg'
 import projectImage from "../../assets/images/exampleProyect.webp";
 import waveImage from "../../assets/images/wave-project.webp";
 import "./projects.css";
@@ -128,7 +128,7 @@ function Projects() {
           style={{ width: "100%", height: "20vh" }}
         />
         <div className="paw-icon">
-          <IoIosPaw className="icono" />
+          <img src={paw} alt='aaa' className="paw"/>
         </div>
       </div>
     </div>
