@@ -10,7 +10,7 @@ import {
   Spinner,
 } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
-import { RiMailSendLine } from "react-icons/ri";
+import riMailSendLine from "../../assets/images/ri--mail-send-line.svg"
 import { useForm } from "./../../hooks/useForm";
 import logo from "../../assets/images/LogoPochi.webp";
 import "./contact.css";
@@ -277,7 +277,7 @@ const Contact = () => {
                     className="text-white text-uppercase"
                     type="submit"
                   >
-                    <RiMailSendLine className="me-2 mb-1" size={25} />
+                    <img src={riMailSendLine} className="me-2 mb-1" alt="rimail" sizes={25}/>
                     Enviar formulario
                   </Button>
                 </div>
