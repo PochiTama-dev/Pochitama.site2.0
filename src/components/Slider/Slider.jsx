@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Slider from "react-slick";
 import { loremIpsum } from "./variables.js";
 import "./slider.css";
