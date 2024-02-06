@@ -6,6 +6,9 @@
   margin: 0;
   padding: 0;
 }
+.cta svg {
+  max-width: 100%;
+}
 video {
   background-color: transparent;
   border: none;
@@ -460,7 +463,7 @@ video {
     height: 50%;
   }
   .cta path {
-    transform: translateX(-130px) translateY(-150px);
+    transform: translateX(-130px) translateY(-200px);
     animation: wave-animation 5s infinite;
   }
 }

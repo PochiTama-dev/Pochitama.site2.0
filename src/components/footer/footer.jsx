@@ -10,7 +10,7 @@ const Footer = () => {
         {" "}
         {/* CONTENEDOR IMAGEN */}
         <a href="/">
-          <img className="img_footer" src={miLogo} alt="" />
+          <img className="img_footer" src={miLogo} alt="logo" />
         </a>
       </div>
       <LinksBox /> {/* Caja de links */}
