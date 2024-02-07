@@ -15,7 +15,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <img src={instagram} alt='img' width={50}/>
+                <img src={instagram} alt='img' className="footer-icons"/>
             </a>
             <a
             href="https://facebook.com/profile.php?id=100090586969134"
@@ -23,7 +23,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <img src={facebook} alt='facebook' width={50}/>
+                <img src={facebook} alt='facebook' className="footer-icons"/>
             </a>
             <a
             href=""
@@ -31,7 +31,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <img src={twitter} alt='twitter' width={50}/>
+                <img src={twitter} alt='twitter' className="footer-icons"/>
             </a>
             <a
             href=""
@@ -39,7 +39,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <img src={linkedin} alt='linkedin' width={50}/>
+                <img src={linkedin} alt='linkedin' className="footer-icons"/>
             </a>
             <a
             href="https://github.com/PochiTama-dev"
@@ -47,7 +47,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <img src={github} alt='github' width={50}/>
+                <img src={github} alt='github' className="footer-icons"/>
             </a>
       </div>
     )
