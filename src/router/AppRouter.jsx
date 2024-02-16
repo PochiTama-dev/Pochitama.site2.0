@@ -1,13 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../components/header/Header";
-import Footer from "../components/footer/footer";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const AboutUs = lazy(() => import("../pages/About/About"));
 const Services = lazy(() => import("../pages/Services/Services"));
 const Portfolio = lazy(() => import("../pages/Portfolio/Portfolio"));
 const Contact = lazy(() => import("../pages/Contact/Contact"));
+const Footer = lazy(() => import("../components/footer/Footer"));
 
 const AppRouter = () => (
   <Router>
@@ -20,8 +20,8 @@ const AppRouter = () => (
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contacto" element={<Contact />} />
       </Routes>
+      <Footer />
     </Suspense>
-    <Footer />
   </Router>
 );
 
