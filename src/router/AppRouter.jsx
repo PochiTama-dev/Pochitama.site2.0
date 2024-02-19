@@ -1,5 +1,5 @@
-import React, { Suspense, lazy } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/footer";
 
