@@ -1,10 +1,10 @@
-import {
-    BsInstagram,
-    BsTwitter,
-    BsLinkedin,
-    BsGithub,
-    BsFacebook,
-  } from "react-icons/bs";
+
+import instagram from  "../../assets/images/instagram-icon.svg"
+import facebook from  "../../assets/images/facebook-icon.svg"
+import twitter from  "../../assets/images/twitter-icon.svg"
+import linkedin from  "../../assets/images/linkedin-icon.svg"
+import github from  "../../assets/images/github-icon.svg"
+import './footer.css'
 
 const LinksBox = () =>{
     return(
@@ -15,7 +15,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <BsInstagram />
+                <img src={instagram} alt='img' className="footer-icons"/>
             </a>
             <a
             href="https://facebook.com/profile.php?id=100090586969134"
@@ -23,7 +23,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <BsFacebook />
+                <img src={facebook} alt='facebook' className="footer-icons"/>
             </a>
             <a
             href=""
@@ -31,7 +31,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <BsTwitter />
+                <img src={twitter} alt='twitter' className="footer-icons"/>
             </a>
             <a
             href=""
@@ -39,7 +39,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <BsLinkedin />
+                <img src={linkedin} alt='linkedin' className="footer-icons"/>
             </a>
             <a
             href="https://github.com/PochiTama-dev"
@@ -47,7 +47,7 @@ const LinksBox = () =>{
             rel="noopener noreferrer"
             className="sin-enlace"
             >
-                <BsGithub />
+                <img src={github} alt='github' className="footer-icons"/>
             </a>
       </div>
     )

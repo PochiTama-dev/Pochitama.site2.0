@@ -8,3 +8,23 @@
 .btn-transition {
     transition: background-color 0.8s ease !important;
 }
+
+.container-watermark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.container-watermark .watermark-image {
+    opacity: 0.5;
+    height: auto;
+    margin-right: 5rem;
+    max-width: none;
+    transform: scale(1.8);
+}
+
+@media screen and (max-width: 768px) {
+    .container-watermark {
+        display: none;
+    }
+}

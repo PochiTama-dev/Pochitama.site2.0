@@ -64,6 +64,8 @@
   box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px 0px;
   height: 50vh;
   width: 20%;
+  min-width: 170px;
+  max-width: 270px;
   padding: 10px;
   margin-left: 5px;
   margin-right: 5px;
@@ -71,11 +73,37 @@
 }
 
 .porfolio-proyect-box:hover {
-  transform: scale(1.1); /* Agranda el elemento al 110% del tamaño original */
+  transform: scale(1.05); /* Agranda el elemento al 110% del tamaño original */
   box-shadow: rgba(0, 0, 0, 0.4) 30px 30px 30px 0px; /* Aumenta la sombra al hacer hover */
   filter: brightness(1.2); /* Ilumina el elemento al hacer hover */
   cursor: pointer;
 }
+
+.carousel{
+  width: 40%;
+  padding: 10px;
+  margin: 10px;
+}
+
+.carousel-item.active, .carousel-item-next, .carousel-item-prev{
+  display: flex;
+  justify-content: center;
+}
+.carousel-inner{
+  padding: 10px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  padding: 25px;
+}
+.carousel-control-prev-icon:focus, .carousel-control-next-icon:focus{
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  padding: 25px;
+  opacity: 0;
+}
+
 .par {
   margin-top: 20px;
 }
@@ -88,7 +116,7 @@
 }
 .modal_rectangule {
   position: absolute;
-  top: 65%;
+  top: 61%;
   left: 60%;
   min-width: 40%;
   width: auto;
@@ -102,7 +130,9 @@
   align-items: center;
 }
 .modal_logo {
-  background: url("/src/assets/images/LogoPochi.png");
+  background: url("/src/assets/images/LogoPochi.webp");
+  background-position: center;
+  background-size: cover;
   margin-left: 20px;
   position: relative;
   width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
@@ -147,4 +177,108 @@
   font-weight: 400;
   text-transform: uppercase;
   word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .portfolio-hr {
+    width: 40%;
+  }
+  .portfolio-p {
+    font-size: 16px;
+  }
+  .box-img {
+    width: 30%;
+  }
+  .porfolio-proyect-box {
+    height: auto;
+    min-height: 50vh;
+    width: 45%;
+  }
+  .modal_rectangule {
+    min-width: 70%;
+    left: 0%;
+  }
+  .modal_logo {
+    width: 80px;
+    height: 80px;
+  }
+  .modal_button {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .portfolio-hr {
+    width: 30%;
+  }
+  .portfolio-p {
+    max-width: 90%;
+  }
+  .box-img {
+    width: 20%;
+  }
+  .porfolio-proyect-box {
+    width: 55%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .modal_rectangule {
+    min-width: 80.2%;
+    transform: translateX(-50%);
+  }
+  .modal_logo {
+    width: 100px;
+    height: 100px;
+  }
+  .modal_button {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) and (max-width:990px){
+  .modal_rectangule{
+    top: 53%;
+    left: 40%;
+    min-width: 60%;
+  }
+  .porfolio-proyect-box {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .modal_logo{
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+  }
+  .modal_label{
+    padding-top: 50px;
+  }    
+}
+@media (min-width: 990px) and (max-width:1000px){
+  .modal_rectangule{
+    top: 56%;
+    left: 40%;
+    min-width: 60%;
+  }
+  .modal_logo{
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+  }
+  .modal_label{
+    padding-top: 50px;
+  }
+  .porfolio-proyect-box {
+    width: 45%;
+    margin-left: 0;
+    margin-right: 0;
+  }    
+}
+
+@media (min-width: 1000px) and (max-width:1200px){
+  .modal_logo{
+    width: 120px;
+    height: 120px;
+    margin-left: 0;
+  }  
 }

@@ -1,28 +1,41 @@
 .carousel {
   cursor: grab;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 7.5%;
+  width: 85%;
 }
 
-.card-container {
+.slider-card-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 10%;
+  margin-top: 20%;
+  position: relative;
 }
 
-.item {
+.slider-logo-container {
+  position: absolute;
+  margin-left: 39.3%;
+  height: 80px;
+  transform: translateY(-50%);
+}
+
+.slider-logo {
+  height: 100%;
+  max-width: 80px;
+}
+
+.slider-item {
   color: var(--quaternary-color);
   background-color: var(--secundary-color);
   min-width: 20vw;
   width: 90%;
+  margin-left: 5%;
   min-height: 50vh;
   font-family: "Old Standard TT-Bold", Helvetica;
 }
 
-.item-text {
+.slider-item-text {
   color: white;
-  padding-top: 5%;
+  padding-top: 15%;
   margin-left: 10%;
   width: 80%;
   pointer-events: none;
@@ -58,4 +71,22 @@
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .line-left,
+  .line-right {
+    display: none;
+  }
+  .slider {
+    height: auto;
+    margin-bottom: 20%;
+  }
+  .slider-title {
+    font-size: 24px;
+  }
+  .slider-item-text {
+    font-size: 16px;
+    padding-top: 20%;
+  }
 }

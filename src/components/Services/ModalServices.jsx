@@ -1,4 +1,3 @@
-import React from "react";
 import { Modal } from "react-bootstrap";
 
 function ModalServices({ show, data, onHide }) {
@@ -15,7 +14,7 @@ function ModalServices({ show, data, onHide }) {
           className=""
           style={{
             background: `url(${
-              data ? data.img : "/src/assets/images/exampleProyect.png"
+              data ? data.img : "/src/assets/images/exampleProyect.webp"
             })`,
             backgroundSize: "cover", // Ajusta el tamaño de la imagen para cubrir completamente el contenedor
             backgroundPosition: "center", // Ajusta la posición de la imagen al centro
@@ -23,11 +22,11 @@ function ModalServices({ show, data, onHide }) {
             minHeight: "45vh",
           }}
         />
-        <div className="modal_rectangule_services">
+        <div className="modal_rectangule">
           <div className="modal_div_title">
-            <label className="modal_rectangule_services_title">{data.title}</label>
+            <label className="modal_rectangule_title">{data.title}</label>
           </div>
-          <div className="modal_logo_services" />
+          <div className="modal_logo" />
         </div>
         <div style={{ width: "100%", padding: "5px ", marginTop: "50px" }}>
           <div>
