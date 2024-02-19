@@ -69,41 +69,41 @@ function Cta({
             <img src={wordpress} alt="wordpress" className="" />
           </Link>
           <div className="gif-gato-logo-box">
-            {gifVisible ? (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className={`start-gif-logo ${gifVisible ? "hidden" : ""}`}
-              >
-                <source
-                  src={gatoAnimado}
-                  className="start-gif-logo"
-                  type="video/webm"
-                />
-              </video>
-            ) : (
-              <img
-                src={logo}
-                alt="logo"
-                className="static-image-logo"
-                style={{ height: "100%" }}
-              />
-            )}
-            {!gifVisible && (
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="gif-gato-logo-2"
-              >
-                <source src={gatoAnimado} type="video/webm" />
-              </video>
-            )}
-          </div>
+  {gifVisible ? (
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      className="start-gif-logo"
+    >
+      <source
+        src={gatoAnimado}
+        type="video/webm"
+      />
+    </video>
+  ) : (
+    <>
+      <img
+        src={logo}
+        alt="logo"
+        className="static-image-logo"
+        style={{ height: "100%" }}
+      />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="gif-gato-logo-2"
+      >
+        <source src={gatoAnimado} type="video/webm" />
+      </video>
+    </>
+  )}
+</div>
+
         </div>
         <div className=" col-right">
           <div className="div-text">
