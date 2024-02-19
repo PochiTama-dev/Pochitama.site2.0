@@ -18,7 +18,7 @@ function ProyectCard({proyectName, position, link}) {
             <div className='portfolio-pildora'>{/*PILDORA PROYECTO*/}
                 <label className='portfolio-label'>{proyectName}</label>
             </div>
-            {show === true && <ModalPortfolio show={show}/>}
+            {show === true && <ModalPortfolio show={show} setShow={setShow}/>}
     </div>
     );
 }

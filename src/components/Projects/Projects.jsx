@@ -1,11 +1,19 @@
+import { useState } from "react";
 import { Button, Card, Container, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import paw from '../../assets/images/ion--paw.svg'
 import projectImage from "../../assets/images/exampleProyect.webp";
 import waveImage from "../../assets/images/wave-project.webp";
 import "./projects.css";
+import ModalPortfolio from "../Portfolio/ModalPortfolio"; 
+import '../../pages/Portfolio/portfolio.css'
 
 function Projects() {
+  const [showModal, setShowModal] = useState(false)
+  
+  const handleShowModal = () =>{
+    setShowModal(!showModal)
+}
   return (
     <div className="project_container">
       <Container fluid className="bg-md-primary py-5">
@@ -44,7 +52,9 @@ function Projects() {
             lg={8}
             className="d-flex flex-column justify-content-center mb-5"
           >
-            <Card className="project_card card_hover">
+            <Card className="project_card card_hover"
+              onClick={handleShowModal}
+            >
               <Card.Body>
                 <Row className="d-flex flex-column flex-md-row">
                   <Col
@@ -106,6 +116,12 @@ function Projects() {
             </Card>
           </Col>
         </Row>
+        {showModal &&
+          <ModalPortfolio
+            show={showModal}
+            setShow={setShowModal} 
+          />
+      }
 
         <Row className="justify-content-center text-center my-5">
           <Col md={6} lg={8}>

@@ -1,20 +1,25 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import { loreIpsum } from "../../pages/Portfolio/variables";
-
-function ModalPortfolio({ show, data }) {
+import urlImg from "../../assets/proyect-example.png";
+import logo from "../../assets/images/LogoPochi.webp";
+function ModalPortfolio({ show, data, setShow }) {
   const handlerEvent = (e) => {
     e.stopPropagation();
   };
+  const handleHide = () =>{
+    setShow(false)
+  }
   return (
-    <Modal show={show} centered size="xl" onClick={handlerEvent}>
+    <Modal show={show} centered size="xl" onClick={handlerEvent} onHide={handleHide}>
       <Modal.Body className="d-flex flex-column p-0">
         <div
-          className=""
           style={{
             background: `url(${
-              data ? data.img : "/src/assets/images/exampleProyect.webp"
+              data ? data.img : urlImg
             })`,
+            backgroundSize:'center',
+            backgroundPosition:'center',
             width: "100%",
             minHeight: "45vh",
             borderTopLeftRadius: "5px",
@@ -27,7 +32,7 @@ function ModalPortfolio({ show, data }) {
               Desarrollo de Pagina Web
             </label>
           </div>
-          <div className="modal_logo" />
+          <div className="modal_logo"/>
         </div>
         <div style={{ width: "100%", padding: "5px ", marginTop: "50px" }}>
           <div>
