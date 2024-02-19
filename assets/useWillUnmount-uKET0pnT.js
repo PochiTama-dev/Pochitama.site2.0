@@ -1,0 +1,1 @@
+import{r as u}from"./index-9C-8gFou.js";function s(){const e=u.useRef(!0),t=u.useRef(()=>e.current);return u.useEffect(()=>(e.current=!0,()=>{e.current=!1}),[]),t.current}function n(e){const t=u.useRef(e);return t.current=e,t}function o(e){const t=n(e);u.useEffect(()=>()=>t.current(),[])}export{o as a,s as u};
