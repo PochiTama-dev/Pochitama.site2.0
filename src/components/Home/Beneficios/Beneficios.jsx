@@ -16,7 +16,7 @@ const listaBeneficios = [
     title: "pasión por tu visión",
     description:
       "En Pochitama.dev, no solo creamos aplicaciones web, sino que también nos enamoramos de tus ideas. Nos emociona cada proyecto como si fuera nuestro, y trabajamos incansablemente para convertir tus sueños en una realidad digital impresionante.",
-    image: "https://avatars.githubusercontent.com/u/111319458?v=4",
+    image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/LogoPochi.webp",
     alignEnd: true,
   },
   {
