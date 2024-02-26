@@ -1,5 +1,5 @@
 import { Modal } from "react-bootstrap";
-
+/* eslint-disable */
 function ModalServices({ show, data, onHide }) {
   return (
     <Modal
