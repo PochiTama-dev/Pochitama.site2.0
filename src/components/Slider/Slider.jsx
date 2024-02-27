@@ -1,11 +1,10 @@
 import { useEffect, useRef } from "react";
 import Slider from "react-slick";
-import { loremIpsum } from "./variables.js";
+import { loremIpsum } from "./variables.js"; // Asegúrate de que loremIpsum incluya ahora objetos con name e img
 import "./slider.css";
 import line from "../../assets/images/Line.webp";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import logo from "../../assets/images/LogoPochi.webp";
 
 function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
   const sliderRef = useRef(null);
@@ -50,7 +49,8 @@ function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
         {loremIpsum.map((e, i) => (
           <div key={i} className="slider-card-container">
             <div className="slider-logo-container">
-              <img src={logo} alt="logo" className="slider-logo" />
+              {/* Aquí se utiliza e.img en lugar de logo */}
+              <img src={e.img} alt="logo" className="slider-logo" />
             </div>
             <div className="slider-item" onClick={goToNextSlide}>
               <p className="slider-item-text">{e.name}</p>
