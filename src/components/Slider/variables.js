@@ -23,22 +23,22 @@ export const loremIpsum = [
   },
   {
     name: "Lavariso transformo la forma en que gestionamos nuestro negocio. Su software CRM/ERP se adapta perfectamente a nuestras necesidades. El soporte técnico es genial",
-    img: "https://instagram.feze12-1.fna.fbcdn.net/v/t51.2885-19/280930348_970996156898849_7470730095545767848_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.feze12-1.fna.fbcdn.net&_nc_cat=105&_nc_ohc=I7-H5HxSahsAX_djEH2&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfCr0Me86PL7b_-PsEhODeEVd7Ss4iYODlP3iTRiJIGtOA&oe=65E2A3E7&_nc_sid=8b3546",
+    img: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Clientes/gruposervice.jpg",
     fir: "Grupo Service"
   },
   {
     name: "La rapidez y eficiencia de nuestra pagina nos ha salvado en más de una ocasión. muy recomendable el servicio de Pochitama.dev ",
-    img: "../../assets/images/Clientes/Abar.png",
+    img: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Clientes/Abar.png",
     fir: "Cerrajeria Abar"
   },
   {
     name: "Ribrox es una herramienta clave en la gestión de nuestras redes. Su software es robusto y fácil de manejar, mejorando nuestra productividad.",
-    img: "../../assets/images/Clientes/incuba4d.jpg",
+    img: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Clientes/incuba4d.jpg",
     fir: "Incuba4D"
   },
   {
     name: "La asesoría en desarrollo web para Kindom.com.ar fue sublime. Captaron perfectamente nuestra esencia, creando un sitio tanto bello como funcional. gracias.",
-    img: "https://kindom.com.ar/wp-content/uploads/2023/11/logo-kindom.jpg",
+    img: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Clientes/kindom.jpg",
     fir: "Kindom Idiomas"
   },
 ];

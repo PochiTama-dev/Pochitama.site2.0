@@ -26,15 +26,7 @@ const LinksBox = () =>{
                 <img src={facebook} alt='facebook' className="footer-icons"/>
             </a>
             <a
-            href=""
-            target="_blank"
-            rel="noopener noreferrer"
-            className="sin-enlace"
-            >
-                <img src={twitter} alt='twitter' className="footer-icons"/>
-            </a>
-            <a
-            href=""
+            href="https://www.facebook.com/profile.php?id=100090586969134"
             target="_blank"
             rel="noopener noreferrer"
             className="sin-enlace"

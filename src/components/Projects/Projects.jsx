@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import paw from '../../assets/images/ion--paw.svg'
 import projectImage from "../../assets/images/exampleProyect.webp";
 import waveImage from "../../assets/images/wave-project.webp";
+import ProyectSlider from "./ProyectSlider/ProyectSlider";
+import ProyectSlider2 from "./ProyectSlider copy/ProyectSlider";
 import "./projects.css";
 import ModalPortfolio from "../Portfolio/ModalPortfolio"; 
 import '../../pages/Portfolio/portfolio.css'
@@ -63,10 +65,7 @@ function Projects() {
                     className="order-md-1"
                   >
                     <p className="text-primary text-uppercase">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-                      sit amet sapien fringilla, mattis ligula consectetur,
-                      ultrices mauris.
+                    Software avanzado de gestión de redes sociales diseñado para facilitar la generación de contenido atractivo, administración eficaz de campañas publicitarias, integración de chatbots inteligentes, organización con un calendario detallado y análisis exhaustivo de competidores, mejorando significativamente la presencia y estrategia digital de las marcas.
                     </p>
                   </Col>
                   <Col
@@ -74,12 +73,7 @@ function Projects() {
                     md={8}
                     className="order-md-2"
                   >
-                    <img
-                      src={projectImage}
-                      alt="Proyecto 1"
-                      className="img-fluid text-center"
-                      style={{ height: "300px", width: "96%" }}
-                    />
+                   <ProyectSlider/>
                   </Col>
                 </Row>
               </Card.Body>
@@ -96,19 +90,12 @@ function Projects() {
               <Card.Body>
                 <Row>
                   <Col md={8}>
-                    <img
-                      src={projectImage}
-                      alt="Proyecto 2"
-                      className="img-fluid text-center"
-                      style={{ height: "300px", width: "96%" }}
-                    />
+                  <ProyectSlider2/>
                   </Col>
                   <Col md={4}>
                     <p className="text-primary text-uppercase">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ut et massa mi. Aliquam in hendrerit urna. Pellentesque
-                      sit amet sapien fringilla, mattis ligula consectetur,
-                      ultrices mauris.
+                     
+Software CRM/ERP especializado para empresas de reparación de electrodomésticos, incluyendo lavarropas, lavavajillas, microondas y aires acondicionados. Ofrece una aplicación contable con API de la AFIP, control de stock por el jefe de taller y una app móvil para la gestión de técnicos en campo o taller. Facilita la interacción directa con clientes a través de WhatsApp, Facebook e Instagram, mejorando la eficiencia operativa y la satisfacción del cliente.
                     </p>
                   </Col>
                 </Row>
