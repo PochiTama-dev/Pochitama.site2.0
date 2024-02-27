@@ -26,6 +26,8 @@ function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000, 
     responsive: [
       {
         breakpoint: 768,
@@ -49,7 +51,6 @@ function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
         {loremIpsum.map((e, i) => (
           <div key={i} className="slider-card-container">
             <div className="slider-logo-container">
-              {/* Aquí se utiliza e.img en lugar de logo */}
               <img src={e.img} alt="logo" className="slider-logo" />
             </div>
             <div className="slider-item" onClick={goToNextSlide}>

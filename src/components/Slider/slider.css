@@ -14,13 +14,14 @@
 .slider-logo-container {
   position: absolute;
   margin-left: 39.3%;
-  height: 80px;
+  height: 80px; /* Tamaño del contenedor del logo */
   transform: translateY(-50%);
 }
 
 .slider-logo {
-  height: 100%;
-  max-width: 80px;
+  height: calc(100% - 2px); /* 2 píxeles más pequeño que el contenedor */
+  max-width: calc(80px - 2px); /* 2 píxeles más pequeño que el contenedor */
+  border-radius: 50%; /* Borde redondeado para hacerlo circular */
 }
 
 .slider-item {
@@ -32,6 +33,9 @@
   min-height: 50vh;
   font-family: "Old Standard TT-Bold", Helvetica;
 }
+
+/* Resto del CSS permanece igual */
+
 
 .slider-item-text {
   color: white;

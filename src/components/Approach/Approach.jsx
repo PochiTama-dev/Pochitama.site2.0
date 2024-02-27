@@ -43,9 +43,7 @@ function Approach() {
             </div>
             <div className="back">
               <p className="approach-card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aliquid ex vero nesciunt, a, quae, neque cum consequuntur quas
-                eius nostrum in ab aliquam. Ullam, illo est.
+              Estamos comprometidos de todo corazón con la creación de productos digitales de primera clase. Nuestra pasión nos impulsa a resolver problemas complejos de la forma más rápida y rentable posible y propulsa nuestra productividad y nuestro alto nivel de exigencia.
               </p>
             </div>
             <h2 className="approach-card-subtitle">Pasion</h2>
@@ -69,9 +67,7 @@ function Approach() {
             </div>
             <div className="back">
               <p className="approach-card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aliquid ex vero nesciunt, a, quae, neque cum consequuntur quas
-                eius nostrum in ab aliquam. Ullam, illo est.
+              Como solucionadores de problemas, creemos en la superación de los límites a través de la innovación persistente. En el núcleo de nuestro ADN se encuentra un enfoque singular en los resultados exitosos por encima de todo lo demás. Esto nos proporciona el ímpetu necesario para superar los límites de la innovación disruptiva.
               </p>
             </div>
             <h2 className="approach-card-subtitle">Innovacion</h2>
@@ -95,9 +91,7 @@ function Approach() {
             </div>
             <div className="back">
               <p className="approach-card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aliquid ex vero nesciunt, a, quae, neque cum consequuntur quas
-                eius nostrum in ab aliquam. Ullam, illo est.
+              Creemos firmemente en el valor de la diversidad. Tener diferentes puntos de vista enriquece nuestros debates y resultados. El respeto no es negociable y nos ayuda a proteger nuestra cultura, en la que la tolerancia, la aceptación y la amabilidad son fundamentales por difíciles que sean las circunstancias.
               </p>
             </div>
             <h2 className="approach-card-subtitle">Respeto</h2>
@@ -121,9 +115,7 @@ function Approach() {
             </div>
             <div className="back">
               <p className="approach-card-text">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Aliquid ex vero nesciunt, a, quae, neque cum consequuntur quas
-                eius nostrum in ab aliquam. Ullam, illo est.
+              Se nos faculta para ser autónomos a fin de poder emprender acciones que tengan un impacto profundamente positivo en la vida de quienes nos rodean.
               </p>
             </div>
             <h2 className="approach-card-subtitle">Disciplina</h2>
