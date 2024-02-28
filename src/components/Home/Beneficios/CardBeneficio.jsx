@@ -6,6 +6,7 @@ export default function CardBeneficio({
   title,
   description,
   image,
+  alt,
   alignEnd,
 }) {
   return (
@@ -30,7 +31,7 @@ export default function CardBeneficio({
             alignEnd ? "top--25 end-3" : "top--25 start-3"
           } mx-0 w-15 pt-xl-0 pt-md-3 position-absolute px-0`}
         >
-          <Image fluid src={image} roundedCircle></Image>
+          <Image fluid src={image} alt={alt} roundedCircle></Image>
         </Container>
         <Container
           className={`${

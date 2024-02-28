@@ -19,7 +19,7 @@ const About = () => {
     };
   }, []);
 
-  const titleCta = "¿Queres que tu proyecto se expanda?";
+  const titleCta = "¿Queres que tu negocio se expanda?";
   const subtitleCta =
     "¡Es posible! \n Nuestros expertos en E-commerce te pueden ayudar.";
 
@@ -35,7 +35,7 @@ const About = () => {
             </section>
             <section style={{width:"80%"}}>
               <text className="why_description">
-              Descripción de la cons ultoría destacando los beneficios y la propuesta de valor única de la consultoría en el campo de desarrollo de aplicaciones
+              Pochitama.dev se especializa en transformar ideas en aplicaciones web y móviles excepcionales, centradas en el usuario y diseñadas para impresionar. Nuestro enfoque se basa en la colaboración estrecha, comunicación transparente y entrega a tiempo, asegurando soluciones de alta calidad que cumplen y superan tus expectativas. Nos enorgullecemos de nuestro soporte continuo, garantizando que tu proyecto se mantenga actualizado y funcional en el cambiante entorno digital. Con un historial probado de éxito, hacemos de tu visión una realidad, impulsando tu negocio hacia adelante. Descubre la diferencia de trabajar con nosotros y lleva tus objetivos digitales al próximo nivel.
               </text>
             </section>
           </section>

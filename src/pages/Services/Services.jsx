@@ -12,11 +12,6 @@ import {
   dataCardECommerce,
 } from "./variables";
 import { useLocation } from "react-router-dom";
-import desarrollo from '../../assets/images/desarrollo.svg'
-import aplicaciones from '../../assets/images/aplicaciones.svg'
-import diseno from '../../assets/images/diseno.svg'
-import soporte from '../../assets/images/soporte.svg'
-import carrito from '../../assets/images/carrito.svg'
 
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
@@ -113,12 +108,10 @@ const Services = () => {
               </div>
               <Card.Body className="d-flex flex-column justify-content-between bg-primary">
                 <Card.Title className="text-uppercase text-center text-white">
-                  Desarrollo de Aplicaciones Web a Medida
+                  Desarrollo de sitios Web a Medida
                 </Card.Title>
                 <Card.Text className="text-white text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Maecenas vitae mattis
-                  tellus.
+                Creación personalizada de sitios web innovadores y funcionales, adaptados a necesidades específicas de cada cliente.
                 </Card.Text>
                 <div className="text-center">
                   <Button
@@ -152,12 +145,11 @@ const Services = () => {
               </div>
               <Card.Body className="d-flex flex-column justify-content-between bg-primary">
                 <Card.Title className="text-uppercase text-center text-white">
-                  Optimización de Rendimiento
+                  Desarrollo de software
                 </Card.Title>
                 <Card.Text className="text-white text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Maecenas vitae mattis
-                  tellus.
+                  
+Mejora y aceleración del rendimiento de sistemas, asegurando eficiencia y rapidez operativa.
                 </Card.Text>
                 <div className="text-center">
                   <Button
@@ -196,9 +188,7 @@ const Services = () => {
                   Desarrollo de aplicaciones
                 </Card.Title>
                 <Card.Text className="text-white text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Maecenas vitae mattis
-                  tellus.
+                Creación de apps móviles innovadoras, diseñadas para satisfacer las necesidades específicas de los usuarios.
                 </Card.Text>
                 <div className="text-center">
                   <Button
@@ -237,9 +227,7 @@ const Services = () => {
                   Diseños UX/UI
                 </Card.Title>
                 <Card.Text className="text-white text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Maecenas vitae mattis
-                  tellus.
+                Diseño intuitivo y atractivo de interfaces, mejorando la experiencia de usuario y la interacción.
                 </Card.Text>
                 <div className="text-center">
                   <Button
@@ -276,9 +264,8 @@ const Services = () => {
                   Mantenimiento y Soporte
                 </Card.Title>
                 <Card.Text className="text-white text-center">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Maecenas vitae mattis
-                  tellus.
+                  
+Asistencia técnica continua y actualización de sistemas para garantizar su óptimo funcionamiento.
                 </Card.Text>
                 <div className="text-center">
                   <Button

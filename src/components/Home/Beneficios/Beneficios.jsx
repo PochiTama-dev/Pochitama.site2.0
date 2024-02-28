@@ -17,12 +17,14 @@ const listaBeneficios = [
     description:
       "En Pochitama.dev, no solo creamos aplicaciones web, sino que también nos enamoramos de tus ideas. Nos emociona cada proyecto como si fuera nuestro, y trabajamos incansablemente para convertir tus sueños en una realidad digital impresionante.",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2043.png",
+    alt:"Equipo de Pochitama.dev creando aplicaciones web con pasión y dedicación para convertir ideas en realidades digitales",
     alignEnd: true,
   },
   {
     title: "Diseño centrado en el usuario",
     description:
       "Sabemos que cada usuario es único. Es por eso que nuestros diseñadores se sumergen en la mente de tus usuarios para crear una experiencia que los haga sonreír. Desde una interfaz intuitiva hasta un diseño atractivo, nos aseguramos de que cada clic sea una delicia.",
+      alt:"Diseñadores de Pochitama.dev enfocados en la creación de experiencias de usuario personalizadas y atractivas, asegurando una navegación intuitiva y diseños que generan sonrisas",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2044.png",
   },
   {
@@ -30,6 +32,7 @@ const listaBeneficios = [
     description:
       "No solo creamos aplicaciones que se ven bien, sino que también funcionan excepcionalmente bien. Nuestro equipo de desarrolladores se enorgullece de escribir un código limpio y eficiente que no solo cumple con tus requisitos, sino que también impulsa resultados tangibles para tu negocio.",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2045.png",
+    alt: "Equipo de desarrolladores de Pochitama.dev programando aplicaciones eficientes y visualmente atractivas, enfocados en generar resultados tangibles para negocios mediante código limpio y eficaz",
     alignEnd: true,
   },
   {
@@ -37,12 +40,14 @@ const listaBeneficios = [
     description:
       "Consideramos a nuestros clientes como socios en cada paso del camino. Mantenemos líneas de comunicación abiertas y transparentes, asegurándonos de que estés al tanto de cada avance y decisión tomada en el proceso de desarrollo. Tu opinión es esencial en la creación de algo realmente extraordinario.",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2046.png",
+    alt:"Equipo de Pochitama.dev colaborando estrechamente con clientes en el desarrollo de proyectos, enfatizando la comunicación abierta y la importancia de la retroalimentación para lograr resultados extraordinarios"
   },
   {
     title: "Entrega a Tiempo, Siempre",
     description:
       "Comprendemos lo crucial que es el tiempo en el mundo digital. Nos comprometemos a cumplir plazos sin comprometer la calidad. Con Pochitama.dev, no solo obtendrás una aplicación excepcional, sino que también la tendrás justo cuando la necesites.",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2047.png",
+    alt:"Pochitama.dev garantiza la entrega puntual de aplicaciones web excepcionales, comprometiéndose con los plazos sin sacrificar calidad, para satisfacer las necesidades temporales de sus clientes",
     alignEnd: true,
   },
   {
@@ -50,12 +55,14 @@ const listaBeneficios = [
     description:
       "Nuestro compromiso no termina cuando tu aplicación está lista. Ofrecemos soporte continuo para resolver cualquier problema, realizar actualizaciones y asegurarnos de que tu aplicación siga funcionando sin problemas en un entorno en constante cambio.",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2048.png",
+    alt:"Equipo de Pochitama.dev brindando soporte continuo y mantenimiento para aplicaciones, asegurando un funcionamiento óptimo y actualizaciones en entornos digitales cambiantes"
   },
   {
     title: "Historias de Éxito Compartidas",
     description:
       "Nada habla mejor de nuestro trabajo que los éxitos de nuestros clientes. Hemos ayudado a diversas empresas a lograr sus objetivos digitales y estamos ansiosos por compartir estas historias contigo. ¡Tu éxito es nuestro éxito!",
     image: "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/beneficios/Ellipse%2049.png",
+    alt: "Casos de éxito de clientes de Pochitama.dev, destacando cómo la colaboración con nuestra empresa ha impulsado objetivos digitales y logros empresariales significativos",
     alignEnd: true,
   },
 ];
@@ -213,6 +220,7 @@ const Beneficios = () => {
                 id={`beneficio${index}`}
                 title={beneficio.title}
                 description={beneficio.description}
+                alt={beneficio.alt}
                 image={beneficio.image}
               />
             ))}
@@ -226,6 +234,7 @@ const Beneficios = () => {
               title={beneficio.title}
               description={beneficio.description}
               image={beneficio.image}
+              alt={beneficio.alt}
               alignEnd={beneficio.alignEnd}
             />
           ))}
