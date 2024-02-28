@@ -1,6 +1,6 @@
 import { Button, Image } from "react-bootstrap";
 
-function SliderBeneficio({ id, title, description, image }) {
+function SliderBeneficio({ id, title, description, image, alt }) {
   return (
     <div className="sliderBeneficio">
       <div className="beneficios-cards-box-mobile">
@@ -9,6 +9,7 @@ function SliderBeneficio({ id, title, description, image }) {
             <Image
               fluid
               src={image}
+              alt={alt}
               style={{ width: "50%" }}
             ></Image>
           </div>

@@ -16,9 +16,9 @@ import logo from "../../assets/images/LogoPochi.webp";
 import "./contact.css";
 
 const initialForm = {
-  user_name: "",
-  user_email: "",
-  message: "",
+  nombre: "",
+  email: "",
+  mensaje: "",
 };
 
 const validationsForm = (emptyForm, fieldName = "", value = "") => {
@@ -29,17 +29,17 @@ const validationsForm = (emptyForm, fieldName = "", value = "") => {
   const validateField = (name, value) => {
     if (!value || !value.trim()) {
       errors[name] = `El campo ${name} es requerido`;
-    } else if (name === "user_name" && !regexName.test(value)) {
+    } else if (name === "nombre" && !regexName.test(value)) {
       errors[name] = `El campo ${name} solo puede contener letras y espacios`;
-    } else if (name === "user_email" && !regexEmail.test(value)) {
+    } else if (name === "email" && !regexEmail.test(value)) {
       errors[name] = `Debes ingresar un E-mail válido`;
     }
   };
 
   if (emptyForm) {
-    validateField("user_name", emptyForm.user_name);
-    validateField("user_email", emptyForm.user_email);
-    validateField("message", emptyForm.message);
+    validateField("nombre", emptyForm.nombre);
+    validateField("email", emptyForm.email);
+    validateField("mensaje", emptyForm.mensaje);
   } else {
     validateField(fieldName, value);
   }
@@ -60,15 +60,15 @@ const Contact = () => {
     handleSubmit,
   } = useForm(initialForm, validationsForm);
 
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showSuccessmensaje, setShowSuccessmensaje] = useState(false);
   const recaptchaRef = useRef(null);
 
   useEffect(() => {
     if (response) {
-      setShowSuccessMessage(true);
+      setShowSuccessmensaje(true);
 
       setTimeout(() => {
-        setShowSuccessMessage(false);
+        setShowSuccessmensaje(false);
       }, 3000);
     }
   }, [response]);
@@ -224,14 +224,14 @@ const Contact = () => {
                   </Form.Label>
                   <Form.Control
                     type="text"
-                    name="user_name"
-                    isInvalid={!!errors.user_name}
+                    name="nombre"
+                    isInvalid={!!errors.nombre}
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    value={form.user_name}
+                    value={form.nombre}
                   />
                   <Form.Control.Feedback type="invalid">
-                    {errors.user_name}
+                    {errors.nombre}
                   </Form.Control.Feedback>
                 </Form.Group>
 
@@ -239,14 +239,14 @@ const Contact = () => {
                   <Form.Label className="text-white">Tu E-mail</Form.Label>
                   <Form.Control
                     type="email"
-                    name="user_email"
-                    isInvalid={!!errors.user_email}
+                    name="email"
+                    isInvalid={!!errors.email}
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    value={form.user_email}
+                    value={form.email}
                   />
                   <Form.Control.Feedback type="invalid">
-                    {errors.user_email}
+                    {errors.email}
                   </Form.Control.Feedback>
                 </Form.Group>
 
@@ -256,14 +256,14 @@ const Contact = () => {
                   </Form.Label>
                   <Form.Control
                     type="textarea"
-                    name="message"
-                    isInvalid={!!errors.message}
+                    name="mensaje"
+                    isInvalid={!!errors.mensaje}
                     onBlur={handleBlur}
                     onChange={handleChange}
-                    value={form.message}
+                    value={form.mensaje}
                   />
                   <Form.Control.Feedback type="invalid">
-                    {errors.message}
+                    {errors.mensaje}
                   </Form.Control.Feedback>
                 </Form.Group>
                 <ReCAPTCHA
@@ -298,7 +298,7 @@ const Contact = () => {
           )}
 
           {/* Mensaje de éxito */}
-          {showSuccessMessage && (
+          {showSuccessmensaje && (
             <Alert variant="success" className="mt-3">
               ¡El formulario fue enviado con éxito!
             </Alert>

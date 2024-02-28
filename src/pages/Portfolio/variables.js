@@ -1,6 +1,5 @@
 export const texto =
-  "En Pochitama.Dev nos enorgullecemos de nuestro compromiso a la hora de comprender y respetar los deseos de nuestros clientes. \n" +
-  "Creemos que la colaboración efectiva y la comunicación abierta son cruciales para brindar resultados sobresalientes que se alineen con las visiones de nuestros clientes. Nuestros valores fundamentales giran en torno a la creación de soluciones personalizadas que no solo cumplan sino que superen las expectativas de nuestros clientes.";
+  "Pochitama.dev se destaca por comprender y respetar las necesidades de nuestros clientes, priorizando la colaboración y comunicación para entregar soluciones personalizadas que superan expectativas. Nuestros valores se centran en exceder los deseos de los clientes con resultados excepcionales.";
 export const loreIpsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna.";
 export const titleCTA =

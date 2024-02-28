@@ -1,7 +1,6 @@
 
 import instagram from  "../../assets/images/instagram-icon.svg"
 import facebook from  "../../assets/images/facebook-icon.svg"
-import twitter from  "../../assets/images/twitter-icon.svg"
 import linkedin from  "../../assets/images/linkedin-icon.svg"
 import github from  "../../assets/images/github-icon.svg"
 import './footer.css'

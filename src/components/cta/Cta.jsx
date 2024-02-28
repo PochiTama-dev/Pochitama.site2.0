@@ -15,7 +15,7 @@ import gatoAnimado from "../../assets/gif/pochitama-gif.webm";
 import { Link } from "react-router-dom";
 
 function Cta({
-  title = "¿Tenes un proyecto?",
+  title = "¿Queres diseñar tu pagina web?",
   subtitle = "¡Vamos a charlarlo! Nuestros expertos están a tu disposición para hacer realidad tus ideas.",
 }) {
   const [gifVisible, setGifVisible] = useState(true);
