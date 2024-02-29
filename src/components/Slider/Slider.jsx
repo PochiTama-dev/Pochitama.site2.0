@@ -27,7 +27,7 @@ function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000, 
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 768,
@@ -40,14 +40,14 @@ function CustomSlider({ title = "¿Qué dicen nuestros Clientes?" }) {
   };
 
   return (
-    <div className="slider">
+    <div className="slider-clients-container">
       <div className="slider-title-box">
         <img src={line} alt="line" className="line-left" />
         <h1 className="slider-title">{title}</h1>
         <img src={line} alt="line" className="line-right" />
       </div>
 
-      <Slider ref={sliderRef} className="carousel" {...settings}>
+      <Slider ref={sliderRef} className="carousel-clients" {...settings}>
         {loremIpsum.map((e, i) => (
           <div key={i} className="slider-card-container">
             <div className="slider-logo-container">

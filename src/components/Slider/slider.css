@@ -1,4 +1,4 @@
-.carousel {
+.carousel-clients {
   cursor: grab;
   margin-left: 7.5%;
   width: 85%;
@@ -36,7 +36,6 @@
 
 /* Resto del CSS permanece igual */
 
-
 .slider-item-text {
   color: white;
   padding-top: 15%;
@@ -51,7 +50,7 @@
   text-align: left;
 }
 
-.slider {
+.slider-clients-container {
   height: 100vh;
   width: 100%;
   text-transform: uppercase;
@@ -82,7 +81,7 @@
   .line-right {
     display: none;
   }
-  .slider {
+  .slider-clients-container {
     height: auto;
     margin-bottom: 20%;
   }

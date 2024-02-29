@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import "./portfolio.css";
 import ProyectCard from "../../components/Portfolio/ProyectCard";
 import { texto, titleCTA, subtitleCTA } from "./variables.js";
