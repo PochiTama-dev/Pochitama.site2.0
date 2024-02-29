@@ -130,7 +130,9 @@
   align-items: center;
 }
 .modal_logo {
-  background: url("/src/assets/images/LogoPochi.png");
+  background: url("/src/assets/images/LogoPochi.webp");
+  background-position: center;
+  background-size: cover;
   margin-left: 20px;
   position: relative;
   width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */

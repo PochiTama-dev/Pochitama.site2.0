@@ -7,10 +7,9 @@ const ModalPortfolio = ({ show, data }) => {
   };
 
   return (
-    <Modal show={show} centered size="xl" onClick={handlerEvent}>
+    <Modal show={show} centered size="xl" onClick={handlerEvent} onHide={handleHide}>
       <Modal.Body className="d-flex flex-column p-0">
         <div
-          className=""
           style={{
             background: `url(${
               data ? data.img : "/src/assets/images/exampleProyect.webp"
@@ -28,7 +27,7 @@ const ModalPortfolio = ({ show, data }) => {
               Desarrollo de Pagina Web
             </label>
           </div>
-          <div className="modal_logo" />
+          <div className="modal_logo"/>
         </div>
         <div style={{ width: "100%", padding: "5px", marginTop: "50px" }}>
           <div>
