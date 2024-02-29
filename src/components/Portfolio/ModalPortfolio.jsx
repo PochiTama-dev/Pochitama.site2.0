@@ -1,4 +1,3 @@
-import React from "react";
 import { Modal } from "react-bootstrap";
 import { loreIpsum } from "../../pages/Portfolio/variables";
 
@@ -48,5 +47,3 @@ function ModalPortfolio({ show, data }) {
     </Modal>
   );
 }
-
-export default ModalPortfolio;

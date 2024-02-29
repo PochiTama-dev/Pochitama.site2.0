@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import ModalPortfolio from './ModalPortfolio';
 
 function ProyectCard({proyectName, position, link}) {
