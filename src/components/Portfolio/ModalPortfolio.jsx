@@ -1,10 +1,11 @@
 import { Modal } from "react-bootstrap";
 import { loreIpsum } from "../../pages/Portfolio/variables";
 
-function ModalPortfolio({ show, data }) {
+const ModalPortfolio = ({ show, data }) => {
   const handlerEvent = (e) => {
     e.stopPropagation();
   };
+
   return (
     <Modal show={show} centered size="xl" onClick={handlerEvent}>
       <Modal.Body className="d-flex flex-column p-0">
@@ -13,7 +14,8 @@ function ModalPortfolio({ show, data }) {
           style={{
             background: `url(${
               data ? data.img : "/src/assets/images/exampleProyect.webp"
-            })`,
+            }) no-repeat center center`,
+            backgroundSize: 'cover',
             width: "100%",
             minHeight: "45vh",
             borderTopLeftRadius: "5px",
@@ -28,7 +30,7 @@ function ModalPortfolio({ show, data }) {
           </div>
           <div className="modal_logo" />
         </div>
-        <div style={{ width: "100%", padding: "5px ", marginTop: "50px" }}>
+        <div style={{ width: "100%", padding: "5px", marginTop: "50px" }}>
           <div>
             <label className="modal_label">
               {data ? data.description : loreIpsum}
@@ -46,4 +48,6 @@ function ModalPortfolio({ show, data }) {
       </Modal.Body>
     </Modal>
   );
-}
+};
+
+export default ModalPortfolio;
