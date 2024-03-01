@@ -4,7 +4,13 @@ import ProyectCard from "../../components/Portfolio/ProyectCard";
 import { texto, titleCTA, subtitleCTA } from "./variables.js";
 import Cta from "../../components/cta/Cta.jsx";
 import { Carousel } from "react-bootstrap";
-
+import logoKingdom from "../../assets/images/kingdom-logo.webp"
+import logoNutriciom from "../../assets/images/nutricion-logo.webp"
+import logoIlum from "../../assets/images/ilum-logo.webp"
+import logoLeelo from "../../assets/images/leelo-logo.webp"
+import logoMorazul from "../../assets/images/morazul-logo.webp"
+import logoCalu from "../../assets/images/logoCalu.webp"
+import logoSucurApp from "../../assets/images/sucurApp-logo.webp"
 const Portfolio = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -19,6 +25,23 @@ const Portfolio = () => {
     };
   }, []);
 
+  const projectsData = [
+    { title: "Kingdom", image: logoKingdom },
+    { title: "Nutricióm Espiritual", image: logoNutriciom },
+    { title: "ILUM MÉXICO", image: logoIlum },
+    { title: "CALU", image: logoCalu },
+ 
+ 
+  ];
+  const projectsData2 = [
+ 
+    { title: "LEELO ACÁ", image: logoLeelo },
+    { title: "SUCURAPP", image: logoSucurApp },
+    { title: "MORAZUL", image: logoMorazul },
+    { title: "ESCUCHALO ACÁ", image: logoLeelo },
+ 
+  ];
+  const allProjectsData = [...projectsData, ...projectsData2];
   return (
     <div className="portfolio">
       <Cta title={titleCTA} subtitle={subtitleCTA} />
@@ -45,12 +68,28 @@ const Portfolio = () => {
           {/* ROW IMGS */}
           <div className="col-1" />
           {screenWidth > 1000 ? (
-            <div className="col-10 d-flex flex-row justify-content-center">
-              <ProyectCard proyectName="Proyecto" position="impar" />
-              <ProyectCard proyectName="Proyecto" position="par" />
-              <ProyectCard proyectName="Proyecto" position="impar" />
-              <ProyectCard proyectName="Proyecto" position="par" />
+            <> 
+            <div className="col-10 mb-4 d-flex flex-row justify-content-center">
+              {projectsData.map((project, index) => (
+                <ProyectCard
+                  key={index}
+                  proyectName={project.title}
+                  position={index % 2 === 0 ? "par" : "impar"}
+                  image={project.image}
+                />
+              ))}
             </div>
+                   <div className=" mb-4 d-flex flex-row justify-content-center">
+                   {projectsData2.map((project, index) => (
+                     <ProyectCard
+                       key={index}
+                       proyectName={project.title}
+                       position={index % 2 === 0 ? "par" : "impar"}
+                       image={project.image}
+                     />
+                   ))}
+                 </div>
+                 </>
           ) : (
             <div className="col-10 d-flex flex-row justify-content-center align-items-center">
               <Carousel
@@ -60,18 +99,11 @@ const Portfolio = () => {
                   justifyContent: "center",
                 }}
               >
-                <Carousel.Item key={1}>
-                  <ProyectCard proyectName="Proyecto" position={"carousel"} />
-                </Carousel.Item>
-                <Carousel.Item key={2}>
-                  <ProyectCard proyectName="Proyecto" position={"carousel"} />
-                </Carousel.Item>
-                <Carousel.Item key={3}>
-                  <ProyectCard proyectName="Proyecto" position={"carousel"} />
-                </Carousel.Item>
-                <Carousel.Item key={4}>
-                  <ProyectCard proyectName="Proyecto" position={"carousel"} />
-                </Carousel.Item>
+                {allProjectsData.map((project, index) => (
+                  <Carousel.Item key={index}>
+                    <ProyectCard proyectName={project.title} position={"carousel"} image={project.image} />
+                  </Carousel.Item>
+                ))}
               </Carousel>
             </div>
           )}

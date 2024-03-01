@@ -7,7 +7,7 @@ const ModalPortfolio = ({ show, data }) => {
   };
 
   return (
-    <Modal show={show} centered size="xl" onClick={handlerEvent} onHide={handleHide}>
+    <Modal show={show} centered size="xl" onClick={handlerEvent} >
       <Modal.Body className="d-flex flex-column p-0">
         <div
           style={{
@@ -17,8 +17,8 @@ const ModalPortfolio = ({ show, data }) => {
             backgroundSize: 'cover',
             width: "100%",
             minHeight: "45vh",
-            borderTopLeftRadius: "5px",
-            borderTopRightRadius: "5px",
+            borderTopLeftRadius: "10px",
+            borderTopRightRadius: "10px",
           }}
         />
         <div className="modal_rectangule">
