@@ -79,25 +79,29 @@
   cursor: pointer;
 }
 
-.carousel{
+.portfolio .carousel {
   width: 40%;
   padding: 10px;
   margin: 10px;
 }
 
-.carousel-item.active, .carousel-item-next, .carousel-item-prev{
+.portfolio .carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
   display: flex;
   justify-content: center;
 }
-.carousel-inner{
+.portfolio .carousel-inner {
   padding: 10px;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon{
+.portfolio .carousel-control-prev-icon,
+.carousel-control-next-icon {
   background-color: var(--primary-color);
   border-radius: 100%;
   padding: 25px;
 }
-.carousel-control-prev-icon:focus, .carousel-control-next-icon:focus{
+.portfolio .carousel-control-prev-icon:focus,
+.carousel-control-next-icon:focus {
   background-color: var(--primary-color);
   border-radius: 100%;
   padding: 25px;
@@ -232,8 +236,8 @@
   }
 }
 
-@media (min-width: 768px) and (max-width:990px){
-  .modal_rectangule{
+@media (min-width: 768px) and (max-width: 990px) {
+  .modal_rectangule {
     top: 53%;
     left: 40%;
     min-width: 60%;
@@ -243,40 +247,40 @@
     margin-left: 0;
     margin-right: 0;
   }
-  .modal_logo{
+  .modal_logo {
     width: 120px;
     height: 120px;
     margin-left: 0;
   }
-  .modal_label{
+  .modal_label {
     padding-top: 50px;
-  }    
+  }
 }
-@media (min-width: 990px) and (max-width:1000px){
-  .modal_rectangule{
+@media (min-width: 990px) and (max-width: 1000px) {
+  .modal_rectangule {
     top: 56%;
     left: 40%;
     min-width: 60%;
   }
-  .modal_logo{
+  .modal_logo {
     width: 120px;
     height: 120px;
     margin-left: 0;
   }
-  .modal_label{
+  .modal_label {
     padding-top: 50px;
   }
   .porfolio-proyect-box {
     width: 45%;
     margin-left: 0;
     margin-right: 0;
-  }    
+  }
 }
 
-@media (min-width: 1000px) and (max-width:1200px){
-  .modal_logo{
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .modal_logo {
     width: 120px;
     height: 120px;
     margin-left: 0;
-  }  
+  }
 }
