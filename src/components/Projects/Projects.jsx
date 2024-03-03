@@ -54,8 +54,7 @@ function Projects() {
             lg={8}
             className="d-flex flex-column justify-content-center mb-5"
           >
-            <Card className="project_card card_hover"
-              onClick={handleShowModal}
+            <Card className="project_card card_hover" 
             >
               <Card.Body>
                 <Row className="d-flex flex-column flex-md-row">
