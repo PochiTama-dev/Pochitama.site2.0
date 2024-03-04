@@ -1,24 +1,28 @@
-import { useState } from 'react';
+
+import React, { useState } from 'react';
 import ModalPortfolio from './ModalPortfolio';
 
-function ProyectCard({ proyectName, position, link, image }) {
-  const [show, setShow] = useState(false);
+function ProyectCard({ proyectName, position, link, image, images }) {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const handleShowModal = () => {
-    setShow(!show);
-  }
+    setShowModal(true);
+  };
 
-  const handleCLickCard = () => {
-    if (link) {
-      window.open(link, '_blank');
-    } else {
-      handleShowModal();
-    }
-  }
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleCardClick = () => {
+    setSelectedProject({ title: proyectName, image, images});
+    handleShowModal();
+  };
+
   return (
-    <div className={`porfolio-proyect-box ${position}`} onClick={handleCLickCard}>
+    <div className={`porfolio-proyect-box ${position}`} onClick={handleCardClick}>
       {/* FONDO CON IMAGEN */}
-      <div style={{ position: 'relative' }}>
+      <div style={{ position: 'relative',  width: '250px' }}>
         <img
           src={image}
           className='portfolio-label'
@@ -29,7 +33,10 @@ function ProyectCard({ proyectName, position, link, image }) {
           <label className='portfolio-label'>{proyectName}</label>
         </div>
       </div>
-      {show === true && <ModalPortfolio show={show} setShow={setShow} />}
+
+      {showModal && (
+        <ModalPortfolio show={showModal} handleClose={handleCloseModal} data={selectedProject} />
+      )}
     </div>
   );
 }
