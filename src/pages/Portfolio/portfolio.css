@@ -61,7 +61,7 @@
   display: flex;
   border-radius: 25px;
   background: url(/src/assets/images/exampleProyect.png) 50% center / cover
-    no-repeat lightgray;
+    no-repeat white;
   box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px 0px;
   height: 50vh;
   width: 20%;

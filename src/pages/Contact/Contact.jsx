@@ -96,8 +96,7 @@ const Contact = () => {
             </Col>
             <Col xs={10} md={9} lg={8}>
               <h3 className="contactSubtitle">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Perferendis, aut rem. Eveniet laborum quae inventore.
+              Envíanos tu idea a través de nuestro formulario y te contactaremos pronto. Juntos, podemos hacer realidad tu visión. ¡Inicia tu camino hacia el éxito ahora!
               </h3>
             </Col>
           </Row>
