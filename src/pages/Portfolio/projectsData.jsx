@@ -84,17 +84,17 @@ import LavaIcon from "../../assets/images/Clientes/lavaIcon.jpg";
 
 
 export const projectsData = [
-  { title: "Kingdom", image: logoKingdom, images: [Kingdom1, Kingdom2, Kingdom3, Kingdom4, Kingdom5, Kingdom6], url: "http://kindom.com.ar/" },
-  { title: "RIBROX", image: RibroxLogo , images: [Ribrox1, Ribrox2, Ribrox3, Ribrox4, Ribrox5, Ribrox6] },
-  { title: "SUCURAPP", image: logoSucurApp , images: [Sucurapp, Sucurapp2, Sucurapp3, Sucurapp4, Sucurapp5, Sucurapp6] },
+  { title: "Kingdom", image: logoKingdom, images: [Kingdom1, Kingdom2, Kingdom3, Kingdom4, Kingdom5, Kingdom6], url: "http://kindom.com.ar/", description: "asdasd" },
+  { title: "RIBROX", image: RibroxLogo , images: [Ribrox1, Ribrox2, Ribrox3, Ribrox4, Ribrox5, Ribrox6], description: "asdasd" },
+  { title: "SUCURAPP", image: logoSucurApp , images: [Sucurapp, Sucurapp2, Sucurapp3, Sucurapp4, Sucurapp5, Sucurapp6], description: "asdasd" },
   { title: "CALU", image: logoCalu, images: [Calu, Calu2, Calu3, Calu4], url:"calu-mkt.com" },
   { title: "LEELO ACÁ", image: logoLeelo , images: [Leelo, Leelo2, Leelo3, Leelo4, Leelo5], url:"leeloAca.com.ar" },
-  { title: "Nutrición Espiritual", image: logoNutriciom, images: [ Nutriciom,Nutriciom2, Nutriciom3, Nutriciom4, Nutriciom5], url: "https://nutricion-espiritual.com/" }, 
-  { title: "ILUM MÉXICO", image: logoIlum, images: [Ilum1, Ilum2, Ilum3, Ilum4 ], url:"ilum-mexico.com" },
-  { title: "Abar", image: AbarLogo , images: [Abar, Abar2, Abar3, Abar4, Abar5, Abar6] },
-  { title: "MORAZUL", image: logoMorazul , images: [Mora, Mora2, Mora3, Mora4, Mora5, Mora6], url:"morazul.art" },
-  { title: "ESCUCHALO ACÁ", image: logoLeelo, images: [Escuchalo, Escuchalo2, Escuchalo3, Escuchalo4], url:"escuchaloAca.com.ar"  },
-  { title: "LavaRiso", image: LavaIcon , images: [image1, image2, image3, image4, image5, image6] },
+  { title: "Nutrición Espiritual", image: logoNutriciom, images: [ Nutriciom,Nutriciom2, Nutriciom3, Nutriciom4, Nutriciom5], url: "https://nutricion-espiritual.com/" , description: "asdasd"}, 
+  { title: "ILUM MÉXICO", image: logoIlum, images: [Ilum1, Ilum2, Ilum3, Ilum4 ], url:"ilum-mexico.com", description: "asdasd" },
+  { title: "Abar", image: AbarLogo , images: [Abar, Abar2, Abar3, Abar4, Abar5, Abar6], description: "asdasd" },
+  { title: "MORAZUL", image: logoMorazul , images: [Mora, Mora2, Mora3, Mora4, Mora5, Mora6], url:"morazul.art", description: "asdasd" },
+  { title: "ESCUCHALO ACÁ", image: logoLeelo, images: [Escuchalo, Escuchalo2, Escuchalo3, Escuchalo4], url:"escuchaloAca.com.ar" , description: "asdasd" },
+  { title: "LavaRiso", image: LavaIcon , images: [image1, image2, image3, image4, image5, image6], description: "asdasd" },
    
 ];
  
