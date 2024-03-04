@@ -64,6 +64,7 @@ const Portfolio = () => {
         position={(index % 2 === 0) ? "par" : "impar"}
         image={project.image}
         images={project.images}
+        url={project.url}
       />
     ))}
          </div>

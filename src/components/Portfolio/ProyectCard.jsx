@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ModalPortfolio from './ModalPortfolio';
 
-function ProyectCard({ proyectName, position, link, image, images }) {
+function ProyectCard({ proyectName, position, link, image, images, url }) {
   const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -15,7 +15,7 @@ function ProyectCard({ proyectName, position, link, image, images }) {
   };
 
   const handleCardClick = () => {
-    setSelectedProject({ title: proyectName, image, images});
+    setSelectedProject({ title: proyectName, image, images, url});
     handleShowModal();
   };
 
