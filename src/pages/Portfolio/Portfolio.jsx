@@ -4,13 +4,7 @@ import ProyectCard from "../../components/Portfolio/ProyectCard";
 import { texto, titleCTA, subtitleCTA } from "./variables.js";
 import Cta from "../../components/cta/Cta.jsx";
 import { Carousel } from "react-bootstrap";
-import logoKingdom from "../../assets/images/kingdom-logo.webp"
-import logoNutriciom from "../../assets/images/nutricion-logo.webp"
-import logoIlum from "../../assets/images/ilum-logo.webp"
-import logoLeelo from "../../assets/images/leelo-logo.webp"
-import logoMorazul from "../../assets/images/morazul-logo.webp"
-import logoCalu from "../../assets/images/logoCalu.webp"
-import logoSucurApp from "../../assets/images/sucurApp-logo.webp"
+import { projectsData  } from "./projectsData";
 const Portfolio = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -24,24 +18,15 @@ const Portfolio = () => {
       window.removeEventListener("resize", updateScreenWidth);
     };
   }, []);
-
-  const projectsData = [
-    { title: "Kingdom", image: logoKingdom },
-    { title: "Nutricióm Espiritual", image: logoNutriciom },
-    { title: "ILUM MÉXICO", image: logoIlum },
-    { title: "CALU", image: logoCalu },
  
+  const allProjectsData = [...projectsData ];
+  function chunkArray(array, size) {
+    return Array.from({ length: Math.ceil(array.length / size) }, (_, index) =>
+      array.slice(index * size, (index + 1) * size)
+    );
+  }
  
-  ];
-  const projectsData2 = [
- 
-    { title: "LEELO ACÁ", image: logoLeelo },
-    { title: "SUCURAPP", image: logoSucurApp },
-    { title: "MORAZUL", image: logoMorazul },
-    { title: "ESCUCHALO ACÁ", image: logoLeelo },
- 
-  ];
-  const allProjectsData = [...projectsData, ...projectsData2];
+  
   return (
     <div className="portfolio">
       <Cta title={titleCTA} subtitle={subtitleCTA} />
@@ -68,28 +53,23 @@ const Portfolio = () => {
           {/* ROW IMGS */}
           <div className="col-1" />
           {screenWidth > 1000 ? (
-            <> 
-            <div className="col-10 mb-4 d-flex flex-row justify-content-center">
-              {projectsData.map((project, index) => (
-                <ProyectCard
-                  key={index}
-                  proyectName={project.title}
-                  position={index % 2 === 0 ? "par" : "impar"}
-                  image={project.image}
-                />
-              ))}
-            </div>
-                   <div className=" mb-4 d-flex flex-row justify-content-center">
-                   {projectsData2.map((project, index) => (
-                     <ProyectCard
-                       key={index}
-                       proyectName={project.title}
-                       position={index % 2 === 0 ? "par" : "impar"}
-                       image={project.image}
-                     />
-                   ))}
-                 </div>
-                 </>
+     <>
+     <div className="col-10 mb-4 d-flex flex-row flex-wrap justify-content-center" >
+     {chunkArray(allProjectsData, 4).map((row, rowIndex) => (
+  <div key={rowIndex} className={`d-flex flex-row ${row.length === 4 ? 'justify-content-start' : 'justify-content-start'} mb-4`}>
+    {row.map((project, index) => (
+      <ProyectCard
+        key={index}
+        proyectName={project.title}
+        position={(index % 2 === 0) ? "par" : "impar"}
+        image={project.image}
+        images={project.images}
+      />
+    ))}
+         </div>
+       ))}
+     </div>
+   </>
           ) : (
             <div className="col-10 d-flex flex-row justify-content-center align-items-center">
               <Carousel
