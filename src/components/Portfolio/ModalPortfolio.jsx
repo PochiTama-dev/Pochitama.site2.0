@@ -3,10 +3,15 @@ import { Modal, Carousel } from 'react-bootstrap';
 import { loreIpsum } from '../../pages/Portfolio/variables';
 
 const ModalPortfolio = ({ show, handleClose, data }) => {
+  const handleClick = () => {
+    const url = data.url.startsWith('http://') || data.url.startsWith('https://') ? data.url : `http://${data.url}`;
+ 
+    window.open(url, '_blank');
+  };
   const handlerEvent = (e) => {
     e.stopPropagation();
   };
-console.log(data)
+
   return (
     <Modal show={show} centered size='xl' onClick={handlerEvent} onHide={handleClose}>
       <Modal.Body className='d-flex flex-column p-0'>
@@ -44,9 +49,16 @@ console.log(data)
         </div>
 
         <div className='d-flex justify-content-center' style={{ marginTop: '50px' }}>
+    
+        {data.url && (
           <button className='modal_button'>
-            <label className='modal_button_label'>Contrata este servicio</label>
+      
+              <label className='modal_button_label' onClick={handleClick}>
+                Visitala!
+              </label> 
+   
           </button>
+          )}
         </div>
       </Modal.Body>
     </Modal>
