@@ -49,6 +49,7 @@
   text-align: center;
   perspective: 1000px;
   position: relative;
+  border-radius: 15px;
 }
 
 .approach-card-subtitle {
@@ -63,7 +64,7 @@
 .approach-card-text {
   text-transform: uppercase;
   font-family: "Open Sans-Bold", Helvetica;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 500;
   margin: 3%;
 }
