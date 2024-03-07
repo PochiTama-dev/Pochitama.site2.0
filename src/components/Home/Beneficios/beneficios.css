@@ -15,7 +15,8 @@
 }
 
 #imageCat {
-  width: 50%;
+  width: 35%;
+  
 }
 
 @media (max-width: 768px) {

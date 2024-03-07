@@ -30,9 +30,12 @@ function ModalServices({ show, data, onHide }) {
         </div>
         <div style={{ width: "100%", padding: "5px ", marginTop: "50px" }}>
           <div>
+            <div  style={{ marginTop:"150px" }} className="description-modal-portfolio">
+
             <label className="modal_label">
               {data ? data.description : loreIpsum}
             </label>
+            </div>
           </div>
         </div>
         <div

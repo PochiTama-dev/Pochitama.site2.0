@@ -25,6 +25,17 @@
   font-weight: 600;
   max-width: 75%;
 }
+.description-modal-portfolio{
+   margin-top: 20px;
+  background-color: rgba(228, 226, 226, 0.781);
+  border-radius: 15px;
+  padding: 30px;
+  width: 95%;
+  display: flex;
+  margin: 20px auto 0 auto;
+  text-align: left;
+  
+}
 .box-img {
   display: flex;
   flex-direction: column;
@@ -122,9 +133,12 @@
   display: flex;
   justify-content: center;
 }
+  .carousel-indicators {
+  display: none; /* Oculta los marcadores inferiores */
+}
 .modal_rectangule {
   position: absolute;
-  top: 61%;
+  top: 450px;
   left: 60%;
   min-width: 40%;
   width: auto;
@@ -136,6 +150,7 @@
   justify-content: start;
   padding: 10px;
   align-items: center;
+  
 }
 .modal_logo {
   background: url("/src/assets/images/LogoPochi.webp");
@@ -164,8 +179,9 @@
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 500;
   line-height: normal;
+ 
 }
 
 .modal_button {
