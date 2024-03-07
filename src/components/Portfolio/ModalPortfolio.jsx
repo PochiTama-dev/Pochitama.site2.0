@@ -43,7 +43,7 @@ const ModalPortfolio = ({ show, handleClose, data }) => {
         </div>
 
         <div style={{ width: '100%', padding: '5px', marginTop: '50px' }}>
-          <div>
+          <div className='description-modal-portfolio'>
             <label className='modal_label'>{data.description || loreIpsum}</label>
           </div>
         </div>
