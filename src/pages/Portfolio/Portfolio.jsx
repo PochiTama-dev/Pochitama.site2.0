@@ -65,6 +65,7 @@ const Portfolio = () => {
         image={project.image}
         images={project.images}
         url={project.url}
+        description={project.description}
       />
     ))}
          </div>
