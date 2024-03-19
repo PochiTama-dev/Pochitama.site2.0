@@ -6,64 +6,61 @@
   color: var(--primary-color);
 }
 
-.card-image{
-    height: 25px;
+.card-image {
+  height: 25px;
 }
 
-.card-image .icon-cards{
-    position: relative;
-    top: -15px;
-    border: 3px solid #8987C1;
-    border-radius: 50px;
-    padding: 10px;
-    background-color: white;
-    color: #8987C1;
-    transition: background-color 0.8s, color 0.8s;
-    
+.card-image .icon-cards {
+  position: relative;
+  top: -15px;
+  border: 3px solid #8987c1;
+  border-radius: 50px;
+  padding: 10px;
+  background-color: white;
+  color: #8987c1;
+  transition: background-color 0.8s, color 0.8s;
 }
-.svg-fill{
-  fill: #8987C1;
-
+.svg-fill {
+  fill: #8987c1;
 }
-
 
 .card_hover {
-    transition: transform .5s;
-    position: relative;
-    cursor: pointer;
-    &:hover .card-image .icon-cards {
-        background-color: #8987C1;
-        color: white;
-        transition: background-color 0.8s, fill 0.8s;
-
-    }
-    &:hover .svg-fill{
-      fill: white;
-      transition: background-color 0.8s, fill 0.8s;
-
+  transition: transform 0.5s;
+  position: relative;
+  cursor: pointer;
+  &:hover .card-image .icon-cards {
+    background-color: #8987c1;
+    color: white;
+    transition: background-color 0.8s, fill 0.8s;
   }
-  
+  &:hover .svg-fill {
+    fill: white;
+    transition: background-color 0.8s, fill 0.8s;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.3),
+      0 8px 26px 0 rgba(0, 0, 0, 0.22); /* Aumento de la sombra */
+    content: "";
+    opacity: 0;
+    z-index: -1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale3d(1.05, 1.05, 1);
     &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
-      box-shadow: 0 12px 24px 0 rgba(0, 0, 0, .3), 0 8px 26px 0 rgba(0, 0, 0, .22); /* Aumento de la sombra */
-      content: '';
-      opacity: 0;
-      z-index: -1;
+      opacity: 1;
+      box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.4),
+        0 12px 40px 0 rgba(0, 0, 0, 0.3);
     }
-  
-    &:hover,
-    &:focus {
-      transform: scale3d(1.05, 1.05, 1);
-      &::after {
-        opacity: 1;
-        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, .4), 0 12px 40px 0 rgba(0, 0, 0, .3);
-      }
-    }
+  }
 }
 
 .modal_button_services {
@@ -81,7 +78,97 @@
   }
 }
 
-@media screen and (min-width: 1024px){
+.modal_rectangule {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  min-width: 40%;
+  width: auto;
+  height: 10%; /* Puedes ajustar la altura del rectángulo según tus necesidades */
+  background-color: #8987c1; /* Color del rectángulo superpuesto */
+  z-index: 1;
+  border-radius: 20px 0px 0px 20px;
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  align-items: center;
+}
+.modal_logo {
+  background: url("/src/assets/images/LogoPochi.webp");
+  background-position: center;
+  background-size: cover;
+  margin-left: 20px;
+  position: relative;
+  width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  height: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
+  background-size: cover;
+  border-radius: 50%; /* Hace la imagen redonda */
+  z-index: 2; /* Asegura que la imagen esté por encima del rectángulo */
+}
+
+.modal_rectangule_title {
+  color: #fff;
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.modal_label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  overflow-x: hidden;
+}
+
+.modal_button {
+  cursor: pointer;
+  border-radius: 20px;
+  border-color: #8987c1;
+  background: #8987c1;
+  margin-bottom: 30px;
+  width: 30%;
+  padding: 5px;
+}
+.modal_button_label {
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.description-modal-portfolio {
+  margin-top: 20px;
+  background-color: rgba(228, 226, 226, 0.781);
+  border-radius: 15px;
+  padding: 30px;
+  width: 95%;
+  display: flex;
+  margin: 20px auto 0 auto;
+  text-align: left;
+}
+
+/* .modal_rectangule_title {
+  font-weight: bold;
+  font-size: large;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.description-modal-portfolio {
+  padding-left: 5px;
+  letter-spacing: normal;
+}
+*/
+
+@media screen and (min-width: 1024px) {
   .modal_button_services {
     width: 30%;
   }
@@ -90,11 +177,11 @@
   }
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .container-services {
     background-color: var(--primary-color);
   }
-  
+
   .text-primary-services {
     color: white;
   }
