@@ -117,7 +117,8 @@
   text-transform: uppercase;
 }
 .modal-services .modal_label {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans-ExtraBold", Helvetica;
+
   font-size: 16px;
   font-style: normal;
   font-weight: 500;

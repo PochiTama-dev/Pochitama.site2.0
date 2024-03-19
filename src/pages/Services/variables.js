@@ -9,23 +9,24 @@ export const dataCardWeb = {
   description: `El desarrollo de páginas web abarca la creación de sitios web accesibles, atractivos y funcionales, diseñados específicamente
   para cumplir con los objetivos y necesidades de cada cliente. Aquí se detallan los puntos clave y beneficios de este servicio:
 
-  - Personalización - Cada página web es diseñada a medida, asegurando que se alinee perfectamente con la visión y requisitos del cliente. 
+  - **Personalización**: Cada página web es diseñada a medida, asegurando que se alinee perfectamente con la visión y requisitos del cliente. 
   Esto incluye la adaptación a diferentes sectores y audiencias, lo que garantiza una experiencia única para los visitantes.
   
-  - Responsive Design - Desarrollo de sitios web completamente responsivos, asegurando una experiencia de usuario óptima en cualquier 
+  - **Responsive Design** - Desarrollo de sitios web completamente responsivos, asegurando una experiencia de usuario óptima en cualquier 
   dispositivo, desde teléfonos móviles hasta ordenadores de escritorio. Esto mejora significativamente la accesibilidad y la retención de 
   usuarios.
   
-  - Optimización SEO - Implementación de estrategias de optimización para motores de búsqueda (SEO) para mejorar la visibilidad online y 
+  - **Optimización SEO**: Implementación de estrategias de optimización para motores de búsqueda (SEO) para mejorar la visibilidad online y 
   atraer más tráfico orgánico. Esto es esencial para aumentar el alcance y la eficacia de la página web.
   
-  - Integración de Funcionalidades Avanzadas - Incorporación de características y herramientas avanzadas, como e-commerce, formularios de 
+  - **Integración de Funcionalidades Avanzadas**: Incorporación de características y herramientas avanzadas, como e-commerce, formularios de 
   contacto, reservas en línea y más, para potenciar la interacción con los usuarios y ofrecer servicios completos a través de la web.
   
-  - Seguridad y Velocidad - Aseguramiento de la protección de datos y la seguridad del sitio web, junto con la optimización de la velocidad 
+  - **Seguridad y Velocidad**: Aseguramiento de la protección de datos y la seguridad del sitio web, junto con la optimización de la 
+  velocidad 
   de carga. Estos aspectos son cruciales para proporcionar una experiencia segura y ágil para los usuarios.
   
-  - Soporte y Mantenimiento - Ofrecimiento de servicios continuos de soporte y mantenimiento para garantizar que la página web permanezca 
+  - **Soporte y Mantenimiento**: Ofrecimiento de servicios continuos de soporte y mantenimiento para garantizar que la página web permanezca 
   actualizada, funcional y libre de problemas técnicos. Esto incluye actualizaciones de contenido, mejoras de seguridad y optimización del 
   rendimiento.
   
@@ -41,8 +42,8 @@ export const dataCardSoftware = {
   operativa. Este servicio se caracteriza por su enfoque detallado en:
 
   - **Soluciones a Medida**: Creamos software que se ajusta precisamente a los requerimientos y procesos de negocio de nuestros clientes, 
-  desde sistemas de gestión hasta aplicaciones móviles y plataformas web, ofreciendo una solución que encaja perfectamente en su ecosistema 
-  tecnológico.
+  desde sistemas de gestión hasta aplicaciones móviles y plataformas web, ofreciendo una solución que encaja perfectamente en su 
+  ecosistema tecnológico.
   
   - **Tecnología Avanzada**: Utilizamos las últimas tecnologías y metodologías de desarrollo para garantizar aplicaciones modernas, seguras 
   y escalables. Esto incluye desde el desarrollo ágil hasta soluciones basadas en la nube, IA y blockchain.
@@ -147,5 +148,6 @@ export const dataCardUXUI = {
   la visión del proyecto se traduzca sin problemas en una experiencia de usuario excepcional.
 
 El servicio de diseño UX/UI no solo mejora la estética de un producto digital sino que también impulsa la satisfacción y lealtad del usuario, 
-incrementando las tasas de conversión y el éxito del producto en el mercado. Nuestro enfoque estratégico y creativo en el diseño UX/UI transforma las ideas en experiencias digitales cautivadoras y funcionales.`,
+incrementando las tasas de conversión y el éxito del producto en el mercado. Nuestro enfoque estratégico y creativo en el diseño UX/UI 
+transforma las ideas en experiencias digitales cautivadoras y funcionales.`,
 };

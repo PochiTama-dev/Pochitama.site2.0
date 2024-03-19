@@ -1,6 +1,28 @@
 import { Modal } from "react-bootstrap";
 /* eslint-disable */
 function ModalServices({ show, data, onHide }) {
+  const renderDescription = () => {
+    if (!data) return ""; // Manejo de datos nulos
+
+    // Dividir la descripción en partes separadas por '**'
+    const parts = data.description.split("**");
+
+    // Inicializar un array para almacenar las partes renderizadas
+    const renderedParts = [];
+
+    // Iterar sobre las partes divididas
+    for (let i = 0; i < parts.length; i++) {
+      // Alternar entre renderizar texto normal y texto en negrita
+      if (i % 2 === 0) {
+        renderedParts.push(parts[i]); // Agregar texto normal
+      } else {
+        renderedParts.push(<strong key={i}>{parts[i]}</strong>); // Agregar texto en negrita
+      }
+    }
+
+    // Devolver las partes renderizadas como elementos React
+    return renderedParts;
+  };
   return (
     <Modal
       show={show}
@@ -35,7 +57,8 @@ function ModalServices({ show, data, onHide }) {
               className="description-modal-portfolio"
             >
               <pre className="modal_label">
-                {data ? data.description : loreIpsum}
+                {/* {data ? data.description : loreIpsum} */}
+                {renderDescription()}
               </pre>
             </div>
           </div>
