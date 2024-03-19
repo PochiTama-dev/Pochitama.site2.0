@@ -9,7 +9,7 @@ function ModalServices({ show, data, onHide }) {
       onHide={onHide}
       onClick={(e) => e.stopPropagation()}
     >
-      <Modal.Body className="d-flex flex-column p-0">
+      <Modal.Body className="d-flex modal-services flex-column p-0">
         <div
           className=""
           style={{

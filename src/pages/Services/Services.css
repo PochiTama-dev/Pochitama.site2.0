@@ -78,7 +78,7 @@
   }
 }
 
-.modal_rectangule {
+.modal-services .modal_rectangule {
   position: absolute;
   top: 30%;
   left: 60%;
@@ -93,7 +93,7 @@
   padding: 10px;
   align-items: center;
 }
-.modal_logo {
+.modal-services .modal_logo {
   background: url("/src/assets/images/LogoPochi.webp");
   background-position: center;
   background-size: cover;
@@ -106,7 +106,7 @@
   z-index: 2; /* Asegura que la imagen esté por encima del rectángulo */
 }
 
-.modal_rectangule_title {
+.modal-services .modal_rectangule_title {
   color: #fff;
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -116,7 +116,7 @@
   line-height: normal;
   text-transform: uppercase;
 }
-.modal_label {
+.modal-services .modal_label {
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -125,7 +125,7 @@
   overflow-x: hidden;
 }
 
-.modal_button {
+.modal-services .modal_button {
   cursor: pointer;
   border-radius: 20px;
   border-color: #8987c1;
@@ -134,7 +134,7 @@
   width: 30%;
   padding: 5px;
 }
-.modal_button_label {
+.modal-services .modal_button_label {
   cursor: pointer;
   color: white;
   font-size: 16px;
@@ -144,7 +144,7 @@
   word-wrap: break-word;
 }
 
-.description-modal-portfolio {
+.modal-services .description-modal-portfolio {
   margin-top: 20px;
   background-color: rgba(228, 226, 226, 0.781);
   border-radius: 15px;
