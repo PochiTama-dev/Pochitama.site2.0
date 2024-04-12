@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import axios from "axios";
+import { Resend } from 'resend';
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
@@ -12,6 +12,8 @@ export const useForm = (initialForm, validateForm) => {
   const recaptchaCallback = useCallback((recaptchaInstance) => {
     setRecaptcha(recaptchaInstance);
   }, []);
+
+  const resend = new Resend('re_MGTnXnxZ_JBMEeuTRHpx4Qhdn74mpKTQV');
 
   const handleChange = (e, buttonValue) => {
     if (e.target.tagName === "BUTTON") {
@@ -60,22 +62,22 @@ export const useForm = (initialForm, validateForm) => {
     if (Object.keys(formErrors).length === 0 && recaptcha == 'success') {
       setLoading(true);
 
-      axios
-        .post(
-          "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
-          form,
-          { headers: { "Content-Type": "application/json" } }
-        )
-        .then(function (result) {
-          setLoading(false);
-          setResponse(true);
-          setForm(initialForm);
-          setButtonSelections({});
-          console.log(result);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      try {
+        await resend.emails.send({
+          from: 'onboarding@resend.dev',
+          to: 'consultas@pochitama.dev',
+          subject: 'Contacto Landing Pochitama',
+          html: '<p>Congrats on sending your <strong>first email</strong>!</p>'//form
+        });        
+
+        setLoading(false);
+        setResponse(true);
+        setForm(initialForm);
+        setButtonSelections({});
+        console.log('Correo enviado exitosamente');
+      } catch (error) {
+        console.error('Error al enviar el correo:', error);
+      }
     } else {
       return;
     }
