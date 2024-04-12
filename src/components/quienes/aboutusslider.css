@@ -1,3 +1,12 @@
+@keyframes expandCircle {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
 .info{
     margin-top:25px;
     text-align: center;
@@ -27,8 +36,11 @@
     justify-content: center;
     padding: 10px;
     border: 5px solid var(--quaternary-color);
-    border-radius: 100%;
+    border-radius: 50%; /* Asegura un círculo perfecto */
     background: white;
+    width: 150px; /* Tamaño fijo para el círculo */
+    height: 150px; /* Tamaño fijo para el círculo */
+    animation: expandCircle 2s infinite; /* Aplica la animación de expansión */
 }
 
 .slider_box{
@@ -45,21 +57,20 @@
 }
 
 .about_avatar{
-    height: auto;
-    width: auto;
+    width: 100%;
+    height: 100%; /* Asegura que la imagen llene el círculo */
+    object-fit: cover; /* Cubre el espacio sin deformar la imagen */
+    object-position: center; /* Centra la imagen dentro del círculo */
+    border-radius: 50%; /* Mantiene la forma redonda de la imagen */
 }
 @media only screen and (max-width: 768px) {
     .slider_box {
-      width: 50%;
-    };
-    .info text{
-        color: white;
-    };
-    .info text{
-        color: white;
+        width: 100%; /* Cambio para mantener la consistencia en dispositivos móviles */
     }
-    .about_avatar{
+    .info text, .info h5 {
+        color: white; /* Unifica el cambio de color para todo el texto en .info */
+    }
+    .about_avatar {
         background-color: white;
     }
-    
-  }
+}

@@ -50,19 +50,19 @@ function Header() {
         </div>
         <ul className="menu">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/sobre-nosotros">About</Link>
+            <Link to="/sobre-nosotros">Nosotros</Link>
           </li>
           <li>
             <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <Link to="/servicios">Services</Link>
+            <Link to="/servicios">Servicios</Link>
           </li>
           <li>
-            <Link to="/contacto">Contact</Link>
+            <Link to="/contacto">Contacto</Link>
           </li>
         </ul>
         <div className="bar">

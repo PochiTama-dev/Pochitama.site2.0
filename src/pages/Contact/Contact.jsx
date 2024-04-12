@@ -266,7 +266,7 @@ const Contact = () => {
                   </Form.Control.Feedback>
                 </Form.Group>
                 <ReCAPTCHA
-                  sitekey="6LcPFjIpAAAAAGsjEgeUnIcGe1H3aq5iseReUvBB"
+                  sitekey="6LcMY7kpAAAAAHPTkIc6gCw2VtqRcovq3VSI72x-"
                   ref={recaptchaRef}
                   size="invisible"
                 />

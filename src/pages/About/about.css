@@ -55,7 +55,9 @@
 
 .colaborador img {
     width: 100%;
-    border-radius: 50%;
+    height: 100%; /* Asegura que la imagen cubra completamente el área del círculo */
+    border-radius: 50%; /* Mantiene la forma redonda de la imagen */
+    object-fit: cover; /* Asegura que la imagen se ajuste bien sin deformarse */
     position: relative;
 }
 
@@ -63,9 +65,10 @@
     display: inline-block;
     position: relative;
     border: 5px solid var(--quaternary-color);
-    border-radius: 100%;
+    border-radius: 50%; /* Asegura que el borde es completamente redondo */
     overflow: hidden;
-    width: 50%;
+    width: 150px; /* Tamaño fijo para el círculo */
+    height: 150px; /* Tamaño fijo para el círculo */
     padding: 5px;
 }
 

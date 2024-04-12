@@ -8,67 +8,72 @@
       {
         "nombre": "Braian Gomez",
         "area": "Frontend Engineer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Braian.webp"
       },
       {
         "nombre": "Sebastian Faliani",
         "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Sebastian.webp"
       },
       {
         "nombre": "Ulises Armolla",
         "area": "Backend Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Ulises.webp"
+      },
+      {
+        "nombre": "Brian Garcia",
+        "area": "Frontend Developer",
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Brian.webp"
       },
       {
         "nombre": "Facundo Fourcade",
         "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/FacuF.webp"
       },
       {
         "nombre": "Ignacio Maraude",
         "area": "Frontend Engineer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Nacho.webp"
       },
       {
         "nombre": "Matias Diaz",
         "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Matias.webp"
       },
       {
         "nombre": "Facundo Gomez",
         "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/FacuG.webp"
       },
       {
         "nombre": "Pablo Brague",
         "area": "Diseñador Web",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Pablo.webp"
       },
       {
         "nombre": "Aldana Schiuma",
         "area": "Diseñadora UX/UI",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Aldana.webp"
       },
       {
         "nombre": "Martin Alderete",
         "area": "Product Manager",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Martin.webp"
       },
       {
-        "nombre": "Richard",
+        "nombre": "Richard Romero",
         "area": "Diseñador Grafico",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "Mariana Scocola",
+        "nombre": "Mariana Scóccola",
         "area": "Community Manager",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Mariana.webp"
       },
       {
         "nombre": "Ivan Riesgo",
         "area": "Content Creator",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+        "imagen": "https://raw.githubusercontent.com/PochiTama-dev/Pochitama.site2.0/master/src/assets/images/Fotos%20pochitama/Ivan.webp"
       }
     ]
   }
