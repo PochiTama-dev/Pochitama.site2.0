@@ -1,83 +1,73 @@
 {
     "equipo": [
       {
-        "nombre": "GONZALA ENRICA",
+        "nombre": "Gonzalo Enrique",
+        "area": "Founder / CEO",
+        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+      },
+      {
+        "nombre": "Braian Gomez",
+        "area": "Frontend Engineer",
+        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+      },
+      {
+        "nombre": "Sebastian Faliani",
         "area": "Fullstack Developer",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 1",
+        "nombre": "Ulises Armolla",
+        "area": "Backend Developer",
+        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+      },
+      {
+        "nombre": "Facundo Fourcade",
         "area": "Fullstack Developer",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 2",
+        "nombre": "Ignacio Maraude",
+        "area": "Frontend Engineer",
+        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
+      },
+      {
+        "nombre": "Matias Diaz",
         "area": "Fullstack Developer",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 3",
+        "nombre": "Facundo Gomez",
         "area": "Fullstack Developer",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 4",
-        "area": "Fullstack Developer",
+        "nombre": "Pablo Brague",
+        "area": "Diseñador Web",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 5",
-        "area": "Fullstack Developer",
+        "nombre": "Aldana Schiuma",
+        "area": "Diseñadora UX/UI",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 6",
-        "area": "Fullstack Developer",
+        "nombre": "Martin Alderete",
+        "area": "Product Manager",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 7",
-        "area": "Fullstack Developer",
+        "nombre": "Richard",
+        "area": "Diseñador Grafico",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 8",
-        "area": "Fullstack Developer",
+        "nombre": "Mariana Scocola",
+        "area": "Community Manager",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       },
       {
-        "nombre": "EL PEPE 9",
-        "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
-      },
-      {
-        "nombre": "EL PEPE 10",
-        "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
-      },
-      {
-        "nombre": "EL PEPE 11",
-        "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
-      },
-      {
-        "nombre": "EL PEPE 12",
-        "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
-      },
-      {
-        "nombre": "EL PEPE 13",
-        "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
-      },
-      {
-        "nombre": "EL PEPE 14",
-        "area": "Fullstack Developer",
-        "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
-      },
-      {
-        "nombre": "EL PEPE 15",
-        "area": "Fullstack Developer",
+        "nombre": "Ivan Riesgo",
+        "area": "Content Creator",
         "imagen": "https://avatars.githubusercontent.com/u/111319458?v=4"
       }
     ]

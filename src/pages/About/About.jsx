@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import "./about.css";
 import "../../Themes/Base/_variables.css";
 import colaboradores from "../../colaboradores.json";
