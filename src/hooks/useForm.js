@@ -13,8 +13,6 @@ export const useForm = (initialForm, validateForm) => {
     setRecaptcha(recaptchaInstance);
   }, []);
 
-  const resend = new Resend('re_MGTnXnxZ_JBMEeuTRHpx4Qhdn74mpKTQV');
-
   const handleChange = (e, buttonValue) => {
     if (e.target.tagName === "BUTTON") {
       setButtonSelections({
@@ -63,6 +61,9 @@ export const useForm = (initialForm, validateForm) => {
       setLoading(true);
 
       try {
+
+        const resend = new Resend('re_MGTnXnxZ_JBMEeuTRHpx4Qhdn74mpKTQV');
+
         await resend.emails.send({
           from: 'onboarding@resend.dev',
           to: 'consultas@pochitama.dev',
