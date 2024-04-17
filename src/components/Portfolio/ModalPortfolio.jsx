@@ -12,9 +12,9 @@ const ModalPortfolio = ({ show, onHide, data }) => {
     window.open(url, "_blank");
   };
   const handlerEvent = (e) => {
-    e.stopPropagation();
+  
   };
-
+console.log(data.description)
   return (
     <Modal
       show={show}
@@ -43,7 +43,7 @@ const ModalPortfolio = ({ show, onHide, data }) => {
                   alt={`${data.title}-${index}`}
                   style={{
                     height: "400px",
-                    width: "600px",
+                    width: "70%",
                     display: "inline-block",
                     margin: "20px",
                   }}
@@ -63,7 +63,7 @@ const ModalPortfolio = ({ show, onHide, data }) => {
         <div style={{ width: "100%", padding: "5px", marginTop: "50px" }}>
           <div className="description-modal-portfolio">
             <label className="modal_label">
-              {data.description || loreIpsum}
+              {data.description }
             </label>
           </div>
         </div>
