@@ -1,6 +1,5 @@
 import { useState, useCallback } from "react";
 import axios from "axios";
-/* import { Resend } from 'resend'; */
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
@@ -61,31 +60,11 @@ export const useForm = (initialForm, validateForm) => {
     if (Object.keys(formErrors).length === 0 && recaptcha == 'success') {
       setLoading(true);
 
-      /* try {
-
-        const resend = new Resend('re_EtDwyxfE_4NhDTNJjMFyYmKgShiJ9537A');
-
-        await resend.emails.send({
-          from: 'onboarding@resend.dev',
-          to: 'matiasdiazdev@gmail.com',//consultas@pochitama.dev
-          subject: 'Contacto Landing Pochitama',
-          html: '<p>Congrats on sending your <strong>first email</strong>!</p>'//form
-        });        
-
-        setLoading(false);
-        setResponse(true);
-        setForm(initialForm);
-        setButtonSelections({});
-        console.log('Correo enviado exitosamente');
-      } catch (error) {
-        console.error('Error al enviar el correo:', error);
-      } */
-
       axios
         .post(
           "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
           form,
-          { headers: { "Content-Type": "application/json" } }
+          { headers: {'Accept': 'application/json'} }
         )
         .then(function (result) {
           setLoading(false);
