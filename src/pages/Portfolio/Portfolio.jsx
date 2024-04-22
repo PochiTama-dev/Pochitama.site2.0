@@ -83,7 +83,9 @@ const Portfolio = () => {
               >
                 {allProjectsData.map((project, index) => (
                   <Carousel.Item key={index}>
-                    <ProyectCard proyectName={project.title} position={"carousel"} image={project.image} />
+                    <ProyectCard proyectName={project.title}  image={project.image}   images={project.images}
+        url={project.url}
+        description={project.description} />
                   </Carousel.Item>
                 ))}
               </Carousel>
