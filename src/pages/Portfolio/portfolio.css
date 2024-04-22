@@ -248,6 +248,8 @@
   .modal_rectangule {
     min-width: 80.2%;
     transform: translateX(-50%);
+    left: 60%;
+    
   }
   .modal_logo {
     width: 100px;
