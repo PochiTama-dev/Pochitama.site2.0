@@ -64,7 +64,7 @@ export const useForm = (initialForm, validateForm) => {
         .post(
           "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
           form,
-          { headers: { "Content-Type": "application/json" } }
+          { headers: {'Accept': 'application/json'} }
         )
         .then(function (result) {
           setLoading(false);
