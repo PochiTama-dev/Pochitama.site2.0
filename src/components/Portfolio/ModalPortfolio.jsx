@@ -1,6 +1,7 @@
 import React from "react";
 import { Modal, Carousel } from "react-bootstrap";
 import { loreIpsum } from "../../pages/Portfolio/variables";
+import "./modalPortfolio.css";
 
 const ModalPortfolio = ({ show, onHide, data }) => {
   const handleClick = () => {
@@ -11,16 +12,19 @@ const ModalPortfolio = ({ show, onHide, data }) => {
 
     window.open(url, "_blank");
   };
+
   const handlerEvent = (e) => {
-  
+    e.stopPropagation(); // Evitar que el clic se propague y cierre el modal
   };
-console.log(data.description)
+
+  console.log(data.description);
+
   return (
     <Modal
       show={show}
       centered
       size="xl"
-      onClick={handlerEvent}
+      onClick={handlerEvent} // Asigna el manejador de eventos al modal completo
       onHide={onHide}
     >
       <Modal.Body className="d-flex flex-column p-0">
@@ -41,13 +45,8 @@ console.log(data.description)
                 <img
                   src={image}
                   alt={`${data.title}-${index}`}
-                  style={{
-                    height: "400px",
-                    width: "70%",
-                    display: "inline-block",
-                    margin: "20px",
-                  }}
-                  className="mx-auto portfolio-image-modal"
+                  className="portfolio-image-modal"
+                  onClick={handlerEvent} // Asigna el manejador de eventos al carrusel
                 />
               </Carousel.Item>
             ))}
@@ -62,9 +61,7 @@ console.log(data.description)
 
         <div style={{ width: "100%", padding: "5px", marginTop: "50px" }}>
           <div className="description-modal-portfolio">
-            <label className="modal_label">
-              {data.description }
-            </label>
+            <label className="modal_label">{data.description}</label>
           </div>
         </div>
 

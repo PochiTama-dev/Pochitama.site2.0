@@ -1,0 +1,27 @@
+.carousel .portfolio-image-modal {
+    height: 400px;
+    width: 600px;
+    display: inline-block;
+    margin-top: 20px;
+   
+}
+
+
+@media (max-width: 992px) {
+    .carousel .portfolio-image-modal {
+  
+        width: 400px;
+      
+       
+    }
+  }
+
+  
+@media (max-width: 600px) {
+    .carousel .portfolio-image-modal {
+  
+        width: 350px;
+      
+       
+    }
+  }
