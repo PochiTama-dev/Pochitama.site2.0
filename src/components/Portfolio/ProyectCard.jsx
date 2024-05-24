@@ -36,7 +36,7 @@ function ProyectCard({
         <img
           src={image}
           className="portfolio-label"
-          style={{ width: "100%", height: "85%", borderRadius: "20px" }}
+          style={{ width: "100%", height: "80%", borderRadius: "20px" }}
         />
         <div className="portfolio-pildora">
           {/* PILDORA PROYECTO */}

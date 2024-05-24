@@ -82,6 +82,24 @@ import image6 from '../../components/Projects/ProyectSlider copy/proyectHomeImg/
 
 import LavaIcon from "../../assets/images/Clientes/lavaIcon.jpg";
 
+import enigmax from "../../assets/images/Clientes/enigmax/enigmax.webp";
+import enigmax1 from "../../assets/images/Clientes/enigmax/enigmax1.webp";
+import enigmax2 from "../../assets/images/Clientes/enigmax/enigmax2.webp";
+import enigmax3 from "../../assets/images/Clientes/enigmax/enigmax3.webp";
+import enigmaxLogo from "../../assets/images/Clientes/enigmax/enigmaxLogo.jpg";
+
+import delCentro from "../../assets/images/Clientes/delCentroConstrucciones/delCentro.webp";
+import delCentro1 from "../../assets/images/Clientes/delCentroConstrucciones/delCentro1.webp";
+import delCentro2 from "../../assets/images/Clientes/delCentroConstrucciones/delCentro2.webp";
+import delCentro3 from "../../assets/images/Clientes/delCentroConstrucciones/delCentro3.webp";
+import delCentro4 from "../../assets/images/Clientes/delCentroConstrucciones/delCentro4.webp";
+import delCentroLogo from "../../assets/images/Clientes/delCentroConstrucciones/delCentro-Logo.png";
+
+
+import AyVlogo from "../../assets/images/Clientes/AyV/AyV-logo.webp";
+import AyV  from "../../assets/images/Clientes/AyV/AyV.webp";
+import AyV1 from "../../assets/images/Clientes/AyV/AyV1.webp";
+import AyV2 from "../../assets/images/Clientes/AyV/AyV2.webp";
 
 export const projectsData = [
   { title: "Kingdom", image: logoKingdom, images: [Kingdom1, Kingdom2, Kingdom3, Kingdom4, Kingdom5, Kingdom6], url: "http://kindom.com.ar/", description: "PLATAFORMA EDUCATIVA ONLINE DESARROLLADA EN WORDPRESS PARA UNA ACADEMIA DE IDIOMAS, OFRECIENDO CURSOS DINÁMICOS PARA APRENDIZAJE INDIVIDUAL Y CORPORATIVO. INCLUYE INTERFACES INTERACTIVAS, MATERIAL DIDÁCTICO DIVERSIFICADO, OPCIONES DE PERSONALIZACIÓN PARA ESTUDIANTES, INTEGRACIÓN DE PAGOS EN LÍNEA Y HERRAMIENTAS PARA MONITOREO DE PROGRESO, FOMENTANDO UN APRENDIZAJE EFICIENTE Y ADAPTATIVO." },
@@ -95,6 +113,8 @@ export const projectsData = [
   { title: "Morazul", image: logoMorazul , images: [Mora, Mora2, Mora3, Mora4, Mora5, Mora6], url:"morazul.art", description: "PORTAFOLIO DIGITAL CON E-COMMERCE PARA ARTISTA DE MURALES, EXHIBIENDO TRABAJOS REALIZADOS PARA DISTINTAS MARCAS Y FACILITANDO LA EXPANSIÓN DE PROYECTOS. DESTACA POR SU DISEÑO ELEGANTE QUE RESALTA LA CALIDAD ARTÍSTICA, INCLUYENDO UNA TIENDA ONLINE PARA ADQUIRIR OBRAS O CONTRATAR SERVICIOS. OPTIMIZADO PARA SEO, MEJORA LA VISIBILIDAD Y ATRAE NUEVOS CLIENTES, PROMOVIENDO EL ARTE ÚNICO EN ESPACIOS COMERCIALES Y PRIVADOS." },
   { title: "Escuchalo Acá", image: logoLeelo, images: [Escuchalo, Escuchalo2, Escuchalo3, Escuchalo4], url:"escuchaloAca.com.ar" , description: "RADIO ONLINE ESPECIALIZADA EN NOTICIAS NACIONALES, OFRECIENDO COBERTURA CONTINUA Y ANÁLISIS PROFUNDO DE LOS ACONTECIMIENTOS MÁS RELEVANTES. SU PLATAFORMA STREAMING INTEGRA FUNCIONALIDADES INTERACTIVAS PARA UNA EXPERIENCIA AUDITIVA ENRIQUECEDORA, INCENTIVANDO LA PARTICIPACIÓN DE LA AUDIENCIA A TRAVÉS DE FOROS Y REDES SOCIALES. DISEÑADA PARA MANTENER INFORMADOS A LOS OYENTES CON INFORMACIÓN ACTUALIZADA, PROMUEVE UNA COMUNIDAD INFORMADA Y CONECTADA." },
   { title: "LavaRiso", image: LavaIcon , images: [image1, image2, image3, image4, image5, image6], description: "SOFTWARE CRM/ERP ESPECIALIZADO PARA EMPRESAS DE REPARACIÓN DE ELECTRODOMÉSTICOS, INCLUYENDO LAVARROPAS, LAVAVAJILLAS, MICROONDAS Y AIRES ACONDICIONADOS. OFRECE UNA APLICACIÓN CONTABLE CON API DE LA AFIP, CONTROL DE STOCK POR EL JEFE DE TALLER Y UNA APP MÓVIL PARA LA GESTIÓN DE TÉCNICOS EN CAMPO O TALLER. FACILITA LA INTERACCIÓN DIRECTA CON CLIENTES A TRAVÉS DE WHATSAPP, FACEBOOK E INSTAGRAM, MEJORANDO LA EFICIENCIA OPERATIVA Y LA SATISFACCIÓN DEL CLIENTE." },
-   
+  { title: "Enigmax", image: enigmaxLogo , images: [enigmax, enigmax1,enigmax2, enigmax3], description: "ENIGMAX NACE DE LA COLABORACIÓN ENTRE DOS AMIGOS, MARIANO Y SEBASTIAN, CON UN ESPÍRITU EMPRENDEDOR QUE LOS LLEVÓ A EXPLORAR DIVERSOS PROYECTOS Y EMPRESAS. LA SINERGIA DE SUS HABILIDADES CONDUJO AL ÉXITO DE UN LOCAL DE SALAS DE ESCAPE, ABRIENDO ASÍ LAS PUERTAS AL EMOCIONANTE MUNDO DE LAS EXPERIENCIAS INMERSIVAS Y LÚDICAS. ESTA TRAYECTORIA INSPIRADORA CULMINA EN LA CREACIÓN DE ENIGMAX, UNA EMPRESA DEDICADA A LA REALIZACIÓN DE JUEGOS DE ROL INMERSIVOS E INNOVADORES." },
+  { title: "Del Centro Construcciones", image: delCentroLogo , images: [delCentro, delCentro1, delCentro2, delCentro3, delCentro4], description: "NUESTRA MISIÓN ES LIDERAR UNA REVOLUCIÓN EN LA CONSTRUCCIÓN MODULAR OFRECIENDO SOLUCIONES RÁPIDAS, DE ALTA CALIDAD Y ECOLÓGICAMENTE SOSTENIBLES. ESTAMOS COMPROMETIDOS CON LA EXCELENCIA, ASEGURANDO LA MÁXIMA CONFORTABILIDAD Y FUNCIONALIDAD EN CADA PROYECTO. UTILIZAMOS MATERIALES DE LA MEJOR CALIDAD Y TECNOLOGÍAS AVANZADAS PARA NO SOLO CUMPLIR, SINO TAMBIÉN SUPERAR LAS EXPECTATIVAS DE NUESTROS CLIENTES, MANTENIENDO UN COMPROMISO CON LA INNOVACIÓN Y LA ADAPTABILIDAD EN TODO LO QUE HACEMOS." },
+  { title: "AyV uniformes", image: AyVlogo , images: [AyV, AyV1, AyV2], description: "AyV ES TU TIENDA DE CONFIANZA PARA UNIFORMES DE ALTA CALIDAD. OFRECEMOS UNA AMPLIA GAMA DE UNIFORMES PARA DIVERSAS INDUSTRIAS. NOS ENFOCAMOS EN LA DURABILIDAD, COMODIDAD Y ESTILO DE NUESTRAS PRENDAS, ASEGURANDO QUE CADA UNIFORME CUMPLA CON LOS MÁS ALTOS ESTÁNDARES." },
 ];
  

@@ -74,8 +74,8 @@
   background: url(/src/assets/images/exampleProyect.png) 50% center / cover
     no-repeat white;
   box-shadow: rgba(0, 0, 0, 0.2) 20px 20px 20px 0px;
-  height: 50vh;
-  width: 250px;
+  height: 440px;
+  width: 270px;
   min-width: 170px;
   max-width: 270px;
   padding: 10px;
@@ -114,6 +114,7 @@
   background-color: var(--primary-color);
   border-radius: 100%;
   padding: 25px;
+ 
 }
 .portfolio .carousel-control-prev-icon:focus,
 .carousel-control-next-icon:focus {
@@ -215,8 +216,8 @@
   }
   .porfolio-proyect-box {
     height: auto;
-    min-height: 50vh;
-    width: 45%;
+    min-height: 42vh;
+    width: 95%;
   }
   .modal_rectangule {
     min-width: 70%;
@@ -241,7 +242,7 @@
     width: 20%;
   }
   .porfolio-proyect-box {
-    width: 55%;
+    width: 90%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -280,26 +281,7 @@
     padding-top: 50px;
   }
 }
-@media (min-width: 990px) and (max-width: 1000px) {
-  .modal_rectangule {
-    top: 56%;
-    left: 40%;
-    min-width: 60%;
-  }
-  .modal_logo {
-    width: 120px;
-    height: 120px;
-    margin-left: 0;
-  }
-  .modal_label {
-    padding-top: 50px;
-  }
-  .porfolio-proyect-box {
-    width: 45%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
+ 
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   .modal_logo {
@@ -307,4 +289,9 @@
     height: 120px;
     margin-left: 0;
   }
+  .porfolio-proyect-box {
+    width: 230px;
+   
+  }
+ 
 }
