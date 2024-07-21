@@ -299,7 +299,7 @@ const Contact = () => {
           {/* Mensaje de éxito */}
           {showSuccessmensaje && (
             <Alert variant="success" className="mt-3">
-              ¡El formulario fue enviado con éxito!
+              ¡Tu consulta fue enviada con éxito!
             </Alert>
           )}
         </Col>

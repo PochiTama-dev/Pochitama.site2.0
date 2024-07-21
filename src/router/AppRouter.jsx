@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../components/header/Header";
 import Services from "../pages/Services/Services";
+import WhatsAppButton from "../components/Whatsapp/WhatsAppButton";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const AboutUs = lazy(() => import("../pages/About/About"));
@@ -23,6 +24,7 @@ const AppRouter = () => (
       </Routes>
       <Footer />
     </Suspense>
+    <WhatsAppButton/>
   </Router>
 );
 
