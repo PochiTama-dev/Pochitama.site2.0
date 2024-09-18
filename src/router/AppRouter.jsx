@@ -2,8 +2,7 @@ import { Suspense, lazy } from "react";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../components/header/Header";
 import Services from "../pages/Services/Services";
-import WhatsAppButton from "../components/Whatsapp/WhatsAppButton";
-import Sitemap from "../components/Sitemap/Sitemap";
+import PolicyAndPrivacy from "../pages/policy-and-privacy/PolicyAndPrivacy";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const AboutUs = lazy(() => import("../pages/About/About"));
@@ -22,11 +21,10 @@ const AppRouter = () => (
         <Route path="/servicios" element={<Services />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contacto" element={<Contact />} />
-        <Route path="/sitemap" element={<Sitemap />} />
+        <Route path="/politicas-y-privacidad" element={<PolicyAndPrivacy/>}/>
       </Routes>
       <Footer />
     </Suspense>
-    <WhatsAppButton/>
   </Router>
 );
 
