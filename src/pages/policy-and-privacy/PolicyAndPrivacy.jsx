@@ -4,7 +4,7 @@ const PolicyAndPrivacy = () => {
   return (
     <div className="policy-container">
       <h1 className="policy-title">Políticas de Privacidad</h1>
-      <p className="policy-date">Última actualización: [Fecha de actualización]</p>
+      <p className="policy-date">Última actualización: 18/09/2024</p>
 
       <section className="policy-section">
         <h2 className="policy-subtitle">1. Introducción</h2>

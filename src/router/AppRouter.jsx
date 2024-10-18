@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "../components/header/Header";
 import Services from "../pages/Services/Services";
 import PolicyAndPrivacy from "../pages/policy-and-privacy/PolicyAndPrivacy";
+import WhatsAppButton from "../components/Whatsapp/WhatsAppButton";
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const AboutUs = lazy(() => import("../pages/About/About"));
@@ -23,6 +24,7 @@ const AppRouter = () => (
         <Route path="/contacto" element={<Contact />} />
         <Route path="/politicas-y-privacidad" element={<PolicyAndPrivacy/>}/>
       </Routes>
+      <WhatsAppButton />
       <Footer />
     </Suspense>
   </Router>
