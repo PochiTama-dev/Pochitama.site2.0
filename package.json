@@ -9,7 +9,7 @@
     "copy-sitemap": "copyfiles -u 1 public/sitemap.xml dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "predeploy": "npm run build && cp CNAME dist/",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
