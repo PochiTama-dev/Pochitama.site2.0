@@ -481,3 +481,185 @@ video {
     );
   }
 }
+
+/* ========================================
+   CTA MODERN - POCHITAMA COLORS
+   ======================================== */
+
+.cta-modern {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #b8afd5 0%, #d7bcdc 100%);
+  overflow: hidden;
+  padding: 4rem 2rem;
+}
+
+.cta-modern__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-modern__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.cta-modern__logo {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-modern__video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.cta-modern__logo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+}
+
+.cta-modern__logo-static {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+.cta-modern__logo-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cta-modern__logo-wrapper:hover .cta-modern__logo-static {
+  opacity: 0;
+}
+
+.cta-modern__logo-wrapper:hover .cta-modern__logo-hover {
+  opacity: 1;
+}
+
+.cta-modern__text {
+  flex: 1;
+  min-width: 300px;
+  text-align: left;
+}
+
+.cta-modern__title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.cta-modern__subtitle {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.cta-modern__button-link {
+  text-decoration: none;
+}
+
+.cta-modern__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2.5rem;
+  background: white;
+  color: #9a6d89;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta-modern__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  background: #f8f9fa;
+}
+
+.cta-modern__button-arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cta-modern__button:hover .cta-modern__button-arrow {
+  transform: translateX(5px);
+}
+
+.cta-modern__background {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+}
+
+.cta-modern__wave {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-modern {
+    min-height: auto;
+    padding: 3rem 1.5rem;
+  }
+
+  .cta-modern__content {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .cta-modern__text {
+    text-align: center;
+  }
+
+  .cta-modern__logo {
+    min-width: auto;
+  }
+
+  .cta-modern__logo-wrapper {
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .cta-modern__button {
+    width: 100%;
+    justify-content: center;
+  }
+}

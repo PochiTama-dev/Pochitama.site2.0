@@ -1,47 +1,229 @@
+/* ========================================
+   POLICY & PRIVACY - MODERN DESIGN
+   ======================================== */
+
 .policy-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f7fc 100%);
+  padding: 120px 0 80px;
+}
+
+.policy-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.policy-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.policy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: rgba(184, 175, 213, 0.1);
+  border: 1px solid rgba(184, 175, 213, 0.3);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #9A6D89;
+  margin-bottom: 1.5rem;
+}
+
+.policy-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.policy-date {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.policy-intro {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.policy-content {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 10px 40px rgba(154, 109, 137, 0.08);
+  border: 1px solid rgba(184, 175, 213, 0.1);
+}
+
+.policy-section {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(184, 175, 213, 0.15);
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.policy-subtitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #9A6D89;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.policy-subtitle::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(135deg, #9A6D89, #B8AFD5);
+  border-radius: 2px;
+}
+
+.policy-section p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+.policy-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.policy-section ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.policy-section ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #9A6D89, #B8AFD5);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.policy-section strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.policy-contact-box {
+  background: linear-gradient(135deg, rgba(184, 175, 213, 0.1), rgba(215, 188, 220, 0.1));
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border: 1px solid rgba(184, 175, 213, 0.2);
+}
+
+.policy-contact-box ul {
+  margin: 0;
+}
+
+.policy-contact-box li::before {
+  content: '📧';
+  background: none;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  border-radius: 0;
+}
+
+.policy-contact-box li:last-child::before {
+  content: '📍';
+}
+
+.policy-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #9A6D89, #B8AFD5);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 3rem;
+  box-shadow: 0 4px 15px rgba(154, 109, 137, 0.3);
+}
+
+.policy-back-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(154, 109, 137, 0.4);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .policy-container {
+    padding: 100px 0 60px;
   }
-  
-  .policy-title {
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-align: center;
+
+  .policy-wrapper {
+    padding: 0 1.5rem;
   }
-  
-  .policy-date {
-    font-size: 14px;
-    color: #888;
-    text-align: center;
+
+  .policy-content {
+    padding: 2rem 1.5rem;
   }
-  
+
   .policy-section {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
-  
+
   .policy-subtitle {
     font-size: 20px;
-    margin-bottom: 10px;
-    color: #444;
   }
-  
-  ul {
-    list-style-type: disc;
-    margin-left: 20px;
+
+  .policy-section ul li {
+    padding-left: 2.5rem;
   }
-  
-  li {
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .policy-title {
+    font-size: 28px;
   }
-  
-  strong {
-    color: #000;
+
+  .policy-content {
+    padding: 1.5rem 1rem;
   }
+
+  .policy-contact-box {
+    padding: 1.5rem;
+  }
+}
   

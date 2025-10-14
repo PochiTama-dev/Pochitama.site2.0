@@ -1,83 +1,128 @@
-import React from "react";
+import React, { useState } from "react";
 import { Modal, Carousel } from "react-bootstrap";
-import { loreIpsum } from "../../pages/Portfolio/variables";
 import "./modalPortfolio.css";
 
 const ModalPortfolio = ({ show, onHide, data }) => {
-  const handleClick = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleVisitSite = () => {
     const url =
       data.url.startsWith("http://") || data.url.startsWith("https://")
         ? data.url
-        : `http://${data.url}`;
-
-    window.open(url, "_blank");
+        : `https://${data.url}`;
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  const handlerEvent = (e) => {
-    e.stopPropagation(); // Evitar que el clic se propague y cierre el modal
+  const handleSelect = (selectedIndex) => {
+    setActiveIndex(selectedIndex);
   };
-
-  console.log(data.description);
 
   return (
     <Modal
       show={show}
+      onHide={onHide}
       centered
       size="xl"
-      onClick={handlerEvent} // Asigna el manejador de eventos al modal completo
-      onHide={onHide}
+      className="portfolio-modal"
+      backdrop="static"
     >
-      <Modal.Body className="d-flex flex-column p-0">
-        <Carousel
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          {data.images &&
-            data.images.map((image, index) => (
-              <Carousel.Item
-                key={index}
-                className="text-center"
-                style={{ marginBottom: "50px" }}
-              >
-                <img
-                  src={image}
-                  alt={`${data.title}-${index}`}
-                  className="portfolio-image-modal"
-                  onClick={handlerEvent} // Asigna el manejador de eventos al carrusel
-                />
+      <Modal.Header closeButton className="portfolio-modal__header">
+        <Modal.Title className="portfolio-modal__title">
+          {data.title}
+        </Modal.Title>
+      </Modal.Header>
+
+      <Modal.Body className="portfolio-modal__body">
+        {/* Image Carousel */}
+        <div className="portfolio-modal__carousel-wrapper">
+          <Carousel
+            activeIndex={activeIndex}
+            onSelect={handleSelect}
+            interval={null}
+            indicators={true}
+            controls={data.images && data.images.length > 1}
+          >
+            {data.images && data.images.map((image, index) => (
+              <Carousel.Item key={index}>
+                <div className="portfolio-modal__image-container">
+                  <img
+                    src={image}
+                    alt={`${data.title} - Vista ${index + 1}`}
+                    className="portfolio-modal__image"
+                  />
+                </div>
               </Carousel.Item>
             ))}
-        </Carousel>
-
-        <div className="modal_rectangule">
-          <div style={{ width: "60%" }}>
-            <label className="modal_rectangule_title">{data.title}</label>
-          </div>
-          <div className="modal_logo" />
-        </div>
-
-        <div style={{ width: "100%", padding: "5px", marginTop: "50px" }}>
-          <div className="description-modal-portfolio">
-            <label className="modal_label">{data.description}</label>
-          </div>
-        </div>
-
-        <div
-          className="d-flex justify-content-center"
-          style={{ marginTop: "50px" }}
-        >
-          {data.url && (
-            <button className="modal_button">
-              <label className="modal_button_label" onClick={handleClick}>
-                Visitala!
-              </label>
-            </button>
+          </Carousel>
+          
+          {/* Image Counter */}
+          {data.images && data.images.length > 1 && (
+            <div className="portfolio-modal__counter">
+              {activeIndex + 1} / {data.images.length}
+            </div>
           )}
         </div>
+
+        {/* Project Info */}
+        <div className="portfolio-modal__info">
+          {/* Description */}
+          <div className="portfolio-modal__section">
+            <h3 className="portfolio-modal__section-title">
+              📋 Sobre el Proyecto
+            </h3>
+            <p className="portfolio-modal__description">
+              {data.description}
+            </p>
+          </div>
+
+          {/* Technologies */}
+          {data.technologies && data.technologies.length > 0 && (
+            <div className="portfolio-modal__section">
+              <h3 className="portfolio-modal__section-title">
+                🛠️ Tecnologías Utilizadas
+              </h3>
+              <div className="portfolio-modal__tech-grid">
+                {data.technologies.map((tech, index) => (
+                  <span key={index} className="portfolio-modal__tech-badge">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Features */}
+          <div className="portfolio-modal__section">
+            <h3 className="portfolio-modal__section-title">
+              ✨ Características Destacadas
+            </h3>
+            <ul className="portfolio-modal__features">
+              <li>Diseño responsive y adaptable</li>
+              <li>Optimizado para SEO</li>
+              <li>Alto rendimiento y velocidad</li>
+              <li>Experiencia de usuario intuitiva</li>
+            </ul>
+          </div>
+        </div>
       </Modal.Body>
+
+      <Modal.Footer className="portfolio-modal__footer">
+        <button 
+          className="portfolio-modal__btn portfolio-modal__btn--secondary"
+          onClick={onHide}
+        >
+          Cerrar
+        </button>
+        {data.url && (
+          <button 
+            className="portfolio-modal__btn portfolio-modal__btn--primary"
+            onClick={handleVisitSite}
+          >
+            Visitar Sitio Web
+            <span className="portfolio-modal__btn-icon">🚀</span>
+          </button>
+        )}
+      </Modal.Footer>
     </Modal>
   );
 };

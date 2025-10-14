@@ -1,16 +1,61 @@
 :root,
 [data-bs-theme=light] {
-    --font-family-body: "Open Sans", sans-serif;
-    --bs-primary: #5dFFfd;
+    /* Tipografías Profesionales */
+    --font-family-primary: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-family-secondary: 'Inter', sans-serif;
+    --font-family-body: 'Inter', sans-serif;
+    
+    /* Paleta de Colores Principal */
+    --white: #FFFFFF;
+    --lila-claro: #B8AFD5;
+    --violeta-pastel: #D7BCDC;
+    --violeta-oscuro: #9A6D89;
+    --rosa-lavanda: #D6BADB;
+    --rosa-violaceo: #D8BCDC;
+    --lavanda-grisaceo: #B7AFD5;
+    --lila-rosado: #D6BBDB;
+    --violeta-medio: #D7BBDC;
+    --violeta-suave: #D5B9DB;
+    
+    /* Variables de Bootstrap compatibles */
+    --bs-primary: #B8AFD5;
     --primary-color: #B8AFD5;
     --secundary-color: #B4AAD4;
-    --tertiary-color: #8987C1;
-    --quaternary-color: #8888C1;
+    --tertiary-color: #9A6D89;
+    --quaternary-color: #D7BCDC;
 
+    /* Logo Colors */
     --primary-logo-color: #D7BCDC;
     --secundary-logo-color: #9A6D89;
 
+    /* Gradientes */
     --nav-gradient: linear-gradient(90deg, rgba(184,175,213,0) 0%, rgba(180,170,212,1) 55%);
-
+    --hero-gradient: linear-gradient(135deg, #B8AFD5 0%, #D7BCDC 50%, #9A6D89 100%);
+    
+    /* Sombras modernas */
+    --shadow-sm: 0 2px 8px rgba(154, 109, 137, 0.1);
+    --shadow-md: 0 4px 16px rgba(154, 109, 137, 0.15);
+    --shadow-lg: 0 8px 32px rgba(154, 109, 137, 0.2);
+    --shadow-xl: 0 12px 48px rgba(154, 109, 137, 0.25);
+    
+    /* Espaciado */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 50%;
+    
+    /* Transiciones */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
 }
 

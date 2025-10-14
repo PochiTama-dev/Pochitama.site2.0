@@ -1,13 +1,25 @@
-import './PolicyAndPrivacy.css'; // Asegúrate de crear un archivo CSS para los estilos
+import { Link } from 'react-router-dom';
+import './PolicyAndPrivacy.css';
 
 const PolicyAndPrivacy = () => {
   return (
     <div className="policy-container">
-      <h1 className="policy-title">Políticas de Privacidad</h1>
-      <p className="policy-date">Última actualización: 18/09/2024</p>
+      <div className="policy-wrapper">
+        <div className="policy-header">
+          <div className="policy-badge">
+            🔒 Información Legal
+          </div>
+          <h1 className="policy-title">Política de Privacidad</h1>
+          <p className="policy-date">Última actualización: 18 de septiembre de 2024</p>
+          <p className="policy-intro">
+            En Pochitama.dev, nos comprometemos a proteger tu privacidad y mantener 
+            la seguridad de tu información personal.
+          </p>
+        </div>
 
-      <section className="policy-section">
-        <h2 className="policy-subtitle">1. Introducción</h2>
+        <div className="policy-content">
+          <section className="policy-section">
+            <h2 className="policy-subtitle">1. Introducción</h2>
         <p>
           En <strong>pochitama.dev</strong>, entendemos la importancia de la privacidad de los datos y estamos comprometidos a proteger la
           información personal de nuestros clientes, usuarios y asociados. Esta política describe cómo recopilamos, utilizamos, almacenamos
@@ -81,14 +93,24 @@ const PolicyAndPrivacy = () => {
         </p>
       </section>
 
-      <section className="policy-section">
-        <h2 className="policy-subtitle">9. Contacto</h2>
-        <p>Si tienes preguntas sobre nuestra política de privacidad, por favor contáctanos a:</p>
-        <ul>
-          <li><strong>Correo electrónico:</strong> Consultas@pochitama.dev</li>
-          <li><strong>Dirección:</strong> Cotagaita 613, Avellaneda, Buenos Aires.</li>
-        </ul>
-      </section>
+          <section className="policy-section">
+            <h2 className="policy-subtitle">9. Contacto</h2>
+            <p>Si tienes preguntas sobre nuestra política de privacidad, por favor contáctanos:</p>
+            <div className="policy-contact-box">
+              <ul>
+                <li><strong>Correo electrónico:</strong> Enriquegonzalodamian@outlook.com</li>
+                <li><strong>Dirección:</strong> Cotagaita 613, Avellaneda, Buenos Aires.</li>
+              </ul>
+            </div>
+          </section>
+
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link to="/" className="policy-back-link">
+              ← Volver al inicio
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

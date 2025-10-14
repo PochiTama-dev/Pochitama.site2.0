@@ -1,28 +1,25 @@
 import { Modal } from "react-bootstrap";
-/* eslint-disable */
+import { Link } from "react-router-dom";
+import "./ModalServices.css";
+
 function ModalServices({ show, data, onHide }) {
   const renderDescription = () => {
-    if (!data) return ""; // Manejo de datos nulos
+    if (!data) return "";
 
-    // Dividir la descripción en partes separadas por '**'
     const parts = data.description.split("**");
-
-    // Inicializar un array para almacenar las partes renderizadas
     const renderedParts = [];
 
-    // Iterar sobre las partes divididas
     for (let i = 0; i < parts.length; i++) {
-      // Alternar entre renderizar texto normal y texto en negrita
       if (i % 2 === 0) {
-        renderedParts.push(parts[i]); // Agregar texto normal
+        renderedParts.push(parts[i]);
       } else {
-        renderedParts.push(<strong key={i}>{parts[i]}</strong>); // Agregar texto en negrita
+        renderedParts.push(<strong key={i}>{parts[i]}</strong>);
       }
     }
 
-    // Devolver las partes renderizadas como elementos React
     return renderedParts;
   };
+
   return (
     <Modal
       show={show}
@@ -30,46 +27,77 @@ function ModalServices({ show, data, onHide }) {
       size="xl"
       onHide={onHide}
       onClick={(e) => e.stopPropagation()}
+      className="modal-services-modern"
     >
-      <Modal.Body className="d-flex modal-services flex-column p-0">
+      <Modal.Body className="modal-services-body">
+        <button className="modal-close-button" onClick={onHide}>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+          </svg>
+        </button>
+
         <div
-          className=""
+          className="modal-service-image"
           style={{
-            background: `url(${
+            backgroundImage: `linear-gradient(135deg, rgba(184, 175, 213, 0.9), rgba(215, 188, 220, 0.8)), url(${
               data ? data.img : "/src/assets/images/exampleProyect.webp"
             })`,
-            backgroundSize: "cover", // Ajusta el tamaño de la imagen para cubrir completamente el contenedor
-            backgroundPosition: "center", // Ajusta la posición de la imagen al centro
-            width: "100%",
-            minHeight: "45vh",
           }}
-        />
-        <div className="modal_rectangule">
-          <div className="modal_div_title">
-            <label className="modal_rectangule_title">{data.title}</label>
+        >
+          <div className="modal-service-header">
+            <div className="modal-service-badge">✨ Servicio Premium</div>
+            <h2 className="modal-service-title">{data?.title}</h2>
           </div>
-          <div className="modal_logo" />
         </div>
-        <div style={{ width: "100%", padding: "5px " }}>
-          <div>
-            <div
-              style={{ marginTop: "100px" }}
-              className="description-modal-portfolio"
-            >
-              <pre className="modal_label">
-                {/* {data ? data.description : loreIpsum} */}
-                {renderDescription()}
-              </pre>
+
+        <div className="modal-service-content">
+          <div className="modal-service-description">
+            <pre className="description-text">{renderDescription()}</pre>
+          </div>
+
+          <div className="modal-service-features">
+            <h3 className="features-title">¿Por qué elegirnos?</h3>
+            <div className="features-grid">
+              <div className="feature-item">
+                <div className="feature-icon">⚡</div>
+                <div className="feature-text">
+                  <h4>Entrega Rápida</h4>
+                  <p>Cumplimos con los plazos acordados</p>
+                </div>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">🎯</div>
+                <div className="feature-text">
+                  <h4>Calidad Garantizada</h4>
+                  <p>Código limpio y escalable</p>
+                </div>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">💬</div>
+                <div className="feature-text">
+                  <h4>Soporte Continuo</h4>
+                  <p>Te acompañamos en todo momento</p>
+                </div>
+              </div>
+              <div className="feature-item">
+                <div className="feature-icon">🚀</div>
+                <div className="feature-text">
+                  <h4>Tecnología Avanzada</h4>
+                  <p>Herramientas de vanguardia</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          className="d-flex justify-content-center"
-          style={{ marginTop: "50px" }}
-        >
-          <button className="modal_button_services">
-            <label className="modal_button_label">Contrata este servicio</label>
-          </button>
+
+          <div className="modal-service-actions">
+            <Link to="/contacto" className="modal-primary-button">
+              <span>Solicitar este servicio</span>
+              <span className="button-arrow">→</span>
+            </Link>
+            <button className="modal-secondary-button" onClick={onHide}>
+              Ver más servicios
+            </button>
+          </div>
         </div>
       </Modal.Body>
     </Modal>

@@ -3,55 +3,93 @@ import ModalPortfolio from "./ModalPortfolio";
 
 function ProyectCard({
   proyectName,
-  position,
-  link,
   image,
   images,
   url,
   description,
+  category = "web",
+  technologies = []
 }) {
   const [showModal, setShowModal] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleShowModal = () => {
-    setShowModal(!showModal);
+  const handleCardClick = () => {
+    setShowModal(true);
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
   };
 
-  const handleCardClick = () => {
-    setSelectedProject({ title: proyectName, image, images, url, description });
-    handleShowModal();
-  };
-
   return (
-    <div
-      className={`porfolio-proyect-box ${position}`}
-      onClick={handleCardClick}
-    >
-      {/* FONDO CON IMAGEN */}
-      <div style={{ position: "relative", width: "250px" }}>
-        <img
-          src={image}
-          className="portfolio-label"
-          style={{ width: "100%", height: "80%", borderRadius: "20px" }}
-        />
-        <div className="portfolio-pildora">
-          {/* PILDORA PROYECTO */}
-          <label className="portfolio-label">{proyectName}</label>
+    <>
+      <article
+        className="project-card"
+        onClick={handleCardClick}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Image Container */}
+        <div className="project-card__image-wrapper">
+          <img
+            src={image}
+            alt={`Proyecto ${proyectName}`}
+            className="project-card__image"
+            loading="lazy"
+          />
+          <div className={`project-card__overlay ${isHovered ? 'active' : ''}`}>
+            <div className="project-card__overlay-content">
+              <span className="project-card__view-icon">👁️</span>
+              <p className="project-card__view-text">Ver Proyecto</p>
+            </div>
+          </div>
         </div>
-      </div>
+
+        {/* Content */}
+        <div className="project-card__content">
+          <div className="project-card__header">
+            <h3 className="project-card__title">{proyectName}</h3>
+            <span className="project-card__category">{category}</span>
+          </div>
+          
+          {/* Technologies */}
+          {technologies && technologies.length > 0 && (
+            <div className="project-card__tech">
+              {technologies.slice(0, 3).map((tech, index) => (
+                <span key={index} className="project-card__tech-tag">
+                  {tech}
+                </span>
+              ))}
+              {technologies.length > 3 && (
+                <span className="project-card__tech-more">
+                  +{technologies.length - 3}
+                </span>
+              )}
+            </div>
+          )}
+
+          <button className="project-card__button">
+            Ver Detalles
+            <span className="project-card__arrow">→</span>
+          </button>
+        </div>
+      </article>
 
       {showModal && (
         <ModalPortfolio
           show={showModal}
-          data={selectedProject}
+          data={{ 
+            title: proyectName, 
+            image, 
+            images, 
+            url, 
+            description,
+            technologies 
+          }}
           onHide={handleCloseModal}
         />
       )}
-    </div>
+    </>
   );
 }
 

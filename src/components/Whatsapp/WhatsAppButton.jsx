@@ -2,7 +2,7 @@
 import './WhatsAppButton.css'; // Asegúrate de crear este archivo CSS para estilizar el botón
 
 const WhatsAppButton = () => {
-  const phoneNumber = '5491166092758'; // Reemplaza con tu número de WhatsApp
+  const phoneNumber = '5491155787653'; // Reemplaza con tu número de WhatsApp
 
   return (
     <a

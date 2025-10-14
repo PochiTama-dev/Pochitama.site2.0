@@ -1,16 +1,6 @@
 import { useEffect, useState } from "react";
 import "./cta.css";
 import logo from "../../assets/images/LogoPochi.webp";
-import angular from "../../assets/images/angular.webp";
-import django from "../../assets/images/django.webp";
-import js from "../../assets/images/js.webp";
-import node from "../../assets/images/node.webp";
-import php from "../../assets/images/php.webp";
-import python from "../../assets/images/python.webp";
-import react from "../../assets/images/react.webp";
-import ruby from "../../assets/images/ruby.webp";
-import vue from "../../assets/images/Vue.webp";
-import wordpress from "../../assets/images/Wordpress.webp";
 import gatoAnimado from "../../assets/gif/pochitama-gif.webm";
 import { Link } from "react-router-dom";
 
@@ -29,138 +19,75 @@ function Cta({
   }, []);
 
   return (
-    <div className="cta ">
-      <div className=" div-container">
-        <div className=" col-left">
-          <Link to="https://angular.io/docs" className="angular">
-            <img src={angular} alt="angular" className="" />
-          </Link>
-          <Link to="https://docs.djangoproject.com/5.0/" className="django">
-            <img src={django} alt="django" className="" />
-          </Link>
-          <Link
-            to="https://developer.mozilla.org/docs/Web/JavaScript"
-            className="js"
-          >
-            <img src={js} alt="javascript" className="" />
-          </Link>
-          <Link
-            to="https://nodejs.org/learn/getting-started/introduction-to-nodejs"
-            className="node"
-          >
-            <img src={node} alt="node" className="" />
-          </Link>
-          <Link to="https://www.php.net/docs.php" className="php">
-            <img src={php} alt="php" className="" />
-          </Link>
-          <Link to="https://www.python.org/doc/" className="python">
-            <img src={python} alt="python" className="" />
-          </Link>
-          <Link to="https://react.dev/learn" className="react">
-            <img src={react} alt="react" className="" />
-          </Link>
-          <Link to="https://www.ruby-lang.org/documentation/" className="ruby">
-            <img src={ruby} alt="ruby" className="" />
-          </Link>
-          <Link to="https://vuejs.org/guide/introduction.html" className="vue">
-            <img src={vue} alt="vue" className="" />
-          </Link>
-          <Link to="https://wordpress.org/documentation/" className="wordpress">
-            <img src={wordpress} alt="wordpress" className="" />
-          </Link>
-          <div className="gif-gato-logo-box">
-  {gifVisible ? (
-    <video
-      autoPlay
-      loop
-      muted
-      playsInline
-      preload="auto"
-      className="start-gif-logo"
-    >
-      <source
-        src={gatoAnimado}
-        type="video/webm"
-      />
-    </video>
-  ) : (
-    <>
-      <img
-        src={logo}
-        alt="logo"
-        className="static-image-logo"
-        style={{ height: "100%" }}
-      />
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="gif-gato-logo-2"
-      >
-        <source src={gatoAnimado} type="video/webm" />
-      </video>
-    </>
-  )}
-</div>
-
-        </div>
-        <div className=" col-right">
-          <div className="div-text">
-            <h2 className="title">{title}</h2>
-            <h3 className="subtitle">{subtitle}</h3>
-          </div>
-          <div className="gif-gato-logo-box-responsive">
+    <div className="cta-modern">
+      <div className="cta-modern__container">
+        <div className="cta-modern__content">
+          <div className="cta-modern__logo">
             {gifVisible ? (
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="start-gif-logo-responsive"
+                preload="auto"
+                className="cta-modern__video"
               >
                 <source src={gatoAnimado} type="video/webm" />
               </video>
             ) : (
-              <img
-                src={logo}
-                alt="logo"
-                className="static-image-logo-responsive"
-                style={{ height: "100%" }}
-              />
+              <div className="cta-modern__logo-wrapper">
+                <img
+                  src={logo}
+                  alt="Pochitama Logo"
+                  className="cta-modern__logo-static"
+                />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="cta-modern__logo-hover"
+                >
+                  <source src={gatoAnimado} type="video/webm" />
+                </video>
+              </div>
             )}
           </div>
-          <div className="div-contact-box">
-            <Link className="button-contact-link" to="/contacto">
-              <button className="button-contact">Contactanos</button>
+          
+          <div className="cta-modern__text">
+            <h2 className="cta-modern__title">{title}</h2>
+            <p className="cta-modern__subtitle">{subtitle}</p>
+            <Link className="cta-modern__button-link" to="/contacto">
+              <button className="cta-modern__button">
+                Hablemos de tu proyecto
+                <span className="cta-modern__button-arrow">→</span>
+              </button>
             </Link>
           </div>
         </div>
       </div>
-      <div className="svg-background">
+      
+      <div className="cta-modern__background">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 3500 100%"
-          fill="none"
-          width="3500"
-          height="100%"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="cta-modern__wave"
         >
           <path
-            d="M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 3500 559.956 1730 559.956V0H0V531.685Z"
-            fill="#B8AFD5"
-          >
-            <animate
-              attributeName="d"
-              dur="5s"
-              repeatCount="indefinite"
-              keyTimes="0;0.33;0.66;1"
-              values="
-    M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 3500 559.956 3500 559.956V0H0V531.685Z;
-    M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 501.078 1013.93 531.685C1234.77 562.291 3500 531.685 3500 531.685V0H0V531.685Z;
-    M0 531.685C0 531.685 245.944 531.685 442.111 531.685C638.278 531.685 793.092 431.931 1013.93 431.931C1234.77 431.931 3500 531.685 3500 531.685V0H0V531.685Z;
-    M0 531.685C0 531.685 245.944 431.931 442.111 431.931C638.278 431.931 793.092 455.078 1013.93 531.685C1234.77 608.291 3500 559.956 3500 559.956V0H0V531.685Z"
-            />
-          </path>
+            d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+            opacity=".25"
+            fill="#d7bcdc"
+          />
+          <path
+            d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+            opacity=".5"
+            fill="#b8afd5"
+          />
+          <path
+            d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+            fill="#9a6d89"
+          />
         </svg>
       </div>
     </div>

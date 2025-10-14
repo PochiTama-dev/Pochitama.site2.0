@@ -101,20 +101,160 @@ import AyV  from "../../assets/images/Clientes/AyV/AyV.webp";
 import AyV1 from "../../assets/images/Clientes/AyV/AyV1.webp";
 import AyV2 from "../../assets/images/Clientes/AyV/AyV2.webp";
 
+import GestionSpartanLogo from "../../assets/images/Clientes/gestionspartan/Dashboard.webp";
+import GestionSpartan1 from "../../assets/images/Clientes/gestionspartan/compras.webp";
+import GestionSpartan2 from "../../assets/images/Clientes/gestionspartan/ventas.webp";
+import GestionSpartan3 from "../../assets/images/Clientes/gestionspartan/productos.webp";
+import GestionSpartan4 from "../../assets/images/Clientes/gestionspartan/vendedores.webp";
+import GestionSpartan5 from "../../assets/images/Clientes/gestionspartan/informes.webp";
+
+import GrandMarketLogo from "../../assets/images/Clientes/grandmarketopen/dashboard.webp";
+import GrandMarket1 from "../../assets/images/Clientes/grandmarketopen/Asignaciones (1).webp";
+import GrandMarket2 from "../../assets/images/Clientes/grandmarketopen/Asignaciones2 (1).webp";
+import GrandMarket3 from "../../assets/images/Clientes/grandmarketopen/basegeneral (1).webp";
+import GrandMarket4 from "../../assets/images/Clientes/grandmarketopen/contabilidad.webp";
+import GrandMarket5 from "../../assets/images/Clientes/grandmarketopen/whatsappconIA.webp";
+
 export const projectsData = [
-  { title: "Kingdom", image: logoKingdom, images: [Kingdom1, Kingdom2, Kingdom3, Kingdom4, Kingdom5, Kingdom6], url: "http://kindom.com.ar/", description: "PLATAFORMA EDUCATIVA ONLINE DESARROLLADA EN WORDPRESS PARA UNA ACADEMIA DE IDIOMAS, OFRECIENDO CURSOS DINÁMICOS PARA APRENDIZAJE INDIVIDUAL Y CORPORATIVO. INCLUYE INTERFACES INTERACTIVAS, MATERIAL DIDÁCTICO DIVERSIFICADO, OPCIONES DE PERSONALIZACIÓN PARA ESTUDIANTES, INTEGRACIÓN DE PAGOS EN LÍNEA Y HERRAMIENTAS PARA MONITOREO DE PROGRESO, FOMENTANDO UN APRENDIZAJE EFICIENTE Y ADAPTATIVO." },
-  { title: "Ribrox", image: RibroxLogo , images: [Ribrox1, Ribrox2, Ribrox3, Ribrox4, Ribrox5, Ribrox6], description: "SOFTWARE AVANZADO DE GESTIÓN DE REDES SOCIALES DISEÑADO PARA FACILITAR LA GENERACIÓN DE CONTENIDO ATRACTIVO, ADMINISTRACIÓN EFICAZ DE CAMPAÑAS PUBLICITARIAS, INTEGRACIÓN DE CHATBOTS INTELIGENTES, ORGANIZACIÓN CON UN CALENDARIO DETALLADO Y ANÁLISIS EXHAUSTIVO DE COMPETIDORES, MEJORANDO SIGNIFICATIVAMENTE LA PRESENCIA Y ESTRATEGIA DIGITAL DE LAS MARCAS." },
-  { title: "Sucurapp", image: logoSucurApp , images: [Sucurapp, Sucurapp2, Sucurapp3, Sucurapp4, Sucurapp5, Sucurapp6], description: "SOLUCIÓN CONTABLE AVANZADA PARA MONITORIZAR INGRESOS/EGRESOS EN SUCURSALES MAYORISTAS. AUTOMATIZA PROCESOS FINANCIEROS, FACILITA INTERCAMBIO CON EXCEL, Y OPTIMIZA LA GESTIÓN FINANCIERA. INCREMENTA LA VISIBILIDAD OPERATIVA Y FINANCIERA, MEJORANDO EL CONTROL Y DECISIONES EMPRESARIALES." },
-  { title: "Calu", image: logoCalu, images: [Calu, Calu2, Calu3, Calu4], url:"calu-mkt.com", description:"SITIO WEB DINÁMICO PARA AGENCIA DE MARKETING CON DISEÑO ATRACTIVO Y PLATAFORMA BACK-END PERSONALIZABLE. PERMITE EDICIÓN DETALLADA DE CADA ASPECTO DEL SITIO, FORTALECIENDO LA PRESENCIA ONLINE. INTEGRA HERRAMIENTAS AVANZADAS PARA GESTIÓN DE CONTENIDOS, VISUALIZACIÓN DE ANALÍTICAS Y OPTIMIZACIÓN SEO, IMPULSANDO LA ESTRATEGIA DE MARKETING DIGITAL." },
-  { title: "Leelo acá", image: logoLeelo , images: [Leelo, Leelo2, Leelo3, Leelo4, Leelo5], url:"leeloAca.com.ar", description:"PORTAL DE NOTICIAS ACTUALIZADAS QUE RECOPILA INFORMACIÓN RELEVANTE NACIONAL, CON ESPACIO PARA DEBATE Y OPINIÓN DE USUARIOS. OFRECE UNA PLATAFORMA INTERACTIVA PARA DISCUSIÓN, PERMITIENDO INTERCAMBIO DE PERSPECTIVAS. INTEGRA SECCIONES DIVERSIFICADAS, FOROS DE DEBATE Y HERRAMIENTAS PARA LA PARTICIPACIÓN COMUNITARIA, ENRIQUECIENDO EL DIÁLOGO PÚBLICO." },
-  { title: "Nutrición Espiritual", image: logoNutriciom, images: [ Nutriciom,Nutriciom2, Nutriciom3, Nutriciom4, Nutriciom5], url: "https://nutricion-espiritual.com/" , description: "LANDING PAGE INSPIRADORA PARA GURÚ DE NUTRICIÓN ESPIRITUAL, DISEÑADA PARA AUMENTAR LA AUDIENCIA EN SU CANAL DE YOUTUBE. DESTACA CONTENIDO ENRIQUECEDOR, VIDEOS MOTIVACIONALES Y RECURSOS GRATUITOS PARA FOMENTAR EL BIENESTAR INTEGRAL. INCLUYE LLAMADOS A LA ACCIÓN EFECTIVOS, TESTIMONIOS REALES Y ENLACES DIRECTOS AL CANAL, MAXIMIZANDO LA CONEXIÓN Y EL CRECIMIENTO DE SEGUIDORES"}, 
-  { title: "Ilum Mexico", image: logoIlum, images: [Ilum1, Ilum2, Ilum3, Ilum4 ], url:"ilum-mexico.com", description: "PLATAFORMA NACIONAL DE CAPACITACIÓN CON AMPLIA OFERTA DE CURSOS DIVERSOS, COMBINANDO SERIEDAD Y ATRACTIVO EN SU DISEÑO. TOTALMENTE CONFIGURABLE PARA ADAPTARSE A NECESIDADES ESPECÍFICAS, PROPORCIONA UN ENTORNO DE APRENDIZAJE INTERACTIVO Y EFICIENTE. DESTACA POR SU FACILIDAD DE USO, PERSONALIZACIÓN DEL APRENDIZAJE Y HERRAMIENTAS DINÁMICAS, IMPULSANDO EL DESARROLLO PROFESIONAL Y PERSONAL DE SUS USUARIOS" },
-  { title: "Abar", image: AbarLogo , images: [Abar, Abar2, Abar3, Abar4, Abar5, Abar6], description: "SITIO WEB INNOVADOR PARA CERRAJERÍA, DISEÑADO PARA ATRAER MÁS CLIENTES Y MEJORAR EL POSICIONAMIENTO SEO. DESTACA POR SU INTERFAZ AMIGABLE Y CONTENIDO OPTIMIZADO PARA BUSCADORES, OFRECIENDO INFORMACIÓN CLARA SOBRE SERVICIOS DE ALTA CALIDAD. INCLUYE TESTIMONIOS DE CLIENTES SATISFECHOS, FORMULARIOS DE CONTACTO RÁPIDOS Y ESTRATEGIAS DE MARKETING DIGITAL EFICACES PARA AUMENTAR LA VISIBILIDAD Y EL ALCANCE EMPRESARIAL." },
-  { title: "Morazul", image: logoMorazul , images: [Mora, Mora2, Mora3, Mora4, Mora5, Mora6], url:"morazul.art", description: "PORTAFOLIO DIGITAL CON E-COMMERCE PARA ARTISTA DE MURALES, EXHIBIENDO TRABAJOS REALIZADOS PARA DISTINTAS MARCAS Y FACILITANDO LA EXPANSIÓN DE PROYECTOS. DESTACA POR SU DISEÑO ELEGANTE QUE RESALTA LA CALIDAD ARTÍSTICA, INCLUYENDO UNA TIENDA ONLINE PARA ADQUIRIR OBRAS O CONTRATAR SERVICIOS. OPTIMIZADO PARA SEO, MEJORA LA VISIBILIDAD Y ATRAE NUEVOS CLIENTES, PROMOVIENDO EL ARTE ÚNICO EN ESPACIOS COMERCIALES Y PRIVADOS." },
-  { title: "Escuchalo Acá", image: logoLeelo, images: [Escuchalo, Escuchalo2, Escuchalo3, Escuchalo4], url:"escuchaloAca.com.ar" , description: "RADIO ONLINE ESPECIALIZADA EN NOTICIAS NACIONALES, OFRECIENDO COBERTURA CONTINUA Y ANÁLISIS PROFUNDO DE LOS ACONTECIMIENTOS MÁS RELEVANTES. SU PLATAFORMA STREAMING INTEGRA FUNCIONALIDADES INTERACTIVAS PARA UNA EXPERIENCIA AUDITIVA ENRIQUECEDORA, INCENTIVANDO LA PARTICIPACIÓN DE LA AUDIENCIA A TRAVÉS DE FOROS Y REDES SOCIALES. DISEÑADA PARA MANTENER INFORMADOS A LOS OYENTES CON INFORMACIÓN ACTUALIZADA, PROMUEVE UNA COMUNIDAD INFORMADA Y CONECTADA." },
-  { title: "LavaRiso", image: LavaIcon , images: [image1, image2, image3, image4, image5, image6], description: "SOFTWARE CRM/ERP ESPECIALIZADO PARA EMPRESAS DE REPARACIÓN DE ELECTRODOMÉSTICOS, INCLUYENDO LAVARROPAS, LAVAVAJILLAS, MICROONDAS Y AIRES ACONDICIONADOS. OFRECE UNA APLICACIÓN CONTABLE CON API DE LA AFIP, CONTROL DE STOCK POR EL JEFE DE TALLER Y UNA APP MÓVIL PARA LA GESTIÓN DE TÉCNICOS EN CAMPO O TALLER. FACILITA LA INTERACCIÓN DIRECTA CON CLIENTES A TRAVÉS DE WHATSAPP, FACEBOOK E INSTAGRAM, MEJORANDO LA EFICIENCIA OPERATIVA Y LA SATISFACCIÓN DEL CLIENTE." },
-  { title: "Enigmax", image: enigmaxLogo , images: [enigmax, enigmax1,enigmax2, enigmax3], url:"https://www.enigmaxoficial.com/", description: "ENIGMAX NACE DE LA COLABORACIÓN ENTRE DOS AMIGOS, MARIANO Y SEBASTIAN, CON UN ESPÍRITU EMPRENDEDOR QUE LOS LLEVÓ A EXPLORAR DIVERSOS PROYECTOS Y EMPRESAS. LA SINERGIA DE SUS HABILIDADES CONDUJO AL ÉXITO DE UN LOCAL DE SALAS DE ESCAPE, ABRIENDO ASÍ LAS PUERTAS AL EMOCIONANTE MUNDO DE LAS EXPERIENCIAS INMERSIVAS Y LÚDICAS. ESTA TRAYECTORIA INSPIRADORA CULMINA EN LA CREACIÓN DE ENIGMAX, UNA EMPRESA DEDICADA A LA REALIZACIÓN DE JUEGOS DE ROL INMERSIVOS E INNOVADORES." },
-  { title: "Del Centro Construcciones", image: delCentroLogo , images: [delCentro, delCentro1, delCentro2, delCentro3, delCentro4], url:"https://delcentroconstrucciones.com/", description: "NUESTRA MISIÓN ES LIDERAR UNA REVOLUCIÓN EN LA CONSTRUCCIÓN MODULAR OFRECIENDO SOLUCIONES RÁPIDAS, DE ALTA CALIDAD Y ECOLÓGICAMENTE SOSTENIBLES. ESTAMOS COMPROMETIDOS CON LA EXCELENCIA, ASEGURANDO LA MÁXIMA CONFORTABILIDAD Y FUNCIONALIDAD EN CADA PROYECTO. UTILIZAMOS MATERIALES DE LA MEJOR CALIDAD Y TECNOLOGÍAS AVANZADAS PARA NO SOLO CUMPLIR, SINO TAMBIÉN SUPERAR LAS EXPECTATIVAS DE NUESTROS CLIENTES, MANTENIENDO UN COMPROMISO CON LA INNOVACIÓN Y LA ADAPTABILIDAD EN TODO LO QUE HACEMOS." },
-  { title: "AyV uniformes", image: AyVlogo , images: [AyV, AyV1, AyV2], url:"https://ayvuniformessf.com.ar/", description: "AyV ES TU TIENDA DE CONFIANZA PARA UNIFORMES DE ALTA CALIDAD. OFRECEMOS UNA AMPLIA GAMA DE UNIFORMES PARA DIVERSAS INDUSTRIAS. NOS ENFOCAMOS EN LA DURABILIDAD, COMODIDAD Y ESTILO DE NUESTRAS PRENDAS, ASEGURANDO QUE CADA UNIFORME CUMPLA CON LOS MÁS ALTOS ESTÁNDARES." },
+  { 
+    title: "Gestion Spartan", 
+    image: GestionSpartanLogo, 
+    images: [GestionSpartan1, GestionSpartan2, GestionSpartan3, GestionSpartan4, GestionSpartan5], 
+    url: "", 
+    description: "Gestión Spartan es una plataforma de gestión contable y operativa diseñada para optimizar el control de negocios comerciales. Permite administrar el catálogo de productos, realizar compras a proveedores, gestionar ventas diarias y asignar vendedores. El sistema ofrece un completo módulo de informes analíticos, que muestra ganancias, comisiones, inventario, compras y ventas dentro de un rango de fechas personalizable. Además, incluye alertas de stock bajo y herramientas de exportación a PDF, Excel y CSV, facilitando el análisis financiero y la toma de decisiones.",
+    category: "web",
+    technologies: ["React", "Node.js", "PostgreSQL", "TypeScript", "Docker", "PDF/Excel Export"]
+  },
+  { 
+    title: "Grand Market Open", 
+    image: GrandMarketLogo, 
+    images: [GrandMarket1, GrandMarket2, GrandMarket3, GrandMarket4, GrandMarket5], 
+    url: "", 
+    description: "Grand Market Open es una plataforma integral para la gestión de emprendedores y eventos del ecosistema Grand Market. Permite registrar emprendedores a través de un formulario, almacenar sus datos en una base centralizada y automatizar la primera entrevista mediante una IA integrada con WhatsApp. El sistema facilita al administrador evaluar la aptitud de cada emprendedor, gestionar invitaciones a eventos, asignar fechas de participación y controlar los pagos (anticipo o total). Además, integra un módulo contable y un panel de mensajería unificado que centraliza las conversaciones con los emprendedores dentro de la plataforma.",
+    category: "web",
+    technologies: ["React", "Node.js", "PostgreSQL", "TypeScript", "Socket.IO", "WhatsApp API"]
+  },
+  { 
+    title: "Kingdom", 
+    image: logoKingdom, 
+    images: [Kingdom1, Kingdom2, Kingdom3, Kingdom4, Kingdom5, Kingdom6], 
+    url: "http://kindom.com.ar/", 
+    description: "Plataforma educativa online desarrollada en WordPress para una academia de idiomas, ofreciendo cursos dinámicos para aprendizaje individual y corporativo. Incluye interfaces interactivas, material didáctico diversificado, opciones de personalización para estudiantes, integración de pagos en línea y herramientas para monitoreo de progreso, fomentando un aprendizaje eficiente y adaptativo.",
+    category: "web",
+    technologies: ["WordPress", "PHP", "MySQL", "JavaScript", "CSS3"]
+  },
+  { 
+    title: "Ribrox", 
+    image: RibroxLogo, 
+    images: [Ribrox1, Ribrox2, Ribrox3, Ribrox4, Ribrox5, Ribrox6], 
+    description: "Software avanzado de gestión de redes sociales diseñado para facilitar la generación de contenido atractivo, administración eficaz de campañas publicitarias, integración de chatbots inteligentes, organización con un calendario detallado y análisis exhaustivo de competidores, mejorando significativamente la presencia y estrategia digital de las marcas.",
+    category: "web",
+    technologies: ["React", "Node.js", "MongoDB", "Express", "API Integration"]
+  },
+  { 
+    title: "Sucurapp", 
+    image: logoSucurApp, 
+    images: [Sucurapp, Sucurapp2, Sucurapp3, Sucurapp4, Sucurapp5, Sucurapp6], 
+    description: "Solución contable avanzada para monitorizar ingresos/egresos en sucursales mayoristas. Automatiza procesos financieros, facilita intercambio con Excel, y optimiza la gestión financiera. Incrementa la visibilidad operativa y financiera, mejorando el control y decisiones empresariales.",
+    category: "web",
+    technologies: ["React", "Node.js", "PostgreSQL", "TypeScript", "Excel Integration"]
+  },
+  { 
+    title: "Calu", 
+    image: logoCalu, 
+    images: [Calu, Calu2, Calu3, Calu4], 
+    url: "calu-mkt.com", 
+    description: "Sitio web dinámico para agencia de marketing con diseño atractivo y plataforma back-end personalizable. Permite edición detallada de cada aspecto del sitio, fortaleciendo la presencia online. Integra herramientas avanzadas para gestión de contenidos, visualización de analíticas y optimización SEO, impulsando la estrategia de marketing digital.",
+    category: "web",
+    technologies: ["React", "Next.js", "Tailwind CSS", "Strapi CMS", "SEO"]
+  },
+  { 
+    title: "Leelo acá", 
+    image: logoLeelo, 
+    images: [Leelo, Leelo2, Leelo3, Leelo4, Leelo5], 
+    url: "leeloAca.com.ar", 
+    description: "Portal de noticias actualizadas que recopila información relevante nacional, con espacio para debate y opinión de usuarios. Ofrece una plataforma interactiva para discusión, permitiendo intercambio de perspectivas. Integra secciones diversificadas, foros de debate y herramientas para la participación comunitaria, enriqueciendo el diálogo público.",
+    category: "web",
+    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Redux"]
+  },
+  { 
+    title: "Nutrición Espiritual", 
+    image: logoNutriciom, 
+    images: [Nutriciom, Nutriciom2, Nutriciom3, Nutriciom4, Nutriciom5], 
+    url: "https://nutricion-espiritual.com/", 
+    description: "Landing page inspiradora para gurú de nutrición espiritual, diseñada para aumentar la audiencia en su canal de YouTube. Destaca contenido enriquecedor, videos motivacionales y recursos gratuitos para fomentar el bienestar integral. Incluye llamados a la acción efectivos, testimonios reales y enlaces directos al canal, maximizando la conexión y el crecimiento de seguidores.",
+    category: "web",
+    technologies: ["React", "Next.js", "YouTube API", "Tailwind CSS", "Vercel"]
+  }, 
+  { 
+    title: "Ilum Mexico", 
+    image: logoIlum, 
+    images: [Ilum1, Ilum2, Ilum3, Ilum4], 
+    url: "ilum-mexico.com", 
+    description: "Plataforma nacional de capacitación con amplia oferta de cursos diversos, combinando seriedad y atractivo en su diseño. Totalmente configurable para adaptarse a necesidades específicas, proporciona un entorno de aprendizaje interactivo y eficiente. Destaca por su facilidad de uso, personalización del aprendizaje y herramientas dinámicas, impulsando el desarrollo profesional y personal de sus usuarios.",
+    category: "web",
+    technologies: ["React", "Node.js", "MongoDB", "Video Streaming", "LMS"]
+  },
+  { 
+    title: "Abar", 
+    image: AbarLogo, 
+    images: [Abar, Abar2, Abar3, Abar4, Abar5, Abar6], 
+    description: "Sitio web innovador para cerrajería, diseñado para atraer más clientes y mejorar el posicionamiento SEO. Destaca por su interfaz amigable y contenido optimizado para buscadores, ofreciendo información clara sobre servicios de alta calidad. Incluye testimonios de clientes satisfechos, formularios de contacto rápidos y estrategias de marketing digital eficaces para aumentar la visibilidad y el alcance empresarial.",
+    category: "web",
+    technologies: ["WordPress", "SEO", "Google Analytics", "PHP", "JavaScript"]
+  },
+  { 
+    title: "Morazul", 
+    image: logoMorazul, 
+    images: [Mora, Mora2, Mora3, Mora4, Mora5, Mora6], 
+    url: "morazul.art", 
+    description: "Portafolio digital con e-commerce para artista de murales, exhibiendo trabajos realizados para distintas marcas y facilitando la expansión de proyectos. Destaca por su diseño elegante que resalta la calidad artística, incluyendo una tienda online para adquirir obras o contratar servicios. Optimizado para SEO, mejora la visibilidad y atrae nuevos clientes, promoviendo el arte único en espacios comerciales y privados.",
+    category: "ecommerce",
+    technologies: ["React", "Stripe", "Node.js", "MongoDB", "AWS S3"]
+  },
+  { 
+    title: "Escuchalo Acá", 
+    image: logoLeelo, 
+    images: [Escuchalo, Escuchalo2, Escuchalo3, Escuchalo4], 
+    url: "escuchaloAca.com.ar", 
+    description: "Radio online especializada en noticias nacionales, ofreciendo cobertura continua y análisis profundo de los acontecimientos más relevantes. Su plataforma streaming integra funcionalidades interactivas para una experiencia auditiva enriquecedora, incentivando la participación de la audiencia a través de foros y redes sociales. Diseñada para mantener informados a los oyentes con información actualizada, promueve una comunidad informada y conectada.",
+    category: "web",
+    technologies: ["React", "Audio Streaming", "Node.js", "WebRTC", "Socket.io"]
+  },
+  { 
+    title: "LavaRiso", 
+    image: LavaIcon, 
+    images: [image1, image2, image3, image4, image5, image6], 
+    description: "Software CRM/ERP especializado para empresas de reparación de electrodomésticos, incluyendo lavarropas, lavavajillas, microondas y aires acondicionados. Ofrece una aplicación contable con API de la AFIP, control de stock por el jefe de taller y una app móvil para la gestión de técnicos en campo o taller. Facilita la interacción directa con clientes a través de WhatsApp, Facebook e Instagram, mejorando la eficiencia operativa y la satisfacción del cliente.",
+    category: "mobile",
+    technologies: ["React Native", "Node.js", "PostgreSQL", "AFIP API", "WhatsApp API"]
+  },
+  { 
+    title: "Enigmax", 
+    image: enigmaxLogo, 
+    images: [enigmax, enigmax1, enigmax2, enigmax3], 
+    url: "https://www.enigmaxoficial.com/", 
+    description: "Enigmax nace de la colaboración entre dos amigos, Mariano y Sebastian, con un espíritu emprendedor que los llevó a explorar diversos proyectos y empresas. La sinergia de sus habilidades condujo al éxito de un local de salas de escape, abriendo así las puertas al emocionante mundo de las experiencias inmersivas y lúdicas. Esta trayectoria inspiradora culmina en la creación de Enigmax, una empresa dedicada a la realización de juegos de rol inmersivos e innovadores.",
+    category: "web",
+    technologies: ["React", "Node.js", "MongoDB", "Payment Gateway", "Booking System"]
+  },
+  { 
+    title: "Del Centro Construcciones", 
+    image: delCentroLogo, 
+    images: [delCentro, delCentro1, delCentro2, delCentro3, delCentro4], 
+    url: "https://delcentroconstrucciones.com/", 
+    description: "Nuestra misión es liderar una revolución en la construcción modular ofreciendo soluciones rápidas, de alta calidad y ecológicamente sostenibles. Estamos comprometidos con la excelencia, asegurando la máxima confortabilidad y funcionalidad en cada proyecto. Utilizamos materiales de la mejor calidad y tecnologías avanzadas para no solo cumplir, sino también superar las expectativas de nuestros clientes, manteniendo un compromiso con la innovación y la adaptabilidad en todo lo que hacemos.",
+    category: "web",
+    technologies: ["React", "Next.js", "Tailwind CSS", "Contact Forms", "SEO"]
+  },
+  { 
+    title: "AyV uniformes", 
+    image: AyVlogo, 
+    images: [AyV, AyV1, AyV2], 
+    url: "https://ayvuniformessf.com.ar/", 
+    description: "AyV es tu tienda de confianza para uniformes de alta calidad. Ofrecemos una amplia gama de uniformes para diversas industrias. Nos enfocamos en la durabilidad, comodidad y estilo de nuestras prendas, asegurando que cada uniforme cumpla con los más altos estándares.",
+    category: "ecommerce",
+    technologies: ["WooCommerce", "WordPress", "Payment Gateway", "Shipping Integration", "SEO"]
+  },
 ];
- 
+
