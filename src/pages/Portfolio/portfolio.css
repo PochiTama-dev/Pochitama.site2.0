@@ -357,29 +357,50 @@
 }
 
 /* ========================================
-   CAROUSEL MOBILE
+   MOBILE GRID (Horizontal Scroll)
    ======================================== */
 
+.portfolio-mobile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+  max-width: 100%;
+  overflow-x: visible;
+}
+
+/* Para tablets pequeños */
+@media (max-width: 768px) {
+  .portfolio-mobile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* Para móviles */
+@media (max-width: 480px) {
+  .portfolio-mobile-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .project-card {
+    max-width: 100%;
+  }
+  
+  .project-card__image-wrapper {
+    aspect-ratio: 16/10;
+  }
+}
+
+/* Ocultar carousel viejo */
 .portfolio-carousel-wrapper {
-  max-width: 400px;
-  margin: 0 auto;
+  display: none;
 }
 
 .portfolio-carousel-item {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.portfolio-page .carousel-control-prev-icon,
-.portfolio-page .carousel-control-next-icon {
-  background-color: #b8afd5;
-  border-radius: 50%;
-  padding: 1.5rem;
-}
-
-.portfolio-page .carousel-indicators button {
-  background-color: #b8afd5;
+  display: none;
 }
 
 /* ========================================

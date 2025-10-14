@@ -1,23 +1,10 @@
-import { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import "./about.css";
 import "../../Themes/Base/_variables.css";
 import colaboradores from "../../colaboradores.json";
 import Cta from "../../components/cta/Cta";
-import AboutUsSlider from "../../components/quienes/AboutUsSlider";
 
 const About = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const updateScreenWidth = () => {
-      setScreenWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', updateScreenWidth);
-    return () => window.removeEventListener('resize', updateScreenWidth);
-  }, []);
-
   // Stats de la empresa
   const stats = [
     { number: "50+", label: "Proyectos Completados", icon: "🚀" },
@@ -152,31 +139,27 @@ const About = () => {
             </p>
           </div>
 
-          {screenWidth >= 1024 ? (
-            <div className="team-grid">
-              {colaboradores.equipo.map((colaborador, index) => (
-                <article key={index} className="team-member">
-                  <div className="team-member__image-wrapper">
-                    <img 
-                      src={colaborador.imagen} 
-                      alt={`${colaborador.nombre} - ${colaborador.area}`}
-                      className="team-member__image"
-                      loading="lazy"
-                    />
-                    <div className="team-member__overlay">
-                      <span className="team-member__icon">👋</span>
-                    </div>
+          <div className="team-grid">
+            {colaboradores.equipo.map((colaborador, index) => (
+              <article key={index} className="team-member">
+                <div className="team-member__image-wrapper">
+                  <img 
+                    src={colaborador.imagen} 
+                    alt={`${colaborador.nombre} - ${colaborador.area}`}
+                    className="team-member__image"
+                    loading="lazy"
+                  />
+                  <div className="team-member__overlay">
+                    <span className="team-member__icon">👋</span>
                   </div>
-                  <div className="team-member__info">
-                    <h3 className="team-member__name">{colaborador.nombre}</h3>
-                    <p className="team-member__role">{colaborador.area}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          ) : (
-            <AboutUsSlider equipo={colaboradores.equipo} screenWidth={screenWidth} />
-          )}
+                </div>
+                <div className="team-member__info">
+                  <h3 className="team-member__name">{colaborador.nombre}</h3>
+                  <p className="team-member__role">{colaborador.area}</p>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
 
         {/* CTA Section */}

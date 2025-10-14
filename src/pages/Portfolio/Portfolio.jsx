@@ -4,7 +4,6 @@ import "./portfolio.css";
 import ProyectCard from "../../components/Portfolio/ProyectCard";
 import { texto, titleCTA, subtitleCTA } from "./variables.js";
 import Cta from "../../components/cta/Cta.jsx";
-import { Carousel } from "react-bootstrap";
 import { projectsData } from "./projectsData";
 
 const Portfolio = () => {
@@ -33,12 +32,6 @@ const Portfolio = () => {
   const filteredProjects = selectedFilter === "all" 
     ? allProjectsData 
     : allProjectsData.filter(project => project.category === selectedFilter);
-
-  const chunkArray = (array, size) => {
-    return Array.from({ length: Math.ceil(array.length / size) }, (_, index) =>
-      array.slice(index * size, (index + 1) * size)
-    );
-  };
 
   return (
     <>
@@ -109,24 +102,19 @@ const Portfolio = () => {
                 ))}
               </div>
             ) : (
-              <div className="portfolio-carousel-wrapper">
-                <Carousel>
-                  {filteredProjects.map((project, index) => (
-                    <Carousel.Item key={index}>
-                      <div className="portfolio-carousel-item">
-                        <ProyectCard
-                          proyectName={project.title}
-                          image={project.image}
-                          images={project.images}
-                          url={project.url}
-                          description={project.description}
-                          category={project.category}
-                          technologies={project.technologies}
-                        />
-                      </div>
-                    </Carousel.Item>
-                  ))}
-                </Carousel>
+              <div className="portfolio-mobile-grid">
+                {filteredProjects.map((project, index) => (
+                  <ProyectCard
+                    key={index}
+                    proyectName={project.title}
+                    image={project.image}
+                    images={project.images}
+                    url={project.url}
+                    description={project.description}
+                    category={project.category}
+                    technologies={project.technologies}
+                  />
+                ))}
               </div>
             )}
           </div>
