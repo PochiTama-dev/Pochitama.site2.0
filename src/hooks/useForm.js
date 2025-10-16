@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import axios from "axios";
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm);
@@ -60,22 +59,62 @@ export const useForm = (initialForm, validateForm) => {
     if (Object.keys(formErrors).length === 0 && recaptcha == 'success') {
       setLoading(true);
 
-      axios
-        .post(
-          "https://getform.io/f/566cb1ba-bdff-4158-93b7-0ed82642b0e7",
-          form,
-          { headers: {'Accept': 'application/json'} }
-        )
-        .then(function (result) {
+      // Preparar los servicios seleccionados
+      const selectedServices = Object.entries(buttonSelections)
+        .filter(([_, isSelected]) => isSelected)
+        .map(([service]) => {
+          const serviceNames = {
+            'seo': 'SEO',
+            'web_design': 'Web Design & Development',
+            'ecommerce': 'E-Commerce',
+            'mobile_app': 'Mobile App',
+            'branding': 'Branding',
+            'consulting': 'Consulting'
+          };
+          return serviceNames[service] || service;
+        })
+        .join(', ');
+
+      // Construir el mensaje con los servicios
+      const fullMessage = selectedServices 
+        ? `Servicios de interés: ${selectedServices}\n\n${form.mensaje}`
+        : form.mensaje;
+
+      // Datos a enviar a la API de Flashtag
+      const contactData = {
+        name: form.nombre,
+        email: form.email,
+        subject: selectedServices || 'Consulta general',
+        message: fullMessage
+      };
+
+      try {
+        const response = await fetch('https://api.flashtag.tech/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(contactData)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
           setLoading(false);
           setResponse(true);
           setForm(initialForm);
           setButtonSelections({});
-          console.log(result);
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+          console.log('Email enviado exitosamente:', result);
+        } else {
+          setLoading(false);
+          console.error('Error al enviar el email:', result);
+          alert('Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.');
+        }
+      } catch (error) {
+        setLoading(false);
+        console.error('Error de conexión:', error);
+        alert('Error de conexión. Por favor, verifica tu internet e intenta nuevamente.');
+      }
     } else {
       return;
     }
