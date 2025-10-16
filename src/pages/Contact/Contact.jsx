@@ -365,25 +365,37 @@ const Contact = () => {
                       )}
                     </Button>
                   </div>
-
-                  {/* Mensaje de éxito */}
-                  {showSuccessmensaje && (
-                    <Alert variant="success" className="success-alert animate-on-scroll">
-                      <div className="alert-content">
-                        <span className="alert-icon">✅</span>
-                        <div>
-                          <strong>¡Mensaje enviado con éxito!</strong>
-                          <p className="mb-0">Te responderemos pronto a tu email.</p>
-                        </div>
-                      </div>
-                    </Alert>
-                  )}
                 </Form>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
+
+      {/* Modal de éxito */}
+      {showSuccessmensaje && (
+        <div className="success-modal-overlay" onClick={() => setShowSuccessmensaje(false)}>
+          <div className="success-modal" onClick={(e) => e.stopPropagation()}>
+            <div className="success-modal-icon">
+              <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <circle cx="40" cy="40" r="40" fill="#10B981" fillOpacity="0.1"/>
+                <circle cx="40" cy="40" r="32" fill="#10B981" fillOpacity="0.2"/>
+                <path d="M25 40L35 50L55 30" stroke="#10B981" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <h3 className="success-modal-title">¡Mensaje Enviado!</h3>
+            <p className="success-modal-message">
+              Tu mensaje ha sido enviado con éxito. Te responderemos pronto a tu email.
+            </p>
+            <button 
+              className="success-modal-button" 
+              onClick={() => setShowSuccessmensaje(false)}
+            >
+              Entendido
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
