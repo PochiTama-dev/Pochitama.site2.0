@@ -132,23 +132,88 @@ const Services = () => {
   return (
     <div className="services-modern">
       <Helmet>
-        <title>Servicios de Desarrollo Web y Software | Pochitama</title>
+        <title>Servicios: Automatización IA, WhatsApp API, Desarrollo Web & Apps | Pochitama</title>
         <meta
           name="description"
-          content="Ofrecemos servicios de desarrollo web, software a medida, aplicaciones móviles, diseño UX/UI y soporte técnico. Soluciones digitales innovadoras para tu negocio."
+          content="Servicios especializados en Automatización con IA (ChatGPT, OpenAI), WhatsApp Business API, Instagram API, desarrollo web, apps móviles y diseño UX/UI. Soluciones tech que transforman negocios."
         />
         <meta
           name="keywords"
-          content="desarrollo web, desarrollo software, aplicaciones móviles, diseño UX/UI, mantenimiento web, soporte técnico, React, Node.js, PostgreSQL, servicios digitales"
+          content="automatización IA, ChatGPT integration, WhatsApp Business API, Instagram API, Meta API, desarrollo web, apps móviles, chatbots inteligentes, machine learning, OpenAI, React, Node.js, diseño UX/UI, SEO, software empresarial"
         />
-        <meta property="og:title" content="Servicios de Desarrollo Web y Software | Pochitama" />
+        <meta property="og:title" content="Servicios: IA, WhatsApp API, Desarrollo Web & Apps | Pochitama" />
         <meta
           property="og:description"
-          content="Servicios completos de desarrollo digital: Web, Software, Apps, UX/UI y Soporte. Tecnología de vanguardia para tu negocio."
+          content="Automatizaciones con IA, WhatsApp Business API, Instagram API, desarrollo web y apps móviles. Tecnología innovadora para impulsar tu negocio."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://pochitama.dev/services" />
-        <link rel="canonical" href="https://pochitama.dev/services" />
+        <meta property="og:url" content="https://pochitamadev.com/servicios" />
+        <meta property="og:image" content="https://pochitamadev.com/ico/LogoPochi.webp" />
+        <link rel="canonical" href="https://pochitamadev.com/servicios" />
+        
+        {/* Schema.org JSON-LD para Servicios */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Digital Technology Services",
+            "provider": {
+              "@type": "Organization",
+              "name": "Pochitama",
+              "url": "https://pochitamadev.com"
+            },
+            "areaServed": {
+              "@type": "Place",
+              "name": "Worldwide"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios Digitales",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Automatizaciones con IA",
+                    "description": "Soluciones de automatización con ChatGPT, OpenAI API, Machine Learning y procesamiento de lenguaje natural"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Meta API - WhatsApp & Instagram",
+                    "description": "Implementación de WhatsApp Business API e Instagram API para automatización de atención al cliente y ventas"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Desarrollo Web",
+                    "description": "Desarrollo de sitios web personalizados con React, Node.js y tecnologías modernas"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Desarrollo de Apps Móviles",
+                    "description": "Aplicaciones móviles nativas y multiplataforma para iOS y Android"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Diseño UX/UI",
+                    "description": "Diseño de interfaces intuitivas centradas en la experiencia del usuario"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
       </Helmet>
 
       <section className="services-hero">

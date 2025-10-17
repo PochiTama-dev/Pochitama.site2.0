@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import "./homeV2.css";
 
 // Assets imports
@@ -148,6 +149,102 @@ const HomeV2 = () => {
 
   return (
     <div className="home-v2">
+      <Helmet>
+        <title>Pochitama | Automatización IA, WhatsApp API & Desarrollo Web | Agencia Tech 2025</title>
+        <meta
+          name="description"
+          content="Especialistas en automatización con IA (ChatGPT, OpenAI), WhatsApp Business API, Instagram API, desarrollo web y apps móviles. Transformamos negocios con tecnología de vanguardia. +50 proyectos exitosos."
+        />
+        <meta
+          name="keywords"
+          content="automatización inteligencia artificial, ChatGPT empresas, WhatsApp Business API, Instagram API automatización, desarrollo web React, apps móviles, chatbots IA, OpenAI integration, Meta API, machine learning, agencia tech 2025"
+        />
+        <meta property="og:title" content="Pochitama | Automatización IA & WhatsApp API | Agencia Tech" />
+        <meta
+          property="og:description"
+          content="Automatizaciones con IA, WhatsApp Business API y desarrollo de apps que impulsan negocios. 98% satisfacción, soporte 24/7."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pochitamadev.com" />
+        <meta property="og:image" content="https://pochitamadev.com/ico/LogoPochi.webp" />
+        <link rel="canonical" href="https://pochitamadev.com" />
+        
+        {/* Schema.org JSON-LD para HomePage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Pochitama",
+            "url": "https://pochitamadev.com",
+            "logo": "https://pochitamadev.com/ico/LogoPochi.webp",
+            "description": "Agencia tech especializada en automatizaciones con IA, WhatsApp Business API y desarrollo de soluciones digitales",
+            "slogan": "Construimos Experiencias Digitales que Transforman Negocios",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "ratingCount": "50",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "offers": {
+              "@type": "AggregateOffer",
+              "priceCurrency": "USD",
+              "offers": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Automatizaciones con IA",
+                    "description": "Soluciones inteligentes con ChatGPT, OpenAI API y Machine Learning"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Meta API - WhatsApp & Instagram",
+                    "description": "Automatización empresarial mediante WhatsApp Business API e Instagram API"
+                  }
+                }
+              ]
+            }
+          })}
+        </script>
+        
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Qué es la automatización con IA?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "La automatización con IA utiliza inteligencia artificial como ChatGPT y OpenAI para automatizar procesos empresariales, crear chatbots inteligentes, analizar datos y optimizar operaciones, reduciendo costos y mejorando la eficiencia."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cómo funciona WhatsApp Business API?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WhatsApp Business API permite a las empresas automatizar conversaciones, enviar notificaciones, integrar chatbots, gestionar catálogos de productos y ofrecer atención al cliente 24/7 a través de WhatsApp de manera escalable y profesional."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué tecnologías utilizan para desarrollo web?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Utilizamos tecnologías modernas como React, Node.js, Next.js, Vue, Python, Django y más. Desarrollamos con código limpio, arquitectura escalable y siguiendo las mejores prácticas de la industria."
+                }
+              }
+            ]
+          })}
+        </script>
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="hero-section" ref={heroRef}>
         <div className="hero-background">
