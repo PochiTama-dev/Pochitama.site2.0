@@ -67,6 +67,18 @@ const HomeV2 = () => {
   // Servicios principales
   const services = [
     {
+      icon: "🤖",
+      title: "Automatizaciones con IA",
+      description: "Soluciones inteligentes que automatizan procesos y optimizan operaciones",
+      tags: ["ChatGPT", "OpenAI API", "Machine Learning", "NLP"],
+    },
+    {
+      icon: "📲",
+      title: "Meta API",
+      description: "Automatización de WhatsApp, Instagram y Facebook para tu negocio",
+      tags: ["WhatsApp Business", "Instagram API", "Messenger", "Chatbots"],
+    },
+    {
       icon: "📱",
       title: "Apps Móviles",
       description: "Desarrollo nativo y multiplataforma para iOS y Android",

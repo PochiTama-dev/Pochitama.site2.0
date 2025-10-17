@@ -9,6 +9,8 @@ import {
   dataCardApps,
   dataCardUXUI,
   dataCardECommerce,
+  dataCardAI,
+  dataCardMetaAPI,
 } from "./variables";
 
 const Services = () => {
@@ -29,6 +31,33 @@ const Services = () => {
     {
       id: 1,
       icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+          <circle cx="8" cy="19" r="2"/>
+          <circle cx="16" cy="19" r="2"/>
+          <path d="M18 14.5c-.83 0-1.5.67-1.5 1.5s.67 1.5 1.5 1.5 1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/>
+        </svg>
+      ),
+      title: "Automatizaciones con IA",
+      description: "Optimiza procesos empresariales con inteligencia artificial: chatbots, análisis predictivo y automatización inteligente.",
+      features: ["ChatGPT Integration", "Machine Learning", "NLP & Sentiment Analysis", "Automation Bots"],
+      data: dataCardAI,
+    },
+    {
+      id: 2,
+      icon: (
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.75 13.96c.25.13.41.2.46.3.06.11.04.61-.21 1.18-.2.56-1.24 1.1-1.7 1.12-.46.02-.47.36-2.96-.73-2.49-1.09-3.99-3.75-4.11-3.92-.12-.17-.96-1.38-.92-2.61.05-1.22.69-1.8.95-2.04.24-.26.51-.29.68-.26h.47c.15 0 .36-.06.55.45l.69 1.87c.06.13.1.28.01.44l-.27.41-.39.42c-.12.12-.26.25-.12.5.12.26.62 1.09 1.32 1.78.91.88 1.71 1.17 1.95 1.3.24.14.39.12.54-.04l.81-.94c.19-.25.35-.19.58-.11l1.67.88M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10c-1.97 0-3.8-.57-5.35-1.55L2 22l1.55-4.65A9.969 9.969 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8c0 1.72.54 3.31 1.46 4.61L4.5 19.5l2.89-.96A7.95 7.95 0 0 0 12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8z"/>
+        </svg>
+      ),
+      title: "Meta API (WhatsApp & Instagram)",
+      description: "Automatiza la comunicación de tu negocio con WhatsApp Business API e Instagram para atención al cliente 24/7.",
+      features: ["WhatsApp Business API", "Instagram Automation", "Chatbots Inteligentes", "CRM Integration"],
+      data: dataCardMetaAPI,
+    },
+    {
+      id: 3,
+      icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
           <path d="M20 3H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h7v2H8v2h8v-2h-3v-2h7c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2M4 14V5h16l.002 9z"/>
         </svg>
@@ -39,7 +68,7 @@ const Services = () => {
       data: dataCardWeb,
     },
     {
-      id: 2,
+      id: 4,
       icon: (
         <svg width="48" height="48" viewBox="0 0 52 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M28.3891 17.3562L41.1282 5.02188L45.9672 0.329407C46.4593 -0.147265 47.2516 -0.109375 47.7281 0.382813C48.0375 0.690938 48.1875 1.1125 48.1781 1.53406V39.4653C48.1785 39.8925 48.0255 40.3051 47.7469 40.6281C47.7016 40.6752 47.6536 40.7198 47.6032 40.7619C47.1329 41.1684 46.4221 41.1419 45.9829 40.7025L41.1423 35.8628L28.3891 23.5266L15.8563 35.6572L11.0954 40.2956C10.6204 40.7531 9.84698 40.7534 9.37167 40.2956C9.08598 39.9969 8.92792 39.5953 8.93198 39.1778V1.8375C8.93136 1.42031 9.0881 1.01843 9.37011 0.710313C9.4067 0.67375 9.44485 0.639063 9.48423 0.606094C9.96423 0.199219 10.6938 0.225938 11.1423 0.674219L15.9845 5.50969L28.3891 17.3562Z"/>
@@ -51,7 +80,7 @@ const Services = () => {
       data: dataCardSoftware,
     },
     {
-      id: 3,
+      id: 5,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 36 36" fill="currentColor">
           <path d="M25 4H11a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2M11 6h14v18H11Zm0 24v-4h14v4Z"/>
@@ -64,7 +93,7 @@ const Services = () => {
       data: dataCardApps,
     },
     {
-      id: 4,
+      id: 6,
       icon: (
         <svg width="48" height="48" viewBox="0 0 30 47" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fillRule="evenodd" clipRule="evenodd" d="M6.55334 16.9369C5.69341 16.9369 4.8419 17.1066 4.04743 17.4364C3.25296 17.7661 2.53108 18.2495 1.92302 18.8588C1.31495 19.4681 0.832612 20.1915 0.503531 20.9876C0.174449 21.7837 0.00507358 22.637 0.00507358 23.4987C0.00507358 24.3604 0.174449 25.2137 0.503531 26.0098C0.832612 26.806 1.31495 27.5293 1.92302 28.1387C2.53108 28.748 3.25296 29.2313 4.04743 29.5611C4.8419 29.8909 5.69341 30.0606 6.55334 30.0606H13.1016V23.6308C13.1006 23.5428 13.1006 23.4547 13.1016 23.3666V16.9369H6.55334ZM13.1016 13.1263H6.55334C4.8163 13.1263 3.1504 12.4348 1.92212 11.204C0.693844 9.97314 0.0038055 8.30378 0.0038055 6.56313C0.0038055 4.82248 0.693844 3.15312 1.92212 1.9223C3.1504 0.691471 4.8163 0 6.55334 0H13.1016V13.1263Z"/>
@@ -76,7 +105,7 @@ const Services = () => {
       data: dataCardUXUI,
     },
     {
-      id: 5,
+      id: 7,
       icon: (
         <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>

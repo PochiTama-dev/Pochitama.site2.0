@@ -3,6 +3,75 @@ export const loreIpsum =
 
 /* Datos de los modal */
 /* Datos de los modal */
+export const dataCardAI = {
+  title: "Automatizaciones con IA",
+  img: "/src/assets/images/ai-automation.webp",
+  description: `La automatización con Inteligencia Artificial está revolucionando la forma en que operan las empresas. Nuestro servicio 
+  especializado en automatizaciones con IA ofrece soluciones inteligentes que optimizan procesos, reducen costos y mejoran la eficiencia 
+  operativa:
+
+  - **Procesamiento de Lenguaje Natural (NLP)**: Implementamos chatbots y asistentes virtuales inteligentes que comprenden y responden 
+  consultas de manera natural, mejorando la atención al cliente 24/7 y liberando recursos humanos para tareas más estratégicas.
+  
+  - **Integración con OpenAI y GPT**: Desarrollamos soluciones personalizadas utilizando las últimas APIs de OpenAI (ChatGPT-4, DALL-E, 
+  Whisper) para automatizar generación de contenido, análisis de datos, transcripción de audio y más.
+  
+  - **Automatización de Procesos Robóticos (RPA)**: Diseñamos bots inteligentes que automatizan tareas repetitivas como procesamiento de 
+  documentos, entrada de datos, generación de reportes y flujos de trabajo complejos, reduciendo errores humanos hasta en un 90%.
+  
+  - **Machine Learning Personalizado**: Creamos modelos de ML adaptados a tu negocio para predicción de demanda, análisis de sentimiento, 
+  detección de fraudes, recomendaciones personalizadas y optimización de precios.
+  
+  - **Análisis Inteligente de Datos**: Implementamos sistemas de IA que analizan grandes volúmenes de datos en tiempo real, generando 
+  insights accionables y dashboards predictivos para toma de decisiones estratégicas.
+  
+  - **Automatización de Marketing**: Desarrollamos soluciones de IA para personalización de contenido, segmentación dinámica de audiencias, 
+  optimización de campañas publicitarias y generación automática de copy y creatividades.
+  
+  - **Asistentes de Productividad**: Creamos herramientas de IA que automatizan tareas administrativas como programación de reuniones, 
+  gestión de emails, resúmenes de documentos y generación de informes ejecutivos.
+
+  Nuestras soluciones de IA están diseñadas para integrarse sin problemas con tus sistemas existentes, escalando según las necesidades de tu 
+  negocio y generando un ROI medible desde el primer mes de implementación.`,
+};
+
+export const dataCardMetaAPI = {
+  title: "Meta API - Automatización WhatsApp & Instagram",
+  img: "/src/assets/images/meta-api.webp",
+  description: `Las Meta APIs (WhatsApp Business API, Instagram API, Messenger API) son herramientas poderosas para automatizar y escalar 
+  la comunicación con tus clientes. Nuestro servicio especializado incluye:
+
+  - **WhatsApp Business API**: Implementamos soluciones empresariales de WhatsApp que permiten enviar notificaciones, confirmaciones de 
+  pedidos, alertas de envío, recordatorios de citas y más. Integramos catálogos de productos, pagos y atención al cliente automatizada.
+  
+  - **Chatbots Inteligentes**: Desarrollamos chatbots para WhatsApp, Instagram y Messenger que responden consultas frecuentes, califican 
+  leads, procesan pedidos y brindan soporte 24/7 en múltiples idiomas, mejorando la satisfacción del cliente.
+  
+  - **Instagram Business API**: Automatizamos la gestión de mensajes directos, comentarios y menciones de Instagram. Creamos flujos de 
+  conversación para captar leads, gestionar pedidos y ofrecer atención personalizada desde Instagram.
+  
+  - **CRM Integrado**: Conectamos las conversaciones de WhatsApp e Instagram con tu CRM (Salesforce, HubSpot, Zoho), sincronizando 
+  automáticamente contactos, conversaciones e historial de interacciones para un seguimiento unificado.
+  
+  - **Campañas Masivas Personalizadas**: Implementamos sistemas para envío masivo de mensajes personalizados mediante WhatsApp Business API, 
+  respetando las políticas de Meta y garantizando alta tasa de entrega y engagement.
+  
+  - **E-commerce por WhatsApp**: Desarrollamos tiendas completas en WhatsApp con catálogo digital, carrito de compras, pasarelas de pago, 
+  seguimiento de pedidos y gestión de inventario en tiempo real.
+  
+  - **Automatización de Ventas**: Creamos embudos de venta automatizados que nutren leads, califican prospectos, programan citas y cierran 
+  ventas directamente desde WhatsApp e Instagram, aumentando conversiones hasta 3x.
+  
+  - **Analytics y Reporting**: Implementamos dashboards personalizados que muestran métricas clave como tasa de respuesta, tiempo de 
+  atención, conversiones, ROI por canal y análisis de sentimiento de conversaciones.
+  
+  - **Integración Multi-Plataforma**: Conectamos WhatsApp e Instagram con tus sistemas existentes: ERP, plataformas de e-commerce 
+  (Shopify, WooCommerce), sistemas de tickets, herramientas de email marketing y más.
+
+  Nuestras soluciones Meta API están certificadas como Business Solution Providers oficiales, garantizando cumplimiento con todas las 
+  políticas de Meta, alta disponibilidad (99.9% uptime) y soporte técnico especializado para tu negocio.`,
+};
+
 export const dataCardWeb = {
   title: "Desarrollo de Paginas Web",
   img: "/src/assets/images/desarrolloPaginasWeb.webp",
